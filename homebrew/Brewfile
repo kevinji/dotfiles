@@ -1,0 +1,22 @@
+tap 'caskroom/cask'
+tap 'neovim/neovim'
+
+cask_args appdir: '/Applications'
+
+brew 'android-platform-tools'
+brew 'cmake'
+brew 'diff-so-fancy'
+brew 'git'
+brew 'neovim'
+brew 'node'
+brew 'openssl'
+brew 'python'
+brew 'python3'
+brew 'reattach-to-user-namespace'
+brew 'tmux'
+brew 'zsh'
+
+cask 'java'
+cask 'mactex'
+cask 'texstudio'
+cask 'vagrant'
