@@ -1,0 +1,68 @@
+" Default settings
+set nocompatible
+set tabstop=4
+set shiftwidth=4
+set softtabstop=4
+set expandtab
+set smarttab
+set autoindent
+set ruler
+set number
+set showcmd
+set showmatch
+set ignorecase
+set smartcase
+set incsearch
+set hlsearch
+set mouse=a
+set lazyredraw
+set noerrorbells
+set novisualbell
+set nobackup
+set termguicolors
+
+syntax on
+set background=dark
+
+" Shorter keystrokes for commands
+nnoremap ; :
+nnoremap : ;
+
+" vim-plug
+call plug#begin('~/.vim/plugged')
+
+Plug 'airblade/vim-gitgutter'
+Plug 'bling/vim-airline'
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'easymotion/vim-easymotion'
+Plug 'flazz/vim-colorschemes'
+Plug 'fmoralesc/vim-tutor-mode'
+Plug 'godlygeek/tabular'
+Plug 'scrooloose/nerdtree'
+" Plug 'scrooloose/syntastic'
+Plug 'sheerun/vim-polyglot'
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-repeat'
+Plug 'tpope/vim-sleuth'
+Plug 'tpope/vim-surround'
+Plug 'valloric/youcompleteme'
+
+call plug#end()
+
+" CtrlP
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlP'
+
+" Syntastic
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+
+" Theme
+let $NVIM_TUI_ENABLE_TRUE_COLOR = 1
+colorscheme material
