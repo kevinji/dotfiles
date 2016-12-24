@@ -17,9 +17,17 @@ done
 # Symlink Prezto into ~/.zprezto.
 ln -s "$dotfiles"/zsh/prezto "$HOME"/.zprezto
 
-# Symlink the various zsh config files into ~.
+# Symlink Prezto's zsh config files into ~.
+for file in "$dotfiles"/zsh/prezto/runcoms/*; do
+    if [[ "$(basename "$file")" != "README.md" ]]; then
+        ln -s "$file" "$HOME"/."$(basename "$file")"
+    fi
+done
+
+# Symlink the overridden zsh config files into ~.
 for file in "$dotfiles"/zsh/*; do
     if [[ -f "$file" ]]; then
+        rm -f "$HOME"/."$(basename "$file")"
         ln -s "$file" "$HOME"/."$(basename "$file")"
     fi
 done
