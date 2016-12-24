@@ -20,6 +20,7 @@ brew update &> /dev/null
 brew bundle --global
 
 brew linkapps &> /dev/null
+brew cleanup &> /dev/null
 
 echo "Done installing Homebrew."
 echo
