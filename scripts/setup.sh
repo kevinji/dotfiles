@@ -14,7 +14,7 @@ for folder in "${folders[@]}"; do
     done
 done
 
-# Symlink zprezto into ~.
+# Symlink zprezto into ~/.zprezto.
 ln -s "$dotfiles"/zsh/prezto "$HOME"/.zprezto
 
 # Symlink the various zsh config files.
