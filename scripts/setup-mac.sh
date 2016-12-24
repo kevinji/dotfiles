@@ -1,9 +1,10 @@
 #!/bin/bash
-# Grab the current directory.
-base="$(dirname "$BASH_SOURCE")"
+# Navigate to the dotfiles/ dir.
+scripts="$(dirname "$BASH_SOURCE")"
+dotfiles="$(cd "$scripts"/.. && pwd)"
 
-# Xcode
-xcode-select --install
+# Run general scripts.
+"$dotfiles"/scripts/setup.sh
 
 # Homebrew
 echo "Installing Homebrew..."
@@ -12,9 +13,13 @@ if ! type brew &> /dev/null; then
     /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 fi
 
+brew tap homebrew/bundle
 brew update &> /dev/null
+
+# Install from Brewfile.
+brew bundle --global
 
 brew linkapps &> /dev/null
 
-# Run general scripts.
-"$base"/setup.sh
+echo "Done installing Homebrew."
+echo
