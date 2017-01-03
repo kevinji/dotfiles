@@ -12,6 +12,7 @@ brew "ffmpeg", args: [
     "with-libvpx", "with-opus", "with-sdl2", "with-x265"
 ]
 brew "git"
+brew "gnupg2"
 brew "neovim"
 brew "node"
 brew "openssl"
