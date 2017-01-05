@@ -13,6 +13,7 @@ brew "ffmpeg", args: [
 ]
 brew "git"
 brew "gnupg2"
+brew "hub"
 brew "neovim"
 brew "node"
 brew "openssl"
