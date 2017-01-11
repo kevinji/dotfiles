@@ -1,4 +1,6 @@
 tap "caskroom/cask"
+
+tap "buo/cask-upgrade"
 tap "neovim/neovim"
 
 cask_args appdir: "/Applications"
