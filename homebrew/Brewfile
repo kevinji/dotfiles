@@ -27,6 +27,8 @@ brew "yarn"
 brew "zsh"
 
 cask "java"
+
+cask "intellij-idea"
 cask "mactex"
 cask "texstudio"
 cask "vagrant"
