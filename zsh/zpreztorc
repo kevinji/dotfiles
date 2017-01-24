@@ -40,6 +40,13 @@ zstyle ':prezto:load' pmodule \
   'prompt'
 
 #
+# Deer
+#
+
+# Set key bindings
+# zstyle ':prezto:module:deer' key-bindings '^k'
+
+#
 # Autosuggestions
 #
 
@@ -54,7 +61,7 @@ zstyle ':prezto:load' pmodule \
 zstyle ':prezto:module:editor' key-bindings 'vi'
 
 # Auto convert .... to ../..
-zstyle ':prezto:module:editor' dot-expansion 'yes'
+# zstyle ':prezto:module:editor' dot-expansion 'yes'
 
 #
 # Git
@@ -140,6 +147,10 @@ zstyle ':prezto:module:syntax-highlighting' highlighters \
 #   'builtin' 'bg=blue' \
 #   'command' 'bg=blue' \
 #   'function' 'bg=blue'
+
+# Set syntax pattern styles.
+# zstyle ':prezto:module:syntax-highlighting' pattern \
+#   'rm*-rf*' 'fg=white,bold,bg=red'
 
 #
 # Terminal
