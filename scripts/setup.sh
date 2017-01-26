@@ -32,5 +32,8 @@ for file in "$dotfiles"/zsh/*; do
     fi
 done
 
+# Clone Tmux Plugin Manager into ~/.tmux/plugins.
+git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+
 echo "Done symlinking files."
 echo
