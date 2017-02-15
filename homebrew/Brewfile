@@ -6,6 +6,7 @@ tap "neovim/neovim"
 cask_args appdir: "/Applications"
 
 brew "android-platform-tools"
+brew "bfg"
 brew "cmake"
 brew "coreutils"
 brew "diff-so-fancy"
