@@ -1,4 +1,6 @@
 # dotfiles
+[![Build Status](https://travis-ci.org/mc10/dotfiles.svg?branch=master)](https://travis-ci.org/mc10/dotfiles)
+
 dotfiles by [@mc10](https://github.com/mc10).
 
 ## Installation
