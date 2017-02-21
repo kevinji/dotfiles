@@ -5,6 +5,7 @@ tap "neovim/neovim"
 
 cask_args appdir: "/Applications"
 
+# Brews
 brew "android-platform-tools"
 brew "bfg"
 brew "cmake"
@@ -17,7 +18,6 @@ brew "ffmpeg", args: [
 brew "git"
 brew "gnupg2"
 brew "hub"
-brew "maven"
 brew "neovim"
 brew "node"
 brew "openssl"
@@ -29,6 +29,13 @@ brew "tmux"
 brew "yarn"
 brew "zsh"
 
+# Ground
+brew "cassandra"
+brew "maven"
+brew "postgresql"
+brew "neo4j"
+
+# Casks
 cask "java"
 
 cask "mactex"
