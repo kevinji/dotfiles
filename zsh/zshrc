@@ -18,7 +18,7 @@ export EDITOR="$VISUAL"
 alias ga="git add"
 alias gfmu="git pull upstream master"
 
-update-python() {
+update_python() {
   pip2 install --upgrade pip
   pip2 freeze --local | grep -v '^\-e' | cut -d = -f 1 | xargs -n1 pip2 install -U
 
@@ -28,3 +28,7 @@ update-python() {
 
 # Alias hub as git
 eval "$(hub alias -s)"
+
+# PostgreSQL
+alias pg_start="pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start"
+alias pg_stop="pg_ctl -D /usr/local/var/postgres stop -s -m fast"
