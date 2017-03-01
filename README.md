@@ -10,3 +10,6 @@ git clone --recursive https://github.com/mc10/dotfiles.git
 ```
 
 Then, run either `scripts/setup-mac.sh` or `scripts/setup.sh`.
+
+## License
+[MIT](LICENSE).
