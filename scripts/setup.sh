@@ -37,3 +37,6 @@ git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
 
 echo "Done symlinking files."
 echo
+echo "Set zsh as your login shell: chsh -s \$(which zsh)"
+echo "You may need to add zsh to /etc/shells."
+echo
