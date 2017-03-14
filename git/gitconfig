@@ -16,3 +16,5 @@
 	enabled = true
 [fetch]
 	prune = true
+[hub]
+	protocol = https
