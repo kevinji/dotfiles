@@ -29,6 +29,9 @@ update_python() {
 # Alias hub as git
 eval "$(hub alias -s)"
 
+# Load rbenv automatically
+eval "$(rbenv init -)"
+
 # PostgreSQL
 alias pg_start="pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start"
 alias pg_stop="pg_ctl -D /usr/local/var/postgres stop -s -m fast"
