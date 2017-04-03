@@ -6,7 +6,6 @@ tap "neovim/neovim"
 cask_args appdir: "/Applications"
 
 # Brews
-brew "android-platform-tools"
 brew "bfg"
 brew "cmake"
 brew "coreutils"
@@ -41,6 +40,7 @@ brew "neo4j"
 # Casks
 cask "java"
 
+cask "android-sdk"
 cask "mactex"
 cask "texstudio"
 cask "vagrant"
