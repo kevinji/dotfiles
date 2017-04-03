@@ -17,7 +17,7 @@ brew "ffmpeg", args: [
 ]
 brew "git"
 brew "git-lfs"
-brew "gnupg2"
+brew "gnupg"
 brew "hub"
 brew "neovim"
 brew "node"
