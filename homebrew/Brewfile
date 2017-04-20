@@ -34,8 +34,9 @@ brew "zsh"
 # Ground
 brew "cassandra"
 brew "maven"
-brew "postgresql"
 brew "neo4j"
+brew "postgresql"
+brew "sbt"
 
 # Casks
 cask "java"
