@@ -40,13 +40,6 @@ zstyle ':prezto:load' pmodule \
   'prompt'
 
 #
-# Deer
-#
-
-# Set key bindings
-# zstyle ':prezto:module:deer' key-bindings '^k'
-
-#
 # Autosuggestions
 #
 
@@ -62,6 +55,9 @@ zstyle ':prezto:module:editor' key-bindings 'vi'
 
 # Auto convert .... to ../..
 # zstyle ':prezto:module:editor' dot-expansion 'yes'
+
+# Allow the zsh prompt context to be shown.
+# zstyle ':prezto:module:editor' ps-context 'yes'
 
 #
 # Git
@@ -105,6 +101,9 @@ zstyle ':prezto:module:git:status:ignore' submodules 'all'
 # Setting it to 'random' loads a random theme.
 # Auto set to 'off' on dumb terminals.
 zstyle ':prezto:module:prompt' theme 'pure'
+
+# Display pwd in long format for themes that use promptpwd function
+# zstyle ':prezto:module:prompt' long-pwd 'yes'
 
 #
 # Ruby
@@ -164,6 +163,9 @@ zstyle ':prezto:module:syntax-highlighting' highlighters \
 
 # Set the tab title format.
 # zstyle ':prezto:module:terminal:tab-title' format '%m: %s'
+
+# Set the terminal multiplexer title format.
+# zstyle ':prezto:module:terminal:multiplexer-title' format '%s'
 
 #
 # Tmux
