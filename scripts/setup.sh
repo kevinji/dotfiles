@@ -14,6 +14,9 @@ for folder in "${folders[@]}"; do
     done
 done
 
+# Symlink pip into ~/.pip.
+ln -s "$dotfiles"/pip "$HOME"/.pip
+
 # Symlink Prezto into ~/.zprezto.
 ln -s "$dotfiles"/zsh/prezto "$HOME"/.zprezto
 
