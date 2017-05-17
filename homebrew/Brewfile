@@ -29,6 +29,7 @@ brew "reattach-to-user-namespace"
 brew "rust"
 brew "the_silver_searcher"
 brew "tmux"
+brew "wine"
 brew "yarn"
 brew "zsh"
 
