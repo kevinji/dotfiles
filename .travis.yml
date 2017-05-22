@@ -1,5 +1,4 @@
 sudo: false
-script:
-  - bash scripts/setup.sh
+script: ./scripts/setup.sh
 notifications:
   email: false
