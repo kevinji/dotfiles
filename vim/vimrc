@@ -24,10 +24,6 @@ set termguicolors
 syntax on
 set background=dark
 
-" Shorter keystrokes for commands
-nnoremap ; :
-nnoremap : ;
-
 " vim-plug
 call plug#begin('~/.vim/plugged')
 
