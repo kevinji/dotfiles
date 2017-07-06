@@ -24,6 +24,15 @@ set termguicolors
 syntax on
 set background=dark
 
+" Make <Leader> more accessible
+let mapleader = ","
+
+" Window keybinds
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
+
 " vim-plug
 call plug#begin('~/.vim/plugged')
 
@@ -34,6 +43,7 @@ Plug 'easymotion/vim-easymotion'
 Plug 'flazz/vim-colorschemes'
 Plug 'fmoralesc/vim-tutor-mode'
 Plug 'godlygeek/tabular'
+Plug 'mileszs/ack.vim'
 Plug 'scrooloose/nerdtree'
 " Plug 'scrooloose/syntastic'
 Plug 'sheerun/vim-polyglot'
@@ -59,6 +69,18 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
+
+" EasyMotion
+map <Leader> <Plug>(easymotion-prefix)
+
+"" JK motions: Line motions
+map <Leader>j <Plug>(easymotion-j)
+map <Leader>k <Plug>(easymotion-k)
+
+" ack.vim
+if executable('ag')
+  let g:ackprg = 'ag --vimgrep'
+endif
 
 " Theme
 let $NVIM_TUI_ENABLE_TRUE_COLOR = 1
