@@ -1,6 +1,7 @@
 tap "caskroom/cask"
 
 tap "buo/cask-upgrade"
+tap "d12frosted/emacs-plus"
 tap "neovim/neovim"
 
 cask_args appdir: "/Applications"
@@ -10,6 +11,7 @@ brew "bfg"
 brew "cmake"
 brew "coreutils"
 brew "diff-so-fancy"
+brew "emacs-plus"
 brew "ffmpeg", args: [
     "with-fdk-aac", "with-freetype", "with-libass", "with-libvorbis",
     "with-libvpx", "with-opus", "with-sdl2", "with-x265"
