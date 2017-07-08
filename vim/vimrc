@@ -37,7 +37,6 @@ nnoremap <C-l> <C-w>l
 call plug#begin('~/.vim/plugged')
 
 Plug 'airblade/vim-gitgutter'
-Plug 'bling/vim-airline'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'easymotion/vim-easymotion'
 Plug 'flazz/vim-colorschemes'
@@ -53,6 +52,7 @@ Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-sleuth'
 Plug 'tpope/vim-surround'
 Plug 'valloric/youcompleteme'
+Plug 'vim-airline/vim-airline'
 
 call plug#end()
 
