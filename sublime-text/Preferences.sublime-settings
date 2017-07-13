@@ -4,11 +4,14 @@
 	"bold_folder_labels": true,
 	"color_scheme": "Packages/Material Theme/schemes/Material-Theme-Darker.tmTheme",
 	"font_face": "Source Code Pro",
+	"font_options":
+	[
+		"subpixel_antialias"
+	],
 	"font_size": 14,
 	"highlight_line": true,
 	"ignored_packages":
 	[
-		"Vintage"
 	],
 	"indent_guide_options":
 	[
@@ -29,5 +32,6 @@
 		80
 	],
 	"soda_classic_tabs": true,
-	"theme": "Material-Theme-Darker.sublime-theme"
+	"theme": "Material-Theme-Darker.sublime-theme",
+	"vintage_start_in_command_mode": true
 }
