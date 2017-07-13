@@ -1,4 +1,5 @@
 sudo: false
+language: shell
 script: ./scripts/setup.sh
 notifications:
   email: false
