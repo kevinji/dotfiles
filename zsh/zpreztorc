@@ -102,8 +102,8 @@ zstyle ':prezto:module:git:status:ignore' submodules 'all'
 # Auto set to 'off' on dumb terminals.
 zstyle ':prezto:module:prompt' theme 'pure'
 
-# Display pwd in long format for themes that use promptpwd function
-# zstyle ':prezto:module:prompt' long-pwd 'yes'
+# Set how themes that use promptpwd function display the pwd, can be 'short', 'long', or 'full'
+# zstyle ':prezto:module:prompt' pwd-length 'short'
 
 #
 # Ruby
@@ -111,6 +111,13 @@ zstyle ':prezto:module:prompt' theme 'pure'
 
 # Auto switch the Ruby version on directory change.
 # zstyle ':prezto:module:ruby:chruby' auto-switch 'yes'
+
+#
+# Python
+#
+
+# Auto switch the Python virtualenv on directory change.
+# zstyle ':prezto:module:python:virtualenv' auto-switch 'yes'
 
 #
 # Screen
@@ -179,3 +186,15 @@ zstyle ':prezto:module:tmux:auto-start' remote 'yes'
 
 # Integrate with iTerm2.
 zstyle ':prezto:module:tmux:iterm' integrate 'yes'
+
+# Set the default session name:
+# zstyle ':prezto:module:tmux:session' name 'YOUR DEFAULT SESSION NAME'
+
+#
+# Utility
+#
+
+# Enabled safe options. This aliases cp, ln, mv and rm so that they prompt
+# before deleting or overwriting files. Set to 'no' to disable this safer
+# behavior.
+# zstyle ':prezto:module:utility' safe-ops 'yes'
