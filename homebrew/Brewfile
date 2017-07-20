@@ -45,7 +45,6 @@ brew "sbt"
 # Casks
 cask "java"
 
-cask "android-sdk"
 cask "iina"
 cask "mactex"
 cask "texstudio"
