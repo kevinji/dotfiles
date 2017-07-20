@@ -1,21 +1,19 @@
 #
 # Executes commands at the start of an interactive session.
 #
-# Authors:
-#   Sorin Ionescu <sorin.ionescu@gmail.com>
-#
 
 # Source Prezto.
 if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 fi
 
-# Customize to your needs...
-alias vim="nvim"
-export VISUAL=vim
-export EDITOR="$VISUAL"
+## Custom modifications
+# Alias hub as git
+alias git="hub"
 
+# Other aliases
 alias ga="git add"
+alias gfu="git fetch upstream"
 alias gfmu="git pull upstream master"
 
 update_python() {
@@ -25,12 +23,6 @@ update_python() {
   pip3 install --upgrade pip
   pip3 freeze --local | grep -v '^\-e' | cut -d = -f 1 | xargs -n1 pip3 install -U
 }
-
-# Alias hub as git
-eval "$(hub alias -s)"
-
-# Load rbenv automatically
-eval "$(rbenv init -)"
 
 # PostgreSQL
 alias pg_start="pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start"
