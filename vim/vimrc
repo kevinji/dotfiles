@@ -43,6 +43,7 @@ Plug 'easymotion/vim-easymotion'
 Plug 'flazz/vim-colorschemes'
 Plug 'fmoralesc/vim-tutor-mode'
 Plug 'godlygeek/tabular'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'mileszs/ack.vim'
 Plug 'scrooloose/nerdtree'
 " Plug 'scrooloose/syntastic'

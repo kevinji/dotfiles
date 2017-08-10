@@ -30,3 +30,10 @@ alias pg_stop="pg_ctl -D /usr/local/var/postgres stop -s -m fast"
 
 # OPAM configuration
 . ~/.opam/opam-init/init.zsh &> /dev/null
+
+# fzf
+# Auto-completion
+[[ $- == *i* ]] && source "/usr/local/opt/fzf/shell/completion.zsh" 2> /dev/null
+
+# Key bindings
+source "/usr/local/opt/fzf/shell/key-bindings.zsh"

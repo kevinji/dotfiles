@@ -76,3 +76,6 @@ fi
 ## Custom modifications
 # Load rbenv automatically
 eval "$(rbenv init -)"
+
+# fzf
+export PATH="$PATH:/usr/local/opt/fzf/bin"
