@@ -15,8 +15,8 @@ fi
 #
 
 alias vim="nvim"
-export EDITOR="vim"
-export VISUAL="vim"
+export EDITOR="nvim"
+export VISUAL="$EDITOR"
 export PAGER="less"
 
 #
