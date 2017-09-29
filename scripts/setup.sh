@@ -1,4 +1,6 @@
 #!/bin/bash
+set -e
+
 # Navigate to the dotfiles/ dir.
 scripts="$(dirname "$BASH_SOURCE")"
 dotfiles="$(cd "$scripts"/.. && pwd)"
@@ -10,7 +12,7 @@ dotfile_folders=(git homebrew spacemacs tmux vim)
 
 for folder in "${dotfile_folders[@]}"; do
     for file in "$dotfiles"/"$folder"/*; do
-        ln -sn "$file" "$HOME"/."$(basename "$file")"
+        ln -sn "$file" "$HOME"/."$(basename "$file")" || true
     done
 done
 
@@ -18,16 +20,16 @@ done
 copy_folders=(pip shell)
 
 for folder in "${copy_folders[@]}"; do
-    ln -sn "$dotfiles"/"$folder" "$HOME"/."$folder"
+    ln -sn "$dotfiles"/"$folder" "$HOME"/."$folder" || true
 done
 
 # Symlink Prezto into ~/.zprezto.
-ln -sn "$dotfiles"/zsh/prezto "$HOME"/.zprezto
+ln -sn "$dotfiles"/zsh/prezto "$HOME"/.zprezto || true
 
 # Symlink Prezto's zsh config files into ~.
 for file in "$dotfiles"/zsh/prezto/runcoms/*; do
     if [[ "$(basename "$file")" != "README.md" ]]; then
-        ln -sn "$file" "$HOME"/."$(basename "$file")"
+        ln -sn "$file" "$HOME"/."$(basename "$file")" || true
     fi
 done
 
@@ -35,12 +37,12 @@ done
 for file in "$dotfiles"/zsh/*; do
     if [[ -f "$file" ]]; then
         rm -f "$HOME"/."$(basename "$file")"
-        ln -sn "$file" "$HOME"/."$(basename "$file")"
+        ln -sn "$file" "$HOME"/."$(basename "$file")" || true
     fi
 done
 
 # Clone Tmux Plugin Manager into ~/.tmux/plugins.
-git clone https://github.com/tmux-plugins/tpm "$HOME"/.tmux/plugins/tpm
+git clone https://github.com/tmux-plugins/tpm "$HOME"/.tmux/plugins/tpm || true
 
 echo "Done symlinking files."
 echo
