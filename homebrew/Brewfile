@@ -19,10 +19,8 @@ brew "tmux"
 # Git and helpers
 brew "git"
 
-brew "bfg"
 brew "diff-so-fancy"
 brew "git-lfs"
-brew "hub"
 
 # Editors
 brew "emacs-plus"
@@ -56,7 +54,6 @@ brew "ffmpeg", args: [
 ]
 brew "gnupg"
 brew "pandoc"
-brew "wine"
 
 ## Casks
 cask "java"
