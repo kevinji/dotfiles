@@ -44,7 +44,7 @@ brew "rust"
 brew "coreutils"
 brew "fzf"
 brew "htop"
-brew "mobile-shell"
+brew "mosh"
 brew "the_silver_searcher"
 
 # Miscellaneous tools
