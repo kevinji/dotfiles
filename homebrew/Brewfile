@@ -9,39 +9,56 @@ tap "neovim/neovim"
 
 cask_args appdir: "/Applications"
 
-# Brews
+## Brews
+# Shell essentials
+brew "zsh"
+
+brew "reattach-to-user-namespace"
+brew "tmux"
+
+# Git and helpers
+brew "git"
+
 brew "bfg"
-brew "coreutils"
 brew "diff-so-fancy"
+brew "git-lfs"
+brew "hub"
+
+# Editors
 brew "emacs-plus"
+brew "neovim"
+
+# Languages and package managers
+brew "python"
+brew "python3"
+
+brew "node"
+brew "yarn"
+
+brew "ocaml"
+brew "opam"
+
+brew "rbenv"
+
+brew "rust"
+
+# Shell niceties
+brew "coreutils"
+brew "fzf"
+brew "htop"
+brew "mobile-shell"
+brew "the_silver_searcher"
+
+# Miscellaneous tools
 brew "ffmpeg", args: [
     "with-fdk-aac", "with-freetype", "with-libass", "with-libvorbis",
     "with-libvpx", "with-opus", "with-sdl2", "with-x265"
 ]
-brew "fzf"
-brew "git"
-brew "git-lfs"
 brew "gnupg"
-brew "htop"
-brew "hub"
-brew "mobile-shell"
-brew "neovim"
-brew "node"
-brew "ocaml"
-brew "opam"
 brew "pandoc"
-brew "python"
-brew "python3"
-brew "rbenv"
-brew "reattach-to-user-namespace"
-brew "rust"
-brew "the_silver_searcher"
-brew "tmux"
 brew "wine"
-brew "yarn"
-brew "zsh"
 
-# Casks
+## Casks
 cask "java"
 
 cask "iina"
