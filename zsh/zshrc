@@ -8,9 +8,6 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
 fi
 
 ## Custom modifications
-# Alias hub as git
-alias git="hub"
-
 # Other aliases
 alias ga="git add"
 alias gfu="git fetch upstream"
