@@ -1,5 +1,6 @@
 tap "caskroom/cask"
 
+tap "homebrew/science"
 tap "homebrew/services"
 
 tap "beeftornado/rmtree"
@@ -53,6 +54,7 @@ brew "ffmpeg", args: [
     "with-libvpx", "with-opus", "with-sdl2", "with-x265"
 ]
 brew "gnupg"
+brew "openblas"
 brew "pandoc"
 
 ## Casks
