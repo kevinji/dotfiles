@@ -8,6 +8,9 @@ dotfiles="$(cd "$scripts"/.. && pwd)"
 # Run general scripts.
 "$dotfiles"/scripts/setup.sh
 
+# Xcode CLT
+xcode-select --install || true
+
 # Homebrew
 echo "Installing Homebrew..."
 
