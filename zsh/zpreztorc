@@ -31,6 +31,7 @@ zstyle ':prezto:load' pmodule \
   'completion' \
   'git' \
   'osx' \
+  'ssh' \
   'tmux' \
   'syntax-highlighting' \
   'history-substring-search' \
