@@ -13,8 +13,6 @@ cask_args appdir: "/Applications"
 ## Brews
 # Shell essentials
 brew "zsh"
-
-brew "reattach-to-user-namespace"
 brew "tmux"
 
 # Git and helpers
