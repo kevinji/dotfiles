@@ -62,7 +62,6 @@ cask "java"
 
 cask "iina"
 cask "mactex"
-cask "processing"
 cask "texstudio"
 cask "vagrant"
 cask "xquartz"
