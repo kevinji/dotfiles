@@ -41,6 +41,7 @@ brew "rust"
 
 # Shell niceties
 brew "coreutils"
+brew "fd"
 brew "fzf"
 brew "htop"
 brew "mosh"
