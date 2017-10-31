@@ -79,3 +79,7 @@ eval "$(rbenv init -)"
 
 # fzf
 export PATH="$PATH:/usr/local/opt/fzf/bin"
+
+# ls formatting options
+export BLOCK_SIZE="'1"       # Thousands separator for sizes
+export TIME_STYLE="long-iso" # ISO 8601 datetimes
