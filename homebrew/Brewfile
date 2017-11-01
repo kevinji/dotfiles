@@ -46,9 +46,7 @@ brew "fzf"
 brew "htop"
 brew "mosh"
 brew "rename"
-
 brew "ripgrep"
-brew "the_silver_searcher"
 
 # Miscellaneous tools
 brew "ffmpeg", args: [
