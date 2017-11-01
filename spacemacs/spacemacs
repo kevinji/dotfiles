@@ -48,8 +48,8 @@ values."
             shell-default-position 'bottom)
      ;; spell-checking
      ;; syntax-checking
-     ;; ivy
      version-control
+     ;; ivy
      osx
      javascript
      html
