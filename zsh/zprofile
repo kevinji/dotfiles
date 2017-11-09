@@ -14,8 +14,13 @@ fi
 # Editors
 #
 
-alias vim="nvim"
-export EDITOR="nvim"
+if [[ -x "$(command -v nvim)" ]]; then
+  alias vim="nvim"
+  export EDITOR="nvim"
+else
+  export EDITOR="vim"
+fi
+
 export VISUAL="$EDITOR"
 export PAGER="less"
 
@@ -75,7 +80,9 @@ fi
 
 ## Custom modifications
 # Load rbenv automatically
-eval "$(rbenv init -)"
+if [[ -x "$(command -v rbenv)" ]]; then
+  eval "$(rbenv init -)"
+fi
 
 # fzf
 export PATH="$PATH:/usr/local/opt/fzf/bin"
