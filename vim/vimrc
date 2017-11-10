@@ -16,6 +16,7 @@ set incsearch
 set hlsearch
 set mouse=a
 set lazyredraw
+set noshowmode
 set noerrorbells
 set novisualbell
 set nobackup
