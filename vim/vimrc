@@ -10,7 +10,6 @@ set ruler
 set number
 set showcmd
 set showmatch
-set showmode
 set ignorecase
 set smartcase
 set incsearch
@@ -40,24 +39,30 @@ inoremap jk <Esc>
 " vim-plug
 call plug#begin('~/.vim/plugged')
 
+Plug 'tpope/vim-sensible'
+
 Plug 'airblade/vim-gitgutter'
 Plug 'easymotion/vim-easymotion'
-Plug 'flazz/vim-colorschemes'
 Plug 'fmoralesc/vim-tutor-mode'
 Plug 'godlygeek/tabular'
 Plug '/usr/local/opt/fzf'
 Plug 'junegunn/fzf.vim'
+Plug 'kristijanhusak/vim-hybrid-material'
 Plug 'scrooloose/nerdtree'
 Plug 'sheerun/vim-polyglot'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-repeat'
-Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-sleuth'
 Plug 'tpope/vim-surround'
 Plug 'valloric/youcompleteme'
 Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 
 call plug#end()
+
+" Theme
+colorscheme hybrid_material
+let g:airline_theme = "tomorrow"
 
 " EasyMotion
 map <Leader> <Plug>(easymotion-prefix)
@@ -65,7 +70,3 @@ map <Leader> <Plug>(easymotion-prefix)
 "" JK motions: Line motions
 map <Leader>j <Plug>(easymotion-j)
 map <Leader>k <Plug>(easymotion-k)
-
-" Theme
-let $NVIM_TUI_ENABLE_TRUE_COLOR = 1
-colorscheme material
