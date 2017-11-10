@@ -79,6 +79,9 @@ if [[ ! -d "${TMPDIR}" ]]; then
 fi
 
 ## Custom modifications
+# Local changes
+[[ -f "$HOME/.zprofile-local" ]] && source "$HOME/.zprofile-local"
+
 # Load rbenv automatically
 if [[ -x "$(command -v rbenv)" ]]; then
   eval "$(rbenv init -)"
@@ -90,3 +93,9 @@ export PATH="$PATH:/usr/local/opt/fzf/bin"
 # ls formatting options
 export BLOCK_SIZE="'1"       # Thousands separator for sizes
 export TIME_STYLE="long-iso" # ISO 8601 datetimes
+
+# Node.js
+if [[ "$NO_SUDO" = "true" ]]; then
+  export NPM_CONFIG_PREFIX="$HOME/.npm-global"
+  export PATH="$PATH:$NPM_CONFIG_PREFIX/bin"
+fi
