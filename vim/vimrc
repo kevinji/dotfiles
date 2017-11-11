@@ -44,7 +44,6 @@ Plug 'tpope/vim-sensible'
 
 Plug 'airblade/vim-gitgutter'
 Plug 'easymotion/vim-easymotion'
-Plug 'fmoralesc/vim-tutor-mode'
 Plug 'godlygeek/tabular'
 Plug '/usr/local/opt/fzf'
 Plug 'junegunn/fzf.vim'
