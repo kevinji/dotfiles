@@ -88,14 +88,24 @@ if [[ -x "$(command -v rbenv)" ]]; then
 fi
 
 # fzf
-export PATH="$PATH:/usr/local/opt/fzf/bin"
+if [[ -d "/usr/local/opt/fzf" ]]; then
+  export PATH="$PATH:/usr/local/opt/fzf/bin"
+fi
+
+if [[ -x "$(command -v fd)" ]]; then
+  export FZF_DEFAULT_COMMAND="fd . $HOME"
+  export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
+  export FZF_ALT_C_COMMAND="fd -t d . $HOME"
+fi
 
 # ls formatting options
 export BLOCK_SIZE="'1"       # Thousands separator for sizes
 export TIME_STYLE="long-iso" # ISO 8601 datetimes
 
-# Node.js
 if [[ "$NO_SUDO" = "true" ]]; then
-  export NPM_CONFIG_PREFIX="$HOME/.npm-global"
-  export PATH="$PATH:$NPM_CONFIG_PREFIX/bin"
+  # Node.js
+  if [[ -x "$(command -v npm)" ]]; then
+    export NPM_CONFIG_PREFIX="$HOME/.npm-global"
+    export PATH="$PATH:$NPM_CONFIG_PREFIX/bin"
+  fi
 fi
