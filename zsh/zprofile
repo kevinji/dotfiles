@@ -14,7 +14,7 @@ fi
 # Editors
 #
 
-if [[ -x "$(command -v nvim)" ]]; then
+if (( $+commands[nvim] )); then
   alias vim="nvim"
   export EDITOR="nvim"
 else
@@ -82,29 +82,29 @@ fi
 # Local changes
 [[ -f "$HOME/.zprofile-local" ]] && source "$HOME/.zprofile-local"
 
-# Load rbenv automatically
-if [[ -x "$(command -v rbenv)" ]]; then
-  eval "$(rbenv init -)"
-fi
-
 # fzf
 if [[ -d "/usr/local/opt/fzf" ]]; then
   export PATH="$PATH:/usr/local/opt/fzf/bin"
 fi
 
-if [[ -x "$(command -v fd)" ]]; then
+if (( $+commands[fd] )); then
   export FZF_DEFAULT_COMMAND="fd . $HOME"
   export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
   export FZF_ALT_C_COMMAND="fd -t d . $HOME"
 fi
 
-# ls formatting options
+# (GNU) ls formatting options
 export BLOCK_SIZE="'1"       # Thousands separator for sizes
 export TIME_STYLE="long-iso" # ISO 8601 datetimes
 
+# Load rbenv automatically
+if (( $+commands[rbenv] )); then
+  eval "$(rbenv init -)"
+fi
+
 if [[ "$NO_SUDO" = "true" ]]; then
-  # Node.js
-  if [[ -x "$(command -v npm)" ]]; then
+  # npm
+  if (( $+commands[npm] )); then
     export NPM_CONFIG_PREFIX="$HOME/.npm-global"
     export PATH="$PATH:$NPM_CONFIG_PREFIX/bin"
   fi
