@@ -70,3 +70,12 @@ map <Leader> <Plug>(easymotion-prefix)
 "" JK motions: Line motions
 map <Leader>j <Plug>(easymotion-j)
 map <Leader>k <Plug>(easymotion-k)
+
+" Opam
+if executable('opam')
+  let g:opamshare = substitute(system('opam config var share'),'\n$','','''')
+  execute "set rtp+=" . g:opamshare . "/merlin/vim"
+
+  " Run this line for documentation:
+  " :execute "helptags " . g:opamshare . "/merlin/vim/doc"
+endif

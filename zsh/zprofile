@@ -102,6 +102,11 @@ if (( $+commands[rbenv] )); then
   eval "$(rbenv init -)"
 fi
 
+# Opam
+if (( $+commands[opam] )); then
+  eval "$(opam config env)"
+fi
+
 if [[ "$NO_SUDO" = "true" ]]; then
   # npm
   if (( $+commands[npm] )); then
