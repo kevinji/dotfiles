@@ -17,7 +17,7 @@ for folder in "${dotfile_folders[@]}"; do
 done
 
 # Symlink every dot-FOLDER into ~/.FOLDER.
-copy_folders=(pip shell)
+copy_folders=(pip ptpython shell)
 
 for folder in "${copy_folders[@]}"; do
     ln -sn "$dotfiles"/"$folder" "$HOME"/."$folder" || true
