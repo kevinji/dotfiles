@@ -25,6 +25,9 @@ set termguicolors
 syntax on
 set background=dark
 
+" Use the system clipboard, if possible
+set clipboard^=unnamedplus,unnamed
+
 " Make <Leader> more accessible
 let mapleader = ","
 
