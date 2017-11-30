@@ -7,7 +7,14 @@ if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
 fi
 
-## Custom modifications
+## Interactive shell variables
+# Delay of zsh key sequences (like Esc), in 10 ms units
+KEYTIMEOUT=1
+
+# (GNU) ls formatting options
+BLOCK_SIZE="'1"       # Thousands separator for sizes
+TIME_STYLE="long-iso" # ISO 8601 datetimes
+
 # Other aliases
 alias ga="git add"
 alias gfu="git fetch upstream"
@@ -35,6 +42,7 @@ reload_tmux() {
   tmux source-file "$HOME/.tmux.conf"
 }
 
+## Custom programs
 # PostgreSQL
 alias pg_start="pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start"
 alias pg_stop="pg_ctl -D /usr/local/var/postgres stop -s -m fast"

@@ -78,10 +78,10 @@ if [[ ! -d "${TMPDIR}" ]]; then
   mkdir -m 700 "${TMPDIR}"
 fi
 
-## Custom modifications
-# Local changes
+## Local changes
 [[ -f "$HOME/.zprofile-local" ]] && source "$HOME/.zprofile-local"
 
+## Custom programs
 # fzf
 if [[ -d "/usr/local/opt/fzf" ]]; then
   export PATH="$PATH:/usr/local/opt/fzf/bin"
@@ -92,10 +92,6 @@ if (( $+commands[fd] )); then
   export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
   export FZF_ALT_C_COMMAND="fd -t d . $HOME"
 fi
-
-# (GNU) ls formatting options
-export BLOCK_SIZE="'1"       # Thousands separator for sizes
-export TIME_STYLE="long-iso" # ISO 8601 datetimes
 
 # Load rbenv automatically
 if (( $+commands[rbenv] )); then
