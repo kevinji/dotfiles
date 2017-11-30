@@ -3,6 +3,8 @@ tap "caskroom/cask"
 tap "homebrew/science"
 tap "homebrew/services"
 
+tap "caskroom/fonts"
+
 tap "beeftornado/rmtree"
 tap "buo/cask-upgrade"
 tap "d12frosted/emacs-plus"
@@ -59,6 +61,8 @@ brew "pandoc"
 
 ## Casks
 cask "java"
+
+cask "font-fira-code"
 
 cask "iina"
 cask "mactex"
