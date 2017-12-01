@@ -20,7 +20,10 @@ set noshowmode
 set noerrorbells
 set novisualbell
 set nobackup
-set termguicolors
+
+if has('termguicolors')
+  set termguicolors
+endif
 
 syntax on
 set background=dark
