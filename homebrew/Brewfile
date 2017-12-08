@@ -4,6 +4,7 @@ tap "homebrew/science"
 tap "homebrew/services"
 
 tap "caskroom/fonts"
+tap "caskroom/versions"
 
 tap "beeftornado/rmtree"
 tap "buo/cask-upgrade"
@@ -66,11 +67,29 @@ cask "xquartz"
 
 cask "font-fira-code"
 
-# Programming
+# Programming tools
 cask "insomnia"
+cask "iterm2"
 cask "vagrant"
 
-# Other
-cask "iina"
+# Editors
+cask "intellij-idea"
+cask "sublime-text"
+
+# Utilities
+cask "alfred"
+cask "appcleaner"
+cask "bartender"
+cask "scroll-reverser"
+cask "spectacle"
+
+# Applications
 cask "mactex"
 cask "texstudio"
+
+cask "discord"
+cask "iina"
+cask "private-internet-access"
+cask "slack"
+cask "spotify"
+cask "transmission"
