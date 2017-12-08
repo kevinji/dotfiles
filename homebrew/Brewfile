@@ -60,12 +60,17 @@ brew "openblas"
 brew "pandoc"
 
 ## Casks
+# Essentials
 cask "java"
+cask "xquartz"
 
 cask "font-fira-code"
 
+# Programming
+cask "insomnia"
+cask "vagrant"
+
+# Other
 cask "iina"
 cask "mactex"
 cask "texstudio"
-cask "vagrant"
-cask "xquartz"
