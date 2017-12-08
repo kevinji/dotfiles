@@ -15,6 +15,9 @@ tap "neovim/neovim"
 cask_args appdir: "/Applications"
 
 ## Brews
+# macOS App Store
+brew "mas"
+
 # Shell essentials
 brew "zsh"
 brew "tmux"
@@ -100,3 +103,13 @@ cask "private-internet-access"
 cask "slack"
 cask "spotify"
 cask "transmission"
+
+## macOS applications
+mas "Xcode", id: 497799835
+
+mas "DaisyDisk", id: 411643860
+mas "Deliveries", id: 924726344
+mas "Fantastical 2", id: 975937182
+mas "Microsoft OneNote", id: 784801555
+mas "The Unarchiver", id: 425424353
+mas "Wunderlist", id: 410628904
