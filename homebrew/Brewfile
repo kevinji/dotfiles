@@ -63,6 +63,7 @@ brew "ffmpeg", args: [
 brew "gnupg"
 brew "openblas"
 brew "pandoc"
+brew "pngquant"
 
 ## Casks
 # Essentials
