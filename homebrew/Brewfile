@@ -80,6 +80,7 @@ cask "vagrant"
 # Editors
 cask "intellij-idea"
 cask "sublime-text"
+cask "visual-studio-code"
 
 # Utilities
 cask "alfred"
