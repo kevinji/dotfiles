@@ -54,6 +54,7 @@ brew "htop"
 brew "mosh"
 brew "rename"
 brew "ripgrep"
+brew "tldr"
 
 # Miscellaneous tools
 brew "ffmpeg", args: [
