@@ -1,27 +1,23 @@
 [include]
 	path = ~/.gitconfig-local
 [core]
-	excludesfile = ~/.gitignore-global
+	excludesFile = ~/.gitignore-global
 	pager = diff-so-fancy | less --tabs=4 -RFX
-[push]
-	default = simple
-[rebase]
-	autostash = true
-[merge]
-	conflictstyle = diff3
-[diff]
-	compactionHeuristic = true
-[rerere]
-	enabled = true
 [fetch]
 	prune = true
-[hub]
-	protocol = https
-[filter "lfs"]
-	clean = git-lfs clean -- %f
-	smudge = git-lfs smudge -- %f
-	process = git-lfs filter-process
-	required = true
+[push]
+	default = simple
+[commit]
+	verbose = true
+[rebase]
+	autoStash = true
+[merge]
+	conflictStyle = diff3
+[rerere]
+	autoUpdate = true
+	enabled = true
+[diff]
+	compactionHeuristic = true
 [color]
 	ui = true
 [color "diff-highlight"]
@@ -36,3 +32,10 @@
 	old = red bold
 	new = green bold
 	whitespace = red reverse
+[hub]
+	protocol = https
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
