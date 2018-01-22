@@ -31,8 +31,8 @@ brew "emacs-plus"
 brew "neovim"
 
 # Languages and package managers
-brew "python"
-brew "python3"
+brew "python@2"
+brew "python@3"
 
 brew "node"
 brew "yarn"
