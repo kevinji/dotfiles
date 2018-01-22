@@ -1,0 +1,42 @@
+{
+    "editor.fontSize": 14,
+    "editor.fontFamily": "'Source Code Pro'",
+    "search.useRipgrep": true,
+
+    "materialTheme.cache.workbench.settings": {
+        "themeColours": "Default"
+    },
+
+    "terminal.external.osxExec": "iTerm.app",
+
+    "eslint.packageManager": "yarn",
+
+    "python.pythonPath": "python3",
+    "python.venvPath": "~/.virtualenvs",
+
+    "vim.leader": "<space>",
+    "vim.insertModeKeyBindings": [
+        {
+            "before": ["j", "k"],
+            "after": ["<esc>"]
+        }
+    ],
+    "vim.useSystemClipboard": true,
+    "vim.enableNeovim": true,
+    "vim.neovimPath": "/usr/local/bin/nvim",
+
+    "workbench.iconTheme": "vscode-icons",
+
+    "gitlens.blame.line.enabled": false,
+    "gitlens.codeLens.enabled": false,
+    "gitlens.advanced.messages": {
+        "suppressCommitHasNoPreviousCommitWarning": false,
+        "suppressCommitNotFoundWarning": false,
+        "suppressFileNotUnderSourceControlWarning": false,
+        "suppressGitVersionWarning": false,
+        "suppressLineUncommittedWarning": false,
+        "suppressNoRepositoryWarning": false,
+        "suppressUpdateNotice": false,
+        "suppressWelcomeNotice": true
+    }
+}
