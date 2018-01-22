@@ -9,7 +9,6 @@ tap "caskroom/versions"
 tap "beeftornado/rmtree"
 tap "buo/cask-upgrade"
 tap "d12frosted/emacs-plus"
-tap "neovim/neovim"
 
 cask_args appdir: "/Applications"
 
