@@ -69,7 +69,13 @@ brew "pngquant"
 cask "java"
 cask "xquartz"
 
+# Fonts
 cask "font-fira-code"
+cask "font-hack"
+cask "font-inconsolata"
+cask "font-montserrat"
+cask "font-open-sans"
+cask "font-source-code-pro"
 
 # Programming tools
 cask "insomnia"
