@@ -1,5 +1,3 @@
-[include]
-	path = ~/.gitconfig-local
 [core]
 	excludesFile = ~/.gitignore-global
 	pager = diff-so-fancy | $PAGER
@@ -39,3 +37,5 @@
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
 	required = true
+[include]
+	path = ~/.gitconfig-local
