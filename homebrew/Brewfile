@@ -53,6 +53,7 @@ brew "mosh"
 brew "rename"
 brew "ripgrep"
 brew "tldr"
+brew "wget"
 
 # Miscellaneous tools
 brew "ffmpeg", args: [
