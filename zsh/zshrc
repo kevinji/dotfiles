@@ -12,8 +12,8 @@ fi
 KEYTIMEOUT=1
 
 # (GNU) ls formatting options
-BLOCK_SIZE="'1"       # Thousands separator for sizes
-TIME_STYLE="long-iso" # ISO 8601 datetimes
+export BLOCK_SIZE="'1"       # Thousands separator for sizes
+export TIME_STYLE="long-iso" # ISO 8601 datetimes
 
 # Other aliases
 alias ga="git add"
