@@ -85,14 +85,12 @@ cask "vagrant"
 
 # Editors
 cask "intellij-idea"
-cask "sublime-text"
 cask "visual-studio-code"
 
 # Utilities
 cask "alfred"
 cask "appcleaner"
 cask "bartender"
-cask "karabiner-elements"
 cask "scroll-reverser"
 cask "spectacle"
 cask "steelseries-exactmouse-tool"
@@ -106,7 +104,6 @@ cask "mactex"
 cask "texstudio"
 
 cask "adobe-creative-cloud"
-cask "discord"
 cask "dropbox"
 cask "evernote"
 cask "iina"
