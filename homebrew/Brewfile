@@ -32,7 +32,7 @@ brew "neovim"
 
 # Languages and package managers
 brew "python@2"
-brew "python@3"
+brew "python"
 
 brew "node"
 brew "yarn"
