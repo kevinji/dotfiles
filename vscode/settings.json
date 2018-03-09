@@ -11,6 +11,9 @@
 
     "eslint.packageManager": "yarn",
 
+    // Disable for Flow
+    "javascript.validate.enable": false,
+
     "python.pythonPath": "python3",
     "python.venvPath": "~/.virtualenvs",
 
@@ -27,7 +30,11 @@
 
     "workbench.iconTheme": "vscode-icons",
 
-    "gitlens.blame.line.enabled": false,
+    "gitlens.blame.highlight.locations": [
+        "gutter",
+        "line",
+        "overview"
+    ],
     "gitlens.codeLens.enabled": false,
     "gitlens.currentLine.enabled": false,
     "gitlens.hovers.currentLine.enabled": false,
@@ -40,6 +47,6 @@
         "suppressNoRepositoryWarning": false,
         "suppressUpdateNotice": false,
         "suppressWelcomeNotice": true
-    }
+    },
+    "gitlens.keymap": "alternate"
 }
-
