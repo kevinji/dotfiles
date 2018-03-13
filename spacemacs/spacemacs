@@ -53,10 +53,15 @@ This function should only modify configuration layer settings."
      ;; spell-checking
      syntax-checking
      version-control
-     ;; ivy
+
+     ;; Useful
+     colors
      osx
-     javascript
+     ;; ivy
+
+     ;; Languages
      html
+     javascript
      yaml
      ocaml
      python
@@ -69,7 +74,11 @@ This function should only modify configuration layer settings."
    ;; To use a local version of a package, use the `:location' property:
    ;; '(your-package :location "~/path/to/your-package/")
    ;; Also include the dependencies as they will not be resolved automatically.
-   dotspacemacs-additional-packages '(editorconfig)
+   dotspacemacs-additional-packages
+   '(
+     doom-themes
+     editorconfig
+     )
 
    ;; A list of packages that cannot be updated.
    dotspacemacs-frozen-packages '()
@@ -173,8 +182,8 @@ It should only modify the values of Spacemacs settings."
    ;; List of themes, the first of the list is loaded when spacemacs starts.
    ;; Press `SPC T n' to cycle to the next theme in the list (works great
    ;; with 2 themes variants, one dark and one light)
-   dotspacemacs-themes '(spacemacs-dark
-                         spacemacs-light)
+   dotspacemacs-themes '(doom-one
+                         doom-dracula)
 
    ;; Set the theme for the Spaceline. Supported themes are `spacemacs',
    ;; `all-the-icons', `custom', `vim-powerline' and `vanilla'. The first three
@@ -464,6 +473,9 @@ before packages are loaded."
 
   ;; Enable EditorConfig.
   (editorconfig-mode 1)
+
+  ;; Enable rainbow-mode for CSS.
+  (add-hook 'css-mode-hook 'rainbow-mode)
 
   ;; Load custom-file if it exists.
   (when (file-exists-p custom-file)
