@@ -441,7 +441,10 @@ This function is called immediately after `dotspacemacs/init', before layer
 configuration.
 It is mostly for variables that should be set before packages are loaded.
 If you are unsure, try setting them in `dotspacemacs/user-config' first."
-  )
+  (setq
+   ;; Dump generated custom settings elsewhere.
+   ;; https://github.com/syl20bnr/spacemacs/issues/7891
+   custom-file (expand-file-name "custom.el" spacemacs-cache-directory)))
 
 (defun dotspacemacs/user-config ()
   "Configuration for user code:
@@ -449,31 +452,19 @@ This function is called at the very end of Spacemacs startup, after layer
 configuration.
 Put your configuration code here, except for variables that should be set
 before packages are loaded."
-  (editorconfig-mode 1)
-  (setq-default evil-escape-key-sequence "jk")
-  (setq-default create-lockfiles nil)
-  ;; https://emacs.stackexchange.com/a/15054
-  (fset 'evil-visual-update-x-selection 'ignore))
+  (setq-default
+   ;; Map `jk' to `ESC'.
+   evil-escape-key-sequence "jk"
 
-;; Do not write anything past this comment. This is where Emacs will
-;; auto-generate custom variable definitions.
-(defun dotspacemacs/emacs-custom-settings ()
-  "Emacs custom settings.
-This is an auto-generated function, do not modify its content directly, use
-Emacs customize menu instead.
-This function is called at the very end of Spacemacs initialization."
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(package-selected-packages
-   (quote
-    (web-mode hy-mode ace-link counsel smartparens flycheck company helm helm-core ghub dash yasnippet use-package yasnippet-snippets yapfify yaml-mode xterm-color ws-butler winum which-key web-beautify volatile-highlights vi-tilde-fringe uuidgen utop unfill tuareg toc-org tagedit symon swiper string-inflection spaceline-all-the-icons smeargle slim-mode shell-pop scss-mode sass-mode reveal-in-osx-finder restart-emacs rainbow-delimiters pyvenv pytest pyenv-mode py-isort pug-mode popwin pippel pipenv pip-requirements persp-mode pcre2el pbcopy password-generator paradox overseer osx-trash osx-dictionary org-plus-contrib org-bullets open-junk-file ocp-indent neotree nameless mwim multi-term move-text mmm-mode markdown-toc magit-gitflow macrostep lorem-ipsum livid-mode live-py-mode linum-relative link-hint less-css-mode launchctl json-mode js2-refactor js-doc indent-guide importmagic impatient-mode hungry-delete hl-todo highlight-parentheses highlight-numbers highlight-indentation helm-xref helm-themes helm-swoop helm-pydoc helm-purpose helm-projectile helm-mode-manager helm-make helm-gitignore helm-flx helm-descbinds helm-css-scss helm-company helm-c-yasnippet helm-ag google-translate golden-ratio gitconfig-mode gitattributes-mode git-timemachine git-messenger git-link git-gutter-fringe git-gutter-fringe+ gh-md fuzzy font-lock+ flycheck-pos-tip flycheck-ocaml flx-ido fill-column-indicator fancy-battery eyebrowse expand-region exec-path-from-shell evil-visualstar evil-visual-mark-mode evil-unimpaired evil-tutor evil-surround evil-search-highlight-persist evil-numbers evil-nerd-commenter evil-mc evil-matchit evil-magit evil-lisp-state evil-lion evil-indent-plus evil-iedit-state evil-exchange evil-escape evil-ediff evil-cleverparens evil-args evil-anzu eval-sexp-fu eshell-z eshell-prompt-extras esh-help emmet-mode elisp-slime-nav editorconfig dumb-jump diminish diff-hl cython-mode counsel-projectile company-web company-tern company-statistics company-anaconda column-enforce-mode coffee-mode clean-aindent-mode centered-cursor-mode browse-at-remote bind-key auto-yasnippet auto-highlight-symbol auto-compile aggressive-indent adaptive-wrap ace-window ace-jump-helm-line ac-ispell))))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- )
-)
+   ;; Disable Emacs lock files.
+   create-lockfiles nil)
+
+  ;; https://emacs.stackexchange.com/a/15054
+  (fset 'evil-visual-update-x-selection 'ignore)
+
+  ;; Enable EditorConfig.
+  (editorconfig-mode 1)
+
+  ;; Load custom-file if it exists.
+  (when (file-exists-p custom-file)
+    (load-file custom-file)))
