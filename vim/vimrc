@@ -34,6 +34,9 @@ set clipboard^=unnamedplus,unnamed
 " Make <Leader> more accessible
 let mapleader = " "
 
+" Remap Y to y$
+nnoremap Y y$
+
 " Window keybinds
 nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
