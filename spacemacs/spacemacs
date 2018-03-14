@@ -58,6 +58,8 @@ This function should only modify configuration layer settings."
      colors
      osx
      ivy
+     (evil-snipe :variables
+                 evil-snipe-enable-alternate-f-and-t-behaviors t)
 
      ;; Languages
      html
