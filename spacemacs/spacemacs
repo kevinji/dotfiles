@@ -81,6 +81,7 @@ This function should only modify configuration layer settings."
      all-the-icons
      doom-themes
      editorconfig
+     olivetti
      )
 
    ;; A list of packages that cannot be updated.
@@ -467,6 +468,9 @@ before packages are loaded."
    ;; Map `jk' to `ESC'.
    evil-escape-key-sequence "jk"
 
+   ;; Make `olivetti' wider.
+   olivetti-body-width 100
+
    ;; Disable Emacs lock files.
    create-lockfiles nil)
 
@@ -487,6 +491,9 @@ before packages are loaded."
 
   ;; Enable rainbow-mode for CSS.
   (add-hook 'css-mode-hook 'rainbow-mode)
+
+  ;; Replace `spacemacs-centered-buffer-mode' with `olivetti'.
+  (spacemacs/set-leader-keys "wc" 'olivetti-mode)
 
   ;; Load custom-file if it exists.
   (when (file-exists-p custom-file)
