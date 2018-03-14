@@ -7,7 +7,6 @@ set expandtab
 set smarttab
 set autoindent
 set ruler
-set number
 set showcmd
 set showmatch
 set ignorecase
@@ -20,6 +19,10 @@ set noshowmode
 set noerrorbells
 set novisualbell
 set nobackup
+
+" Hybrid line numbers
+set number
+set relativenumber
 
 if has('termguicolors')
   set termguicolors
