@@ -21,11 +21,15 @@ alias gfu="git fetch upstream"
 alias gfmu="git pull upstream master"
 
 update_python() {
-  pip2 install --upgrade pip
-  pip2 freeze --local | grep -v '^\-e' | cut -d = -f 1 | xargs -n1 pip2 install -U
+  if (( $+commands[pip2] )); then
+    pip2 install --upgrade pip
+    pip2 freeze --local | grep -v '^\-e' | cut -d = -f 1 | xargs -n1 pip2 install -U
+  fi
 
-  pip3 install --upgrade pip
-  pip3 freeze --local | grep -v '^\-e' | cut -d = -f 1 | xargs -n1 pip3 install -U
+  if (( $+commands[pip3] )); then
+    pip3 install --upgrade pip
+    pip3 freeze --local | grep -v '^\-e' | cut -d = -f 1 | xargs -n1 pip3 install -U
+  fi
 }
 
 update_vim() {
