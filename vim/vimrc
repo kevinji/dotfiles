@@ -46,6 +46,10 @@ nnoremap <C-l> <C-w>l
 " jk to escape
 inoremap jk <Esc>
 
+" Keep the current visual block selection active after shifting
+vmap > >gv
+vmap < <gv
+
 " vim-plug
 call plug#begin('~/.vim/plugged')
 
