@@ -471,6 +471,9 @@ before packages are loaded."
    ;; Make `olivetti' wider.
    olivetti-body-width 100
 
+   ;; Disable trailing comma warnings for `js2-mode'.
+   js2-strict-trailing-comma-warning nil
+
    ;; Disable Emacs lock files.
    create-lockfiles nil)
 
