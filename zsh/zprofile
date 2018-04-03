@@ -84,7 +84,7 @@ fi
 ## Custom programs
 # fzf
 if [[ -d "/usr/local/opt/fzf" ]]; then
-  export PATH="$PATH:/usr/local/opt/fzf/bin"
+  path+=("/usr/local/opt/fzf/bin")
 fi
 
 if (( $+commands[fd] )); then
@@ -107,6 +107,6 @@ if [[ "$NO_SUDO" = "true" ]]; then
   # npm
   if (( $+commands[npm] )); then
     export NPM_CONFIG_PREFIX="$HOME/.npm-global"
-    export PATH="$PATH:$NPM_CONFIG_PREFIX/bin"
+    path+=("$NPM_CONFIG_PREFIX/bin")
   fi
 fi
