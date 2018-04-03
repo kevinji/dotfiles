@@ -2,6 +2,9 @@
 # Executes commands at the start of an interactive session.
 #
 
+# Profile loading time.
+# zmodload zsh/zprof
+
 # Source Prezto.
 if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
   source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
@@ -59,3 +62,6 @@ if [[ -d "/usr/local/opt/fzf" ]]; then
   # Key bindings
   source "/usr/local/opt/fzf/shell/key-bindings.zsh"
 fi
+
+# Display profiled loading time.
+# zprof
