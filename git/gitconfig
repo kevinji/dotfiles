@@ -15,7 +15,7 @@
 	autoUpdate = true
 	enabled = true
 [diff]
-	compactionHeuristic = true
+	indentHeuristic = true
 [color]
 	ui = true
 [color "diff-highlight"]
