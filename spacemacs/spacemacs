@@ -78,9 +78,10 @@ This function should only modify configuration layer settings."
      ;; Languages
      html
      javascript
-     yaml
      ocaml
      python
+     rust
+     yaml
      )
 
    ;; List of additional packages that will be installed without being
