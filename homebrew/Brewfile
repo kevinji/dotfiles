@@ -42,7 +42,7 @@ brew "opam"
 
 brew "rbenv"
 
-brew "rust"
+brew "rustup-init"
 
 # Shell niceties
 brew "coreutils"
