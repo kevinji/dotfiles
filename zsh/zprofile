@@ -110,3 +110,7 @@ if [[ "$NO_SUDO" = "true" ]]; then
     path+=("$NPM_CONFIG_PREFIX/bin")
   fi
 fi
+
+if [[ -d "$HOME/.cargo" ]]; then
+  path+=("$HOME/.cargo/bin")
+fi
