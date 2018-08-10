@@ -111,6 +111,10 @@ if [[ "$NO_SUDO" = "true" ]]; then
   fi
 fi
 
+# Set up after `rustup-init`:
+# 1. Create `~/.zfunc`.
+# 2. Run `rustup completions zsh > ~/.zfunc/_rustup`.
 if [[ -d "$HOME/.cargo" ]]; then
   path+=("$HOME/.cargo/bin")
+  fpath+=("$HOME/.zfunc")
 fi
