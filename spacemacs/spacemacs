@@ -54,6 +54,7 @@ This function should only modify configuration layer settings."
            ;; in all non-asynchronous sources. If set to `source', preserve individual
            ;; source settings. Else, disable fuzzy matching in all sources.
            helm-use-fuzzy 'always)
+
      auto-completion
      better-defaults
      emacs-lisp
@@ -395,7 +396,10 @@ It should only modify the values of Spacemacs settings."
    ;;                       text-mode
    ;;   :size-limit-kb 1000)
    ;; (default nil)
-   dotspacemacs-line-numbers 'relative
+   dotspacemacs-line-numbers '(:relative t
+                               :enabled-for-modes prog-mode
+                                                  text-mode
+                                                  tuareg-mode)
 
    ;; Code folding method. Possible values are `evil' and `origami'.
    ;; (default 'evil)
