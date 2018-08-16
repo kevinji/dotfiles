@@ -9,6 +9,7 @@ tap "homebrew/cask-versions"
 tap "beeftornado/rmtree"
 tap "buo/cask-upgrade"
 tap "d12frosted/emacs-plus"
+tap "getantibody/tap"
 
 cask_args appdir: "/Applications"
 
@@ -19,6 +20,8 @@ brew "mas"
 # Shell essentials
 brew "zsh"
 brew "tmux"
+
+brew "antibody"
 
 # Git and helpers
 brew "git"

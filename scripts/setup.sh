@@ -17,28 +17,15 @@ for folder in "${dotfile_folders[@]}"; do
 done
 
 # Symlink every dot-FOLDER into ~/.FOLDER.
-copy_folders=(pip ptpython shell)
+copy_folders=(pip ptpython)
 
 for folder in "${copy_folders[@]}"; do
     ln -sn "$dotfiles/$folder" "$HOME/.$folder" || true
 done
 
-# Symlink Prezto into ~/.zprezto.
-ln -sn "$dotfiles/zsh/prezto" "$HOME/.zprezto" || true
-
-# Symlink Prezto's zsh config files into ~.
-for file in "$dotfiles/zsh/prezto/runcoms"/*; do
-    if [[ "$(basename "$file")" != "README.md" ]]; then
-        ln -sn "$file" "$HOME/.$(basename "$file")" || true
-    fi
-done
-
-# Symlink the overridden zsh config files into ~.
+# Symlink zsh config files into ~.
 for file in "$dotfiles/zsh"/*; do
-    if [[ -f "$file" ]]; then
-        rm -f "$HOME/.$(basename "$file")"
-        ln -sn "$file" "$HOME/.$(basename "$file")" || true
-    fi
+    ln -sn "$file" "$HOME/.$(basename "$file")" || true
 done
 
 # Clone Tmux Plugin Manager into ~/.tmux/plugins.

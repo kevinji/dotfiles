@@ -1,14 +1,52 @@
-#
-# Executes commands at the start of an interactive session.
-#
-
 # Profile loading time.
 # zmodload zsh/zprof
 
-# Source Prezto.
-if [[ -s "${ZDOTDIR:-$HOME}/.zprezto/init.zsh" ]]; then
-  source "${ZDOTDIR:-$HOME}/.zprezto/init.zsh"
-fi
+# zsh options
+setopt COMBINING_CHARS      # Display accented chars as one char.
+setopt INTERACTIVE_COMMENTS # Allow comments in shell.
+setopt RC_QUOTES            # Allow 'A''s' to mean 'A'\''s'.
+setopt NO_BEEP              # Disable beeps.
+
+setopt AUTO_PUSHD           # Make `cd` work like `pushd`.
+setopt PUSHD_SILENT         # Avoid printing the stack after `pushd`/`popd`.
+setopt MULTIOS              # Write to multiple descriptors.
+setopt EXTENDED_GLOB        # Make globs more powerful.
+setopt NO_CASE_GLOB         # Make globs case-insensitive.
+
+setopt COMPLETE_IN_WORD     # Complete from both sides of a word.
+setopt AUTO_MENU            # Show completion menu on a successive tab press.
+setopt AUTO_LIST            # Automatically list choices on ambiguous completion.
+setopt AUTO_PARAM_SLASH     # Add a slash automatically after a directory name.
+setopt NO_FLOW_CONTROL      # Disable start/stop characters.
+
+# Case-insensitive, pattern-word, and substring completion.
+zstyle ':completion:*' matcher-list 'm:{[:lower:][:upper:]}={[:upper:][:lower:]}' "r:|[._-]=* r:|=*" "l:|=* r:|=*"
+
+# Cache completion
+zstyle ':completion::complete:*' use-cache on
+zstyle ':completion::complete:*' cache-path "$HOME/.zcompcache"
+
+# zsh functions
+autoload -Uz bracketed-paste-url-magic
+zle -N bracketed-paste bracketed-paste-url-magic
+
+# Source antibody plugins
+source <(antibody init)
+antibody bundle < ~/.zsh_plugins.txt
+
+# zsh features
+autoload -U compinit
+compinit
+
+# zsh-syntax-highlighting
+ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets)
+
+# zsh-history-substring-search
+bindkey '^[[A' history-substring-search-up
+bindkey '^[[B' history-substring-search-down
+
+bindkey -M vicmd 'k' history-substring-search-up
+bindkey -M vicmd 'j' history-substring-search-down
 
 ## Interactive shell variables
 # Delay of zsh key sequences (like Esc), in 10 ms units
@@ -17,11 +55,97 @@ KEYTIMEOUT=1
 # (GNU) ls formatting options
 export BLOCK_SIZE="'1"       # Thousands separator for sizes
 export TIME_STYLE="long-iso" # ISO 8601 datetimes
+export CLICOLOR=1            # Colorize output
 
-# Other aliases
-alias ga="git add"
-alias gfu="git fetch upstream"
-alias gfmu="git pull upstream master"
+# Aliases
+alias l="ls -1A"  # Lists in one column, hidden files.
+alias ll='ls -lh' # Lists human readable sizes.
+alias la="ll -A"  # Lists human readable sizes, hidden files.
+
+alias mkdir="${aliases[mkdir]:-mkdir} -p" # Make intermediate directories.
+
+# Use macOS shortcuts everywhere
+if [[ "$OSTYPE" == darwin* ]]; then
+  alias o="open"
+elif [[ "$OSTYPE" == cygwin* ]]; then
+  alias o="cygstart"
+  alias pbcopy="tee > /dev/clipboard"
+  alias pbpaste="cat /dev/clipboard"
+else
+  alias o="xdg-open"
+  if (( $+commands[xclip] )); then
+    alias pbcopy="xclip -selection clipboard -in"
+    alias pbpaste="xclip -selection clipboard -out"
+  elif (( $+commands[xsel] )); then
+    alias pbcopy="xsel --clipboard --input"
+    alias pbpaste="xsel --clipboard --output"
+  fi
+fi
+
+alias pbc="pbcopy"
+alias pbp="pbpaste"
+
+alias type="type -a"
+
+# Git aliases
+if (( $+commands[git] )); then
+  alias g="git"
+
+  alias gb="git branch"
+  alias gba="git branch --all --verbose"
+  alias gbl="git branch --verbose"
+
+  alias gc="git commit --verbose"
+  alias gcm="git commit --message"
+  alias gcf="git commit --amend --reuse-message HEAD"
+  alias gcF="git commit --verbose --amend"
+
+  alias gco="git checkout"
+
+  alias gf="git fetch"
+  alias gfc="git clone"
+  alias gfu="git fetch upstream"
+  alias gfm="git pull"
+  alias gfmu="git pull upstream master"
+
+  alias ga="git add"
+  alias gia="git add"
+  alias giA="git add --patch"
+  alias gir="git reset"
+
+  _git_log_medium_format="%C(bold)Commit:%C(reset) %C(green)%H%C(red)%d%n%C(bold)Author:%C(reset) %C(cyan)%an <%ae>%n%C(bold)Date:%C(reset)   %C(blue)%ai (%ar)%C(reset)%n%+B"
+  _git_log_oneline_format="%C(green)%h%C(reset) %s%C(red)%d%C(reset)%n"
+  _git_log_brief_format="%C(green)%h%C(reset) %s%n%C(blue)(%ar by %an)%C(red)%d%C(reset)%n"
+
+  alias gl="git log --topo-order --pretty=format:'${_git_log_medium_format}'"
+  alias gls="git log --topo-order --stat --pretty=format:'${_git_log_medium_format}'"
+  alias glo="git log --topo-order --pretty=format:'${_git_log_oneline_format}'"
+  alias glg="git log --topo-order --all --graph --pretty=format:'${_git_log_oneline_format}'"
+  alias glb="git log --topo-order --pretty=format:'${_git_log_brief_format}'"
+
+  alias gm="git merge"
+
+  alias gp="git push"
+  alias gpf="git push --force-with-lease"
+  alias gpF="git push --force"
+
+  alias gr="git rebase"
+
+  alias gR="git remote"
+  alias gRl="git remote --verbose"
+
+  alias gs="git stash"
+  alias gsa="git stash apply"
+  alias gsl="git stash list"
+  alias gsp="git stash pop"
+
+  alias gws="git status --ignore-submodules=all --short"
+  alias gwS="git status --ignore-submodules=all"
+  alias gwd="git diff --no-ext-diff"
+  alias gwD="git diff --no-ext-diff --word-diff"
+  alias gwr="git reset --soft"
+  alias gwR="git reset --hard"
+fi
 
 update_python() {
   if (( $+commands[pip2] )); then
@@ -61,8 +185,10 @@ reload_tmux() {
 
 ## Custom programs
 # PostgreSQL
-alias pg_start="pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start"
-alias pg_stop="pg_ctl -D /usr/local/var/postgres stop -s -m fast"
+if (( $+commands[pg_ctl] )); then
+  alias pg_start="pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start"
+  alias pg_stop="pg_ctl -D /usr/local/var/postgres stop -s -m fast"
+fi
 
 # fzf
 if [[ -d "/usr/local/opt/fzf" ]]; then
