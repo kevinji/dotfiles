@@ -20,11 +20,11 @@ setopt AUTO_PARAM_SLASH     # Add a slash automatically after a directory name.
 setopt NO_FLOW_CONTROL      # Disable start/stop characters.
 
 # Case-insensitive, pattern-word, and substring completion.
-zstyle ':completion:*' matcher-list 'm:{[:lower:][:upper:]}={[:upper:][:lower:]}' "r:|[._-]=* r:|=*" "l:|=* r:|=*"
+zstyle ":completion:*" matcher-list "m:{[:lower:][:upper:]}={[:upper:][:lower:]}" "r:|[._-]=* r:|=*" "l:|=* r:|=*"
 
 # Cache completion
-zstyle ':completion::complete:*' use-cache on
-zstyle ':completion::complete:*' cache-path "$HOME/.zcompcache"
+zstyle ":completion::complete:*" use-cache on
+zstyle ":completion::complete:*" cache-path "$HOME/.zcompcache"
 
 # zsh functions
 autoload -Uz bracketed-paste-url-magic
@@ -42,11 +42,11 @@ compinit
 ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets)
 
 # zsh-history-substring-search
-bindkey '^[[A' history-substring-search-up
-bindkey '^[[B' history-substring-search-down
+bindkey "^[[A" history-substring-search-up
+bindkey "^[[B" history-substring-search-down
 
-bindkey -M vicmd 'k' history-substring-search-up
-bindkey -M vicmd 'j' history-substring-search-down
+bindkey -M vicmd "k" history-substring-search-up
+bindkey -M vicmd "j" history-substring-search-down
 
 ## Interactive shell variables
 # Delay of zsh key sequences (like Esc), in 10 ms units
@@ -59,7 +59,7 @@ export CLICOLOR=1            # Colorize output
 
 # Aliases
 alias l="ls -1A"  # Lists in one column, hidden files.
-alias ll='ls -lh' # Lists human readable sizes.
+alias ll="ls -lh" # Lists human readable sizes.
 alias la="ll -A"  # Lists human readable sizes, hidden files.
 
 alias mkdir="${aliases[mkdir]:-mkdir} -p" # Make intermediate directories.
