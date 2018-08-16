@@ -8,7 +8,7 @@ dotfiles="$(cd "$scripts/.." && pwd)"
 echo "Symlinking files..."
 
 # Symlink every dotfile into ~.
-dotfile_folders=(git homebrew spacemacs tmux vim)
+dotfile_folders=(git homebrew spacemacs tmux vim zsh)
 
 for folder in "${dotfile_folders[@]}"; do
     for file in "$dotfiles/$folder"/*; do
@@ -21,11 +21,6 @@ copy_folders=(pip ptpython)
 
 for folder in "${copy_folders[@]}"; do
     ln -sn "$dotfiles/$folder" "$HOME/.$folder" || true
-done
-
-# Symlink zsh config files into ~.
-for file in "$dotfiles/zsh"/*; do
-    ln -sn "$file" "$HOME/.$(basename "$file")" || true
 done
 
 # Clone Tmux Plugin Manager into ~/.tmux/plugins.
