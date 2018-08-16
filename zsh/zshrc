@@ -31,8 +31,7 @@ autoload -Uz bracketed-paste-url-magic
 zle -N bracketed-paste bracketed-paste-url-magic
 
 # Source antibody plugins
-source <(antibody init)
-antibody bundle < ~/.zsh_plugins.txt
+[[ -f "$HOME/.zsh_plugins.sh" ]] && source "$HOME/.zsh_plugins.sh"
 
 # zsh features
 autoload -U compinit
@@ -181,6 +180,10 @@ update_ycm() {
 
 reload_tmux() {
   tmux source-file "$HOME/.tmux.conf"
+}
+
+reload_antibody() {
+  antibody bundle < "$HOME/.zsh_plugins.txt" > "$HOME/.zsh_plugins.sh"
 }
 
 ## Custom programs
