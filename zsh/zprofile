@@ -3,12 +3,7 @@ if [[ "$OSTYPE" == darwin* ]]; then
   export BROWSER="open"
 fi
 
-if (( $+commands[nvim] )); then
-  alias vim="nvim"
-  export EDITOR="nvim"
-else
-  export EDITOR="vim"
-fi
+export EDITOR="vim"
 
 export VISUAL="$EDITOR"
 export PAGER="less"
@@ -70,11 +65,13 @@ if (( $+commands[rbenv] )); then
 fi
 
 # Opam
-if (( $+commands[opam] )); then
-  eval "$(opam config env)"
+if [[ "$no_opam" != "true" ]]; then
+  if (( $+commands[opam] )); then
+    eval "$(opam config env)"
+  fi
 fi
 
-if [[ "$NO_SUDO" = "true" ]]; then
+if [[ "$no_sudo" = "true" ]]; then
   # npm
   if (( $+commands[npm] )); then
     export NPM_CONFIG_PREFIX="$HOME/.npm-global"
