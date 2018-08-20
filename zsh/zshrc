@@ -69,6 +69,10 @@ export BLOCK_SIZE="'1"       # Thousands separator for sizes
 export TIME_STYLE="long-iso" # ISO 8601 datetimes
 export CLICOLOR=1            # Colorize output
 
+if (( $+commands[dircolors] )); then
+  eval "$(dircolors --sh)"   # Enable correct colors
+fi
+
 # Aliases
 alias l="ls -1A"  # Lists in one column, hidden files.
 alias ll="ls -lh" # Lists human readable sizes.
