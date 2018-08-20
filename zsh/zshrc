@@ -202,5 +202,8 @@ if [[ -d "/usr/local/opt/fzf" ]]; then
   source "/usr/local/opt/fzf/shell/key-bindings.zsh"
 fi
 
+## Local changes
+[[ -f "$HOME/.zshrc-local" ]] && source "$HOME/.zshrc-local"
+
 # Display profiled loading time.
 # zprof
