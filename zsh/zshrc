@@ -19,6 +19,19 @@ setopt AUTO_LIST            # Automatically list choices on ambiguous completion
 setopt AUTO_PARAM_SLASH     # Add a slash automatically after a directory name.
 setopt NO_FLOW_CONTROL      # Disable start/stop characters.
 
+# zsh history
+HISTFILE="$HOME/.zhistory"
+HISTSIZE=10000
+SAVEHIST=10000
+
+setopt EXTENDED_HISTORY     # Use the ":start:elapsed;command" format for history entries.
+setopt INC_APPEND_HISTORY   # Append to history file during shell session.
+setopt SHARE_HISTORY        # Share history between sessions.
+setopt HIST_IGNORE_ALL_DUPS # Delete older duplicated events from history.
+setopt HIST_FIND_NO_DUPS    # Avoid displaying duplicate history entries.
+setopt HIST_SAVE_NO_DUPS    # Avoid saving duplicate history entries.
+setopt HIST_VERIFY          # Do not execute history expanded lines.
+
 # Case-insensitive, pattern-word, and substring completion.
 zstyle ":completion:*" matcher-list "m:{[:lower:][:upper:]}={[:upper:][:lower:]}" "r:|[._-]=* r:|=*" "l:|=* r:|=*"
 
