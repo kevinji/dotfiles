@@ -12,7 +12,11 @@ dotfile_folders=(git homebrew spacemacs tmux vim zsh)
 
 for folder in "${dotfile_folders[@]}"; do
     for file in "$dotfiles/$folder"/*; do
-        ln -sn "$file" "$HOME/.$(basename "$file")" || true
+        home_file="$HOME/.$(basename "$file")"
+        if [[ -f "$home_file" ]]; then
+            mv "$home_file" "$home_file.bak"
+        fi
+        ln -sn "$file" "$home_file"
     done
 done
 
@@ -20,7 +24,11 @@ done
 copy_folders=(pip ptpython)
 
 for folder in "${copy_folders[@]}"; do
-    ln -sn "$dotfiles/$folder" "$HOME/.$folder" || true
+    home_folder="$HOME/.$folder"
+    if [[ -d "$home_folder" ]]; then
+        mv "$home_folder" "$home_folder.bak"
+    fi
+    ln -sn "$dotfiles/$folder" "$home_folder"
 done
 
 # Clone Tmux Plugin Manager into ~/.tmux/plugins.
