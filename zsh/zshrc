@@ -63,6 +63,12 @@ bashcompinit
 # zsh-syntax-highlighting
 ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets)
 
+# Enable proper backspacing in vi mode
+bindkey "^?" backward-delete-char
+bindkey "^W" backward-kill-word
+bindkey "^H" backward-delete-char
+bindkey "^U" backward-kill-line
+
 # zsh-history-substring-search
 bindkey "^[[A" history-substring-search-up
 bindkey "^[[B" history-substring-search-down
