@@ -47,8 +47,12 @@ zle -N bracketed-paste bracketed-paste-url-magic
 [[ -f "$HOME/.zsh_plugins.sh" ]] && source "$HOME/.zsh_plugins.sh"
 
 # zsh features
-autoload -U compinit
+autoload -Uz compinit
 compinit
+
+# bash emulation
+autoload -Uz bashcompinit
+bashcompinit
 
 # zsh-syntax-highlighting
 ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets)
