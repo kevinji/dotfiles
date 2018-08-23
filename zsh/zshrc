@@ -143,6 +143,8 @@ if (( $+commands[git] )); then
   alias ga="git add"
   alias gia="git add"
   alias giA="git add --patch"
+  alias gid="git diff --no-ext-diff --cached"
+  alias giD="git diff --no-ext-diff --cached --word-diff"
   alias gir="git reset"
 
   _git_log_medium_format="%C(bold)Commit:%C(reset) %C(green)%H%C(red)%d%n%C(bold)Author:%C(reset) %C(cyan)%an <%ae>%n%C(bold)Date:%C(reset)   %C(blue)%ai (%ar)%C(reset)%n%+B"
