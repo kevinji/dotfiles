@@ -7,6 +7,12 @@ setopt INTERACTIVE_COMMENTS # Allow comments in shell.
 setopt RC_QUOTES            # Allow 'A''s' to mean 'A'\''s'.
 setopt NO_BEEP              # Disable beeps.
 
+setopt LONG_LIST_JOBS       # List jobs in the long format.
+setopt NOTIFY               # Notify about background jobs immediately.
+setopt NO_BG_NICE           # Do not run background jobs at a lower priority.
+setopt NO_HUP               # Keep jobs alive on shell exit.
+setopt NO_CHECK_JOBS        # Disable warning that checks for running jobs.
+
 setopt AUTO_PUSHD           # Make `cd` work like `pushd`.
 setopt PUSHD_SILENT         # Avoid printing the stack after `pushd`/`popd`.
 setopt MULTIOS              # Write to multiple descriptors.
