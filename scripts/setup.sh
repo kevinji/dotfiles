@@ -8,7 +8,7 @@ dotfiles="$(cd "$scripts/.." && pwd)"
 echo "Symlinking files..."
 
 # Symlink every dotfile into ~.
-dotfile_folders=(git homebrew spacemacs tmux vim zsh)
+dotfile_folders=(git spacemacs tmux vim zsh)
 
 for folder in "${dotfile_folders[@]}"; do
     for file in "$dotfiles/$folder"/*; do
