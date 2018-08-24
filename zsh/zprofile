@@ -45,7 +45,9 @@ if [[ ! -d "${TMPDIR}" ]]; then
 fi
 
 ## Local changes
-[[ -f "$HOME/.zprofile-local" ]] && source "$HOME/.zprofile-local"
+if [[ -f "$HOME/.zprofile-local" ]]; then
+  source "$HOME/.zprofile-local"
+fi
 
 ## Custom programs
 # fzf
