@@ -81,6 +81,11 @@ if [[ "$no_sudo" = "true" ]]; then
   fi
 fi
 
+# Set `RUST_SRC_PATH` for Racer.
+if (( $+commands[rustc] )); then
+  export RUST_SRC_PATH="$(rustc --print sysroot)/lib/rustlib/src/rust/src"
+fi
+
 # Set up after `rustup-init`:
 # 1. Create `~/.zfunc`.
 # 2. Run `rustup completions zsh > ~/.zfunc/_rustup`.
