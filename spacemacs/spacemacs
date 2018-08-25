@@ -523,6 +523,10 @@ before packages are loaded."
    ;; Disable Emacs lock files.
    create-lockfiles nil)
 
+  ;; macOS `ls' does not support `--dired'.
+  (when (eq system-type 'darwin)
+    (setq dired-use-ls-dired nil))
+
   ;; https://emacs.stackexchange.com/a/15054
   (fset 'evil-visual-update-x-selection 'ignore)
 
