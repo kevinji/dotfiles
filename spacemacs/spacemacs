@@ -548,6 +548,14 @@ before packages are loaded."
   ;; Replace `spacemacs-centered-buffer-mode' with `olivetti'.
   (spacemacs/set-leader-keys "wc" 'olivetti-mode)
 
+  ;; Disable `C-h h' (`view-hello-file'), which crashes Spacemacs.
+  (put 'view-hello-file 'disabled t)
+
+  ;; Stop `ESC ESC ESC' (`keyboard-escape-quit') from closing all windows.
+  (defadvice keyboard-escape-quit
+      (around keyboard-escape-quit-dont-close-windows activate)
+    (let ((buffer-quit-function (lambda () ()))) ad-do-it))
+
   ;; Load `custom-file' if it exists.
   (when (file-exists-p custom-file)
     (load-file custom-file)))
