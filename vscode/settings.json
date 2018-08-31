@@ -3,10 +3,6 @@
     "editor.fontFamily": "'Source Code Pro'",
     "search.useRipgrep": true,
 
-    "materialTheme.cache.workbench.settings": {
-        "themeColours": "Default"
-    },
-
     "terminal.external.osxExec": "iTerm.app",
 
     "eslint.packageManager": "yarn",
@@ -16,6 +12,9 @@
 
     "python.pythonPath": "python3",
     "python.venvPath": "~/.virtualenvs",
+
+    "rust.all_features": true,
+    "rust.unstable_features": true,
 
     "vim.leader": "<space>",
     "vim.insertModeKeyBindings": [
