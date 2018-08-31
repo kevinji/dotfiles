@@ -112,6 +112,8 @@ if (( $+commands[git] )); then
 
   alias gb="git branch"
   alias gba="git branch --all --verbose"
+  alias gbd="git branch --delete"
+  alias gbD="git branch --delete --force"
   alias gbl="git branch --verbose"
 
   alias gc="git commit --verbose"
