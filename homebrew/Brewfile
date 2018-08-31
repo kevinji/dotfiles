@@ -123,6 +123,7 @@ cask "transmission"
 ## macOS applications
 mas "Xcode", id: 497799835
 
+mas "1Password 7", id: 1333542190
 mas "DaisyDisk", id: 411643860
 mas "Deliveries", id: 924726344
 mas "Fantastical 2", id: 975937182
