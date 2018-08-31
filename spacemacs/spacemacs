@@ -521,11 +521,17 @@ before packages are loaded."
    js2-strict-trailing-comma-warning nil
 
    ;; Disable Emacs lock files.
-   create-lockfiles nil)
+   create-lockfiles nil
+
+   ;; Use `string' syntax for `re-builder'.
+   reb-re-syntax 'string
+
+   ;; Reset completion delay to default time.
+   company-idle-delay 0.5)
 
   ;; macOS `ls' does not support `--dired'.
   (when (eq system-type 'darwin)
-    (setq dired-use-ls-dired nil))
+    (setq-default dired-use-ls-dired nil))
 
   ;; https://emacs.stackexchange.com/a/15054
   (fset 'evil-visual-update-x-selection 'ignore)
