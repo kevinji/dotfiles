@@ -98,9 +98,15 @@ else
 fi
 
 # Aliases
-alias l="ls -1A"  # Lists in one column, hidden files.
-alias ll="ls -lh" # Lists human readable sizes.
-alias la="ll -A"  # Lists human readable sizes, hidden files.
+alias l="ls -1A"   # Lists in one column, hidden files.
+alias ll="ls -lh"  # Lists human readable sizes.
+alias la="ls -Alh" # Lists human readable sizes, hidden files.
+
+if (( $+commands[exa] )); then
+  alias x="exa -1a"   # Lists in one column, hidden files.
+  alias xl="exa -lh"  # Lists human readable sizes.
+  alias xa="exa -alh" # Lists human readable sizes, hidden files.
+fi
 
 alias mkdir="${aliases[mkdir]:-mkdir} -p" # Make intermediate directories.
 
