@@ -69,7 +69,7 @@ fi
 # Opam
 if [[ "$no_opam" != "true" ]]; then
   if (( $+commands[opam] )); then
-    eval "$(opam config env)"
+    eval "$(opam env)"
   fi
 fi
 
