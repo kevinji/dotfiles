@@ -10,6 +10,7 @@ tap "beeftornado/rmtree"
 tap "buo/cask-upgrade"
 tap "d12frosted/emacs-plus"
 tap "getantibody/tap"
+tap "ocaml/ocaml"
 
 cask_args appdir: "/Applications"
 
@@ -41,7 +42,7 @@ brew "node"
 brew "yarn"
 
 brew "ocaml"
-brew "opam"
+brew "opam@2"
 
 brew "rbenv"
 
