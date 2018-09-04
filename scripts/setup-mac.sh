@@ -24,7 +24,6 @@ brew update &> /dev/null
 # Install from Brewfile.
 brew bundle --file="$dotfiles/homebrew/Brewfile"
 
-brew linkapps &> /dev/null
 brew cleanup &> /dev/null
 
 echo "Done installing Homebrew."
