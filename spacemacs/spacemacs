@@ -554,6 +554,10 @@ before packages are loaded."
   ;; Replace `spacemacs-centered-buffer-mode' with `olivetti'.
   (spacemacs/set-leader-keys "wc" 'olivetti-mode)
 
+  ;; Enable `winner-mode', which allows undoing and redoing of window
+  ;; configuration changes via `C-c left' and `C-c right'.
+  (winner-mode 1)
+
   ;; Disable `C-h h' (`view-hello-file'), which crashes Spacemacs.
   (put 'view-hello-file 'disabled t)
 
