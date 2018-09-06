@@ -172,18 +172,19 @@ It should only modify the values of Spacemacs settings."
    ;; (default 'vim)
    dotspacemacs-editing-style
    '(vim :variables
-      ;; If non-nil `Y' is remapped to `y$' in Evil states.
-      vim-style-remap-Y-to-y$ t
 
-      ;; If non-nil, the shift mappings `<' and `>' retain visual state if used
-      ;; there.
-      vim-style-retain-visual-state-on-shift t
+     ;; If non-nil `Y' is remapped to `y$' in Evil states.
+     vim-style-remap-Y-to-y$ t
 
-      ;; If non-nil, `J' and `K' move lines up and down when in visual mode.
-      vim-style-visual-line-move-text nil
+     ;; If non-nil, the shift mappings `<' and `>' retain visual state if used
+     ;; there.
+     vim-style-retain-visual-state-on-shift t
 
-      ;; If non-nil, inverse the meaning of `g' in `:substitute' Evil ex-command.
-      vim-style-ex-substitute-global nil)
+     ;; If non-nil, `J' and `K' move lines up and down when in visual mode.
+     vim-style-visual-line-move-text nil
+
+     ;; If non-nil, inverse the meaning of `g' in `:substitute' Evil ex-command.
+     vim-style-ex-substitute-global nil)
 
    ;; If non-nil output loading progress in `*Messages*' buffer. (default nil)
    dotspacemacs-verbose-loading nil
@@ -218,7 +219,7 @@ It should only modify the values of Spacemacs settings."
    ;; List of themes, the first of the list is loaded when spacemacs starts.
    ;; Press `SPC T n' to cycle to the next theme in the list (works great
    ;; with 2 themes variants, one dark and one light)
-   dotspacemacs-themes '(doom-one doom-city-lights doom-dracula)
+   dotspacemacs-themes '(doom-dracula doom-one doom-city-lights)
 
    ;; Set the theme for the Spaceline. Supported themes are `spacemacs',
    ;; `all-the-icons', `custom', `doom', `vim-powerline' and `vanilla'. The
@@ -379,7 +380,8 @@ It should only modify the values of Spacemacs settings."
    ;;   :size-limit-kb 1000)
    ;; (default nil)
    dotspacemacs-line-numbers '(:relative t
-                               :enabled-for-modes prog-mode
+                               :enabled-for-modes json-mode
+                                                  prog-mode
                                                   text-mode
                                                   tuareg-mode)
 
@@ -474,7 +476,7 @@ This function is called immediately after `dotspacemacs/init', before layer
 configuration.
 It is mostly for variables that should be set before packages are loaded.
 If you are unsure, try setting them in `dotspacemacs/user-config' first."
-  (setq
+  (setq-default
    ;; Dump generated custom settings elsewhere.
    ;; https://github.com/syl20bnr/spacemacs/issues/7891
    custom-file (expand-file-name "custom.el" spacemacs-cache-directory)))
@@ -508,8 +510,15 @@ before packages are loaded."
    ;; Use `string' syntax for `re-builder'.
    reb-re-syntax 'string
 
+   ;; Use Ivy's fuzzy matcher, and remove the initial `^'.
+   ivy-initial-inputs-alist nil
+   ivy-re-builders-alist '((t . ivy--regex-fuzzy))
+
    ;; Reset completion delay to default time.
    company-idle-delay 0.5)
+
+  ;; Disable double-`TAB'-tapping in minibuffer.
+  (define-key ivy-minibuffer-map (kbd "TAB") 'ivy-alt-done)
 
   ;; macOS `ls' does not support `--dired'.
   (when (eq system-type 'darwin)
