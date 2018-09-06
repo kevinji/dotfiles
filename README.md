@@ -9,7 +9,7 @@ Clone this repo anywhere:
 git clone --recursive https://github.com/mc10/dotfiles.git
 ```
 
-Then, run either `scripts/setup-mac.sh` or `scripts/setup-linux.sh`.
+Then, run `./install`, followed by `./scripts/setup-mac.sh` if relevant.
 
 ## License
 [MIT](LICENSE).
