@@ -5,31 +5,7 @@ set -e
 scripts="$(dirname "$BASH_SOURCE[0]")"
 dotfiles="$(cd "$scripts/.." && pwd)"
 
-echo "Symlinking files..."
-
-# Symlink every dotfile into ~.
-dotfile_folders=(git spacemacs tmux vim zsh)
-
-for folder in "${dotfile_folders[@]}"; do
-    for file in "$dotfiles/$folder"/*; do
-        home_file="$HOME/.$(basename "$file")"
-        if [[ -f "$home_file" ]]; then
-            mv "$home_file" "$home_file.bak"
-        fi
-        ln -sn "$file" "$home_file"
-    done
-done
-
-# Symlink every dot-FOLDER into ~/.FOLDER.
-copy_folders=(pip ptpython)
-
-for folder in "${copy_folders[@]}"; do
-    home_folder="$HOME/.$folder"
-    if [[ -d "$home_folder" ]]; then
-        mv "$home_folder" "$home_folder.bak"
-    fi
-    ln -sn "$dotfiles/$folder" "$home_folder"
-done
+bash -e ../install
 
 # Clone Tmux Plugin Manager into ~/.tmux/plugins.
 git clone https://github.com/tmux-plugins/tpm "$HOME/.tmux/plugins/tpm" || true

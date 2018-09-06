@@ -1,3 +1,6 @@
 [submodule "shell/iterm2-snazzy"]
 	path = shell/iterm2-snazzy
 	url = https://github.com/sindresorhus/iterm2-snazzy.git
+[submodule "dotbot"]
+	path = dotbot
+	url = https://github.com/anishathalye/dotbot

@@ -1,0 +1,28 @@
+- defaults:
+    link:
+      relink: true
+
+- clean: ['~']
+
+- link:
+    ~/.gitconfig: git/gitconfig
+    ~/.gitconfig-local: git/gitconfig-local
+    ~/.gitignore-global: git/gitignore-global
+
+    ~/.pip: pip
+    ~/.ptpython: ptpython
+
+    ~/.spacemacs: spacemacs/spacemacs
+
+    ~/.tmux.conf: tmux/tmux.conf
+
+    ~/.ideavimrc: vim/ideavimrc
+    ~/.vimrc: vim/vimrc
+
+    ~/.hushlogin: zsh/hushlogin
+    ~/.inputrc: zsh/inputrc
+    ~/.zprofile: zsh/zprofile
+    ~/.zprofile-local: zsh/zprofile-local
+    ~/.zsh_plugins.txt: zsh/zsh_plugins.txt
+    ~/.zshenv: zsh/zshenv
+    ~/.zshrc: zsh/zshrc
