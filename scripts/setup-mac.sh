@@ -5,9 +5,6 @@ set -e
 scripts="$(dirname "$BASH_SOURCE[0]")"
 dotfiles="$(cd "$scripts/.." && pwd)"
 
-# Run general scripts.
-bash -e "$dotfiles/scripts/setup.sh"
-
 # Xcode CLT
 xcode-select --install || true
 
