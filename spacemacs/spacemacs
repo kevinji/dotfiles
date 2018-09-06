@@ -39,22 +39,7 @@ This function should only modify configuration layer settings."
      ;; Uncomment some layer names and press `SPC f e R' (Vim style) or
      ;; `M-m f e R' (Emacs style) to install them.
      ;; ----------------------------------------------------------------
-     (helm :variables
-           ;; If non-nil, `helm' will try to minimize the space it uses.
-           helm-enable-auto-resize nil
-
-           ;; if non-nil, the helm header is hidden when there is only one source.
-           helm-no-header nil
-
-           ;; define the position to display `helm', options are `bottom', `top',
-           ;; `left', or `right'.
-           helm-position 'bottom
-
-           ;; Controls fuzzy matching in helm. If set to `always', force fuzzy matching
-           ;; in all non-asynchronous sources. If set to `source', preserve individual
-           ;; source settings. Else, disable fuzzy matching in all sources.
-           helm-use-fuzzy 'always)
-
+     ivy
      auto-completion
      better-defaults
      emacs-lisp
@@ -72,7 +57,6 @@ This function should only modify configuration layer settings."
      ;; Useful
      colors
      osx
-     ivy
      (evil-snipe :variables
                  evil-snipe-enable-alternate-f-and-t-behaviors t)
 
@@ -186,22 +170,20 @@ It should only modify the values of Spacemacs settings."
    ;; with `:variables' keyword (similar to layers). Check the editing styles
    ;; section of the documentation for details on available variables.
    ;; (default 'vim)
-   dotspacemacs-editing-style '(vim :variables
-                                    ;; If non-nil `Y' is remapped to `y$' in
-                                    ;; Evil states.
-                                    vim-style-remap-Y-to-y$ t
+   dotspacemacs-editing-style
+   '(vim :variables
+      ;; If non-nil `Y' is remapped to `y$' in Evil states.
+      vim-style-remap-Y-to-y$ t
 
-                                    ;; If non-nil, the shift mappings `<' and
-                                    ;; `>' retain visual state if used there.
-                                    vim-style-retain-visual-state-on-shift t
+      ;; If non-nil, the shift mappings `<' and `>' retain visual state if used
+      ;; there.
+      vim-style-retain-visual-state-on-shift t
 
-                                    ;; If non-nil, `J' and `K' move lines up
-                                    ;; and down when in visual mode.
-                                    vim-style-visual-line-move-text nil
+      ;; If non-nil, `J' and `K' move lines up and down when in visual mode.
+      vim-style-visual-line-move-text nil
 
-                                    ;; If non-nil, inverse the meaning of `g'
-                                    ;; in `:substitute' Evil ex-command.
-                                    vim-style-ex-substitute-global nil)
+      ;; If non-nil, inverse the meaning of `g' in `:substitute' Evil ex-command.
+      vim-style-ex-substitute-global nil)
 
    ;; If non-nil output loading progress in `*Messages*' buffer. (default nil)
    dotspacemacs-verbose-loading nil
@@ -236,16 +218,16 @@ It should only modify the values of Spacemacs settings."
    ;; List of themes, the first of the list is loaded when spacemacs starts.
    ;; Press `SPC T n' to cycle to the next theme in the list (works great
    ;; with 2 themes variants, one dark and one light)
-   dotspacemacs-themes '(doom-one)
+   dotspacemacs-themes '(doom-one doom-city-lights doom-dracula)
 
    ;; Set the theme for the Spaceline. Supported themes are `spacemacs',
-   ;; `all-the-icons', `custom', `vim-powerline' and `vanilla'. The first three
-   ;; are spaceline themes. `vanilla' is default Emacs mode-line. `custom' is a
-   ;; user defined themes, refer to the DOCUMENTATION.org for more info on how
-   ;; to create your own spaceline theme. Value can be a symbol or list with\
-   ;; additional properties.
+   ;; `all-the-icons', `custom', `doom', `vim-powerline' and `vanilla'. The
+   ;; first three are spaceline themes. `doom' is the doom-emacs mode-line.
+   ;; `vanilla' is default Emacs mode-line. `custom' is a user defined themes,
+   ;; refer to the DOCUMENTATION.org for more info on how to create your own
+   ;; spaceline theme. Value can be a symbol or list with additional properties.
    ;; (default '(spacemacs :separator wave :separator-scale 1.5))
-   dotspacemacs-mode-line-theme '(all-the-icons :separator arrow)
+   dotspacemacs-mode-line-theme '(doom)
 
    ;; If non-nil the cursor color matches the state color in GUI Emacs.
    ;; (default t)
