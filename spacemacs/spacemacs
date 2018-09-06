@@ -512,7 +512,10 @@ before packages are loaded."
 
    ;; Use Ivy's fuzzy matcher, and remove the initial `^'.
    ivy-initial-inputs-alist nil
-   ivy-re-builders-alist '((t . ivy--regex-fuzzy))
+   ivy-re-builders-alist '((swiper . ivy--regex-fuzzy)
+                           (read-file-name-internal . ivy--regex-fuzzy)
+                           (ivy-switch-buffer . ivy--regex-fuzzy)
+                           (t . ivy--regex-plus))
 
    ;; Reset completion delay to default time.
    company-idle-delay 0.5)
