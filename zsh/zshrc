@@ -103,6 +103,7 @@ alias ll="ls -lh"  # Lists human readable sizes.
 alias la="ls -Alh" # Lists human readable sizes, hidden files.
 
 if (( $+commands[exa] )); then
+  alias xs="exa"
   alias x="exa -1a"   # Lists in one column, hidden files.
   alias xl="exa -lh"  # Lists human readable sizes.
   alias xa="exa -alh" # Lists human readable sizes, hidden files.
