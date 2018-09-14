@@ -517,6 +517,9 @@ before packages are loaded."
                            (ivy-switch-buffer . ivy--regex-fuzzy)
                            (t . ivy--regex-plus))
 
+   ;; Display both current and total matches in the Ivy buffer.
+   ;; ivy-count-format "%d/%d "
+
    ;; Reset completion delay to default time.
    company-idle-delay 0.5)
 
@@ -551,6 +554,9 @@ before packages are loaded."
   ;; Enable `winner-mode', which allows undoing and redoing of window
   ;; configuration changes via `C-c left' and `C-c right'.
   (winner-mode 1)
+
+  ;; Add `auto-fill-mode' to a few text modes.
+  (add-hook 'markdown-mode-hook 'auto-fill-mode)
 
   ;; Disable `C-h h' (`view-hello-file'), which crashes Spacemacs.
   (put 'view-hello-file 'disabled t)
