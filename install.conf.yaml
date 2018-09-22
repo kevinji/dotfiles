@@ -14,11 +14,12 @@
     ~/.pip: pip
     ~/.ptpython: ptpython
 
-    ~/.spacemacs: spacemacs/spacemacs
+    ~/.spacemacs.d/init.el:
+      create: true
+      path: spacemacs/init.el
 
     ~/.tmux.conf: tmux/tmux.conf
 
-    ~/.ideavimrc: vim/ideavimrc
     ~/.vimrc: vim/vimrc
 
     ~/.hushlogin: zsh/hushlogin
