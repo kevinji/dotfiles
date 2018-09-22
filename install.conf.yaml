@@ -21,6 +21,9 @@
     ~/.tmux.conf: tmux/tmux.conf
 
     ~/.vimrc: vim/vimrc
+    ~/.config/nvim/init.vim:
+      create: true
+      path: vim/vimrc
 
     ~/.hushlogin: zsh/hushlogin
     ~/.inputrc: zsh/inputrc
