@@ -10,7 +10,6 @@ tap "beeftornado/rmtree"
 tap "buo/cask-upgrade"
 tap "d12frosted/emacs-plus"
 tap "getantibody/tap"
-tap "ocaml/ocaml"
 
 cask_args appdir: "/Applications"
 
@@ -20,9 +19,8 @@ brew "mas"
 
 # Shell essentials
 brew "zsh"
-brew "tmux"
-
 brew "antibody"
+brew "tmux"
 
 # Git and helpers
 brew "git"
@@ -42,7 +40,7 @@ brew "node"
 brew "yarn"
 
 brew "ocaml"
-brew "opam@2"
+brew "opam"
 
 brew "rbenv"
 
@@ -61,7 +59,6 @@ brew "tldr"
 brew "wget"
 
 # Miscellaneous tools
-brew "dfu-util"
 brew "editorconfig"
 brew "ffmpeg", args: [
     "with-fdk-aac", "with-freetype", "with-libass", "with-libvorbis",
@@ -78,7 +75,7 @@ cask "java"
 cask "xquartz"
 
 # Fonts
-cask "font-fira-code"
+cask "font-fira-sans"
 cask "font-hack"
 cask "font-inconsolata"
 cask "font-montserrat"
@@ -86,13 +83,8 @@ cask "font-open-sans"
 cask "font-source-code-pro"
 
 # Programming tools
-cask "insomnia"
 cask "iterm2"
 cask "vagrant"
-
-# Editors
-cask "intellij-idea"
-cask "visual-studio-code"
 
 # Utilities
 cask "alfred"
@@ -115,11 +107,9 @@ cask "adobe-creative-cloud"
 cask "dropbox"
 cask "evernote"
 cask "iina"
-cask "ledger-live"
-cask "polymail"
 cask "private-internet-access"
-cask "slack"
 cask "spotify"
+cask "steam"
 cask "transmission"
 
 ## macOS applications
