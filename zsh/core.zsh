@@ -72,3 +72,7 @@ bindkey "^[[B" history-substring-search-down
 
 bindkey -M vicmd "k" history-substring-search-up
 bindkey -M vicmd "j" history-substring-search-down
+
+# Search backwards and forwards
+bindkey -M vicmd "/" history-incremental-search-backward
+bindkey -M vicmd "?" history-incremental-search-forward
