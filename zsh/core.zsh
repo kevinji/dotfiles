@@ -23,7 +23,7 @@ setopt AUTO_PARAM_SLASH     # Add a slash automatically after a directory name.
 setopt NO_FLOW_CONTROL      # Disable start/stop characters.
 
 # zsh history
-HISTFILE="$HOME/.zhistory"
+HISTFILE="$HOME/.zsh_history"
 HISTSIZE=10000
 SAVEHIST=10000
 
@@ -40,7 +40,6 @@ zstyle ":completion:*" matcher-list "m:{[:lower:][:upper:]}={[:upper:][:lower:]}
 
 # Cache completion
 zstyle ":completion::complete:*" use-cache on
-zstyle ":completion::complete:*" cache-path "$HOME/.zcompcache"
 
 # zsh functions
 autoload -Uz bracketed-paste-url-magic
