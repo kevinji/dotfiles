@@ -480,7 +480,12 @@ If you are unsure, try setting them in `dotspacemacs/user-config' first."
   (setq-default
    ;; Dump generated custom settings elsewhere.
    ;; https://github.com/syl20bnr/spacemacs/issues/7891
-   custom-file (expand-file-name "custom.el" spacemacs-cache-directory)))
+   custom-file (expand-file-name "custom.el" spacemacs-cache-directory))
+
+  ;; Load local config if it exists.
+  (let ((local-file (expand-file-name "~/.spacemacs.d/local.el")))
+    (when (file-exists-p local-file)
+      (load-file local-file))))
 
 (defun dotspacemacs/user-load ()
   "Library to load while dumping.
