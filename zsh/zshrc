@@ -1,242 +1,25 @@
 # Profile loading time.
 # zmodload zsh/zprof
 
-# zsh options
-setopt COMBINING_CHARS      # Display accented chars as one char.
-setopt INTERACTIVE_COMMENTS # Allow comments in shell.
-setopt RC_QUOTES            # Allow 'A''s' to mean 'A'\''s'.
-setopt NO_BEEP              # Disable beeps.
-
-setopt LONG_LIST_JOBS       # List jobs in the long format.
-setopt NOTIFY               # Notify about background jobs immediately.
-setopt NO_BG_NICE           # Do not run background jobs at a lower priority.
-setopt NO_HUP               # Keep jobs alive on shell exit.
-setopt NO_CHECK_JOBS        # Disable warning that checks for running jobs.
-
-setopt AUTO_PUSHD           # Make `cd` work like `pushd`.
-setopt PUSHD_SILENT         # Avoid printing the stack after `pushd`/`popd`.
-setopt MULTIOS              # Write to multiple descriptors.
-setopt EXTENDED_GLOB        # Make globs more powerful.
-setopt NO_CASE_GLOB         # Make globs case-insensitive.
-
-setopt COMPLETE_IN_WORD     # Complete from both sides of a word.
-setopt AUTO_MENU            # Show completion menu on a successive tab press.
-setopt AUTO_LIST            # Automatically list choices on ambiguous completion.
-setopt AUTO_PARAM_SLASH     # Add a slash automatically after a directory name.
-setopt NO_FLOW_CONTROL      # Disable start/stop characters.
-
-# zsh history
-HISTFILE="$HOME/.zhistory"
-HISTSIZE=10000
-SAVEHIST=10000
-
-setopt EXTENDED_HISTORY     # Use the ":start:elapsed;command" format for history entries.
-setopt INC_APPEND_HISTORY   # Append to history file during shell session.
-setopt SHARE_HISTORY        # Share history between sessions.
-setopt HIST_IGNORE_ALL_DUPS # Delete older duplicated events from history.
-setopt HIST_FIND_NO_DUPS    # Avoid displaying duplicate history entries.
-setopt HIST_SAVE_NO_DUPS    # Avoid saving duplicate history entries.
-setopt HIST_VERIFY          # Do not execute history expanded lines.
-
-# Case-insensitive, pattern-word, and substring completion.
-zstyle ":completion:*" matcher-list "m:{[:lower:][:upper:]}={[:upper:][:lower:]}" "r:|[._-]=* r:|=*" "l:|=* r:|=*"
-
-# Cache completion
-zstyle ":completion::complete:*" use-cache on
-zstyle ":completion::complete:*" cache-path "$HOME/.zcompcache"
-
-# zsh functions
-autoload -Uz bracketed-paste-url-magic
-zle -N bracketed-paste bracketed-paste-url-magic
-
-# Source antibody plugins
-[[ -f "$HOME/.zsh_plugins.sh" ]] && source "$HOME/.zsh_plugins.sh"
-
-# zsh features
-autoload -Uz compinit
-compinit
-
-# bash emulation
-autoload -Uz bashcompinit
-bashcompinit
-
-# zsh-syntax-highlighting
-ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets)
-
-# Enable proper backspacing in vi mode
-bindkey "^?" backward-delete-char
-bindkey "^W" backward-kill-word
-bindkey "^H" backward-delete-char
-bindkey "^U" backward-kill-line
-
-# zsh-history-substring-search
-bindkey "^[[A" history-substring-search-up
-bindkey "^[[B" history-substring-search-down
-
-bindkey -M vicmd "k" history-substring-search-up
-bindkey -M vicmd "j" history-substring-search-down
-
-## Interactive shell variables
-# Delay of zsh key sequences (like Esc), in 10 ms units
-KEYTIMEOUT=1
-
-# (GNU) ls formatting options
-export BLOCK_SIZE="'1"       # Thousands separator for sizes
-export TIME_STYLE="long-iso" # ISO 8601 datetimes
-export CLICOLOR=1            # Colorize output
-
-# Enable correct colors for ls
-if (( $+commands[dircolors] )); then
-  eval "$(dircolors --sh)"
-else
-  if [[ -z "$LSCOLORS" ]]; then
-    export LSCOLORS='exfxcxdxbxGxDxabagacad'
-  fi
-  if [[ -z "$LS_COLORS" ]]; then
-    export LS_COLORS='di=34:ln=35:so=32:pi=33:ex=31:bd=36;01:cd=33;01:su=31;40;07:sg=36;40;07:tw=32;40;07:ow=33;40;07:'
-  fi
+# Follow symlinks to this script's directory.
+if (( $+commands[greadlink] )); then
+  alias readlink="greadlink"
 fi
 
-# Aliases
-alias l="ls -1A"   # Lists in one column, hidden files.
-alias ll="ls -lh"  # Lists human readable sizes.
-alias la="ls -Alh" # Lists human readable sizes, hidden files.
+DIR="$(dirname "$(readlink -f "${(%):-%x}")")"
 
-if (( $+commands[exa] )); then
-  alias xs="exa"
-  alias x="exa -1a"   # Lists in one column, hidden files.
-  alias xl="exa -lh"  # Lists human readable sizes.
-  alias xa="exa -alh" # Lists human readable sizes, hidden files.
-fi
-
-alias mkdir="${aliases[mkdir]:-mkdir} -p" # Make intermediate directories.
-
-alias type="type -a"
-
-# Git aliases
-if (( $+commands[git] )); then
-  alias g="git"
-
-  alias gb="git branch"
-  alias gba="git branch --all --verbose"
-  alias gbd="git branch --delete"
-  alias gbD="git branch --delete --force"
-  alias gbl="git branch --verbose"
-
-  alias gc="git commit --verbose"
-  alias gcm="git commit --message"
-  alias gcf="git commit --amend --reuse-message HEAD"
-  alias gcF="git commit --verbose --amend"
-
-  alias gco="git checkout"
-
-  alias gf="git fetch"
-  alias gfc="git clone"
-  alias gfu="git fetch upstream"
-  alias gfm="git pull"
-  alias gfmu="git pull upstream master"
-
-  alias ga="git add"
-  alias gia="git add"
-  alias giA="git add --patch"
-  alias gid="git diff --no-ext-diff --cached"
-  alias giD="git diff --no-ext-diff --cached --word-diff"
-  alias gir="git reset"
-
-  _git_log_medium_format="%C(bold)Commit:%C(reset) %C(green)%H%C(red)%d%n%C(bold)Author:%C(reset) %C(cyan)%an <%ae>%n%C(bold)Date:%C(reset)   %C(blue)%ai (%ar)%C(reset)%n%+B"
-  _git_log_oneline_format="%C(green)%h%C(reset) %s%C(red)%d%C(reset)%n"
-  _git_log_brief_format="%C(green)%h%C(reset) %s%n%C(blue)(%ar by %an)%C(red)%d%C(reset)%n"
-
-  alias gl="git log --topo-order --pretty=format:'${_git_log_medium_format}'"
-  alias gls="git log --topo-order --stat --pretty=format:'${_git_log_medium_format}'"
-  alias glo="git log --topo-order --pretty=format:'${_git_log_oneline_format}'"
-  alias glg="git log --topo-order --all --graph --pretty=format:'${_git_log_oneline_format}'"
-  alias glb="git log --topo-order --pretty=format:'${_git_log_brief_format}'"
-
-  alias gm="git merge"
-
-  alias gp="git push"
-  alias gpf="git push --force-with-lease"
-  alias gpF="git push --force"
-
-  alias gr="git rebase"
-
-  alias gR="git remote"
-  alias gRl="git remote --verbose"
-
-  alias gs="git stash"
-  alias gsa="git stash apply"
-  alias gsl="git stash list"
-  alias gsp="git stash pop"
-
-  alias gws="git status --ignore-submodules=all --short"
-  alias gwS="git status --ignore-submodules=all"
-  alias gwd="git diff --no-ext-diff"
-  alias gwD="git diff --no-ext-diff --word-diff"
-  alias gwr="git reset --soft"
-  alias gwR="git reset --hard"
-fi
-
-update_python() {
-  if (( $+commands[pip2] )); then
-    pip2 install -q --upgrade pip
-    pip2 freeze --local | grep -v '^\-e' | cut -d = -f 1 | xargs -n1 pip2 install -q -U
-  fi
-
-  if (( $+commands[pip3] )); then
-    pip3 install -q --upgrade pip
-    pip3 freeze --local | grep -v '^\-e' | cut -d = -f 1 | xargs -n1 pip3 install -q -U
-  fi
-}
-
-reset_pip() {
-  if (( $+commands[pip2] )); then
-    pip2 uninstall -y -r <(pip2 freeze)
-  fi
-
-  if (( $+commands[pip3] )); then
-    pip3 uninstall -y -r <(pip3 freeze)
-  fi
-}
-
-update_vim() {
-  vim +PlugUpdate +qall
-}
-
-update_ycm() {
-  pushd "$HOME/.vim/plugged/youcompleteme"
-  ./install.py --clang-completer --js-completer --rust-completer --java-completer
-  popd
-}
-
-reload_tmux() {
-  tmux source-file "$HOME/.tmux.conf"
-}
-
-reload_antibody() {
-  antibody bundle < "$HOME/.zsh_plugins.txt" > "$HOME/.zsh_plugins.sh"
-}
-
-## Custom programs
-# PostgreSQL
-if (( $+commands[pg_ctl] )); then
-  alias pg_start="pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start"
-  alias pg_stop="pg_ctl -D /usr/local/var/postgres stop -s -m fast"
-fi
-
-# fzf
-if [[ -d "/usr/local/opt/fzf" ]]; then
-  # Auto-completion
-  [[ $- == *i* ]] && source "/usr/local/opt/fzf/shell/completion.zsh" 2> /dev/null
-
-  # Key bindings
-  source "/usr/local/opt/fzf/shell/key-bindings.zsh"
-fi
+source "$DIR/core.zsh"
+source "$DIR/environment.zsh"
+source "$DIR/aliases.zsh"
+source "$DIR/functions.zsh"
+source "$DIR/custom.zsh"
 
 ## Local changes
 if [[ -f "$HOME/.zshrc-local" ]]; then
   source "$HOME/.zshrc-local"
 fi
+
+unset DIR
 
 # Display profiled loading time.
 # zprof
