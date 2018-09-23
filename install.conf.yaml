@@ -27,11 +27,11 @@
 
     ~/.hushlogin: zsh/hushlogin
     ~/.inputrc: zsh/inputrc
-    ~/.zprofile: zsh/zprofile
-    ~/.zprofile-local: zsh/zprofile-local
+    ~/.zprofile: zsh/zprofile.zsh
+    ~/.zprofile-local: zsh/zprofile-local.zsh
     ~/.zsh_plugins.txt: zsh/zsh_plugins.txt
-    ~/.zshenv: zsh/zshenv
-    ~/.zshrc: zsh/zshrc
+    ~/.zshenv: zsh/zshenv.zsh
+    ~/.zshrc: zsh/zshrc.zsh
 
 - shell:
     - command: git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm || true

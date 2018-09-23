@@ -1,4 +1,4 @@
 git/gitconfig-local
 ptpython/history
-zsh/zprofile-local
-zsh/zshrc-local
+zsh/zprofile-local.zsh
+zsh/zshrc-local.zsh
