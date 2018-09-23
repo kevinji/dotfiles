@@ -157,7 +157,7 @@ It should only modify the values of Spacemacs settings."
    ;; when the current branch is not `develop'. Note that checking for
    ;; new versions works via git commands, thus it calls GitHub services
    ;; whenever you start Emacs. (default nil)
-   dotspacemacs-check-for-update t
+   dotspacemacs-check-for-update nil
 
    ;; If non-nil, a form that evaluates to a package directory. For example, to
    ;; use different package directories for different Emacs versions, set this
@@ -172,19 +172,20 @@ It should only modify the values of Spacemacs settings."
    ;; (default 'vim)
    dotspacemacs-editing-style
    '(vim :variables
+         ;; If non-nil, objects are briefly highlighted.
+         vim-style-visual-feedback nil
 
-     ;; If non-nil `Y' is remapped to `y$' in Evil states.
-     vim-style-remap-Y-to-y$ t
+         ;; If non-nil, `Y' is remapped to `y$' in Evil states.
+         vim-style-remap-Y-to-y$ t
 
-     ;; If non-nil, the shift mappings `<' and `>' retain visual state if used
-     ;; there.
-     vim-style-retain-visual-state-on-shift t
+         ;; If non-nil, the shift mappings `<' and `>' retain visual state.
+         vim-style-retain-visual-state-on-shift t
 
-     ;; If non-nil, `J' and `K' move lines up and down when in visual mode.
-     vim-style-visual-line-move-text nil
+         ;; If non-nil, `J' and `K' move lines up and down when in visual mode.
+         vim-style-visual-line-move-text nil
 
-     ;; If non-nil, inverse the meaning of `g' in `:substitute' Evil ex-command.
-     vim-style-ex-substitute-global nil)
+         ;; If non-nil, inverse the meaning of `g' in `:substitute' Evil ex-command.
+         vim-style-ex-substitute-global nil)
 
    ;; If non-nil output loading progress in `*Messages*' buffer. (default nil)
    dotspacemacs-verbose-loading nil
@@ -219,7 +220,7 @@ It should only modify the values of Spacemacs settings."
    ;; List of themes, the first of the list is loaded when spacemacs starts.
    ;; Press `SPC T n' to cycle to the next theme in the list (works great
    ;; with 2 themes variants, one dark and one light)
-   dotspacemacs-themes '(doom-dracula doom-one doom-city-lights)
+   dotspacemacs-themes '(doom-dracula)
 
    ;; Set the theme for the Spaceline. Supported themes are `spacemacs',
    ;; `all-the-icons', `custom', `doom', `vim-powerline' and `vanilla'. The
