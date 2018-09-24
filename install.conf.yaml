@@ -17,6 +17,9 @@
     ~/.spacemacs.d/init.el:
       create: true
       path: spacemacs/init.el
+    ~/.spacemacs.d/local-example.el:
+      create: true
+      path: spacemacs/local-example.el
 
     ~/.tmux.conf: tmux/tmux.conf
 
