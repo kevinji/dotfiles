@@ -46,7 +46,7 @@ autoload -Uz bracketed-paste-url-magic
 zle -N bracketed-paste bracketed-paste-url-magic
 
 # Source antibody plugins
-[[ -f "$HOME/.zsh_plugins.sh" ]] && source "$HOME/.zsh_plugins.sh"
+[[ -f "$HOME/.zsh-plugins.sh" ]] && source "$HOME/.zsh-plugins.sh"
 
 # zsh features
 autoload -Uz compinit
