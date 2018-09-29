@@ -522,7 +522,10 @@ before packages are loaded."
    ;; ivy-count-format "%d/%d "
 
    ;; Reset completion delay to default time.
-   company-idle-delay 0.5)
+   company-idle-delay 0.5
+
+   ;; Set the inferior shell.
+   shell-file-name "/bin/sh")
 
   ;; Disable double-`TAB'-tapping in minibuffer.
   (define-key ivy-minibuffer-map (kbd "TAB") 'ivy-alt-done)
