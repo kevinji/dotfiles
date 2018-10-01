@@ -527,6 +527,9 @@ before packages are loaded."
    ;; Set the inferior shell.
    shell-file-name "/bin/sh")
 
+  ;; Map `RET' in normal mode to `save-buffer'.
+  (define-key evil-normal-state-map (kbd "RET") 'save-buffer)
+
   ;; Disable double-`TAB'-tapping in minibuffer.
   (define-key ivy-minibuffer-map (kbd "TAB") 'ivy-alt-done)
 
