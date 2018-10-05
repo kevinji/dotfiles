@@ -40,7 +40,9 @@ This function should only modify configuration layer settings."
      ;; `M-m f e R' (Emacs style) to install them.
      ;; ----------------------------------------------------------------
      ivy
-     auto-completion
+     (auto-completion
+      :variables
+      auto-completion-idle-delay 0.5)
      better-defaults
      emacs-lisp
      git
@@ -51,7 +53,10 @@ This function should only modify configuration layer settings."
             shell-default-height 30
             shell-default-position 'bottom)
      ;; spell-checking
-     syntax-checking
+     (syntax-checking
+      :variables
+      flycheck-check-syntax-automatically '(save idle-change mode-enabled)
+      flycheck-idle-change-delay 2)
      version-control
 
      ;; Useful
@@ -406,7 +411,7 @@ It should only modify the values of Spacemacs settings."
 
    ;; If non-nil, start an Emacs server if one is not already running.
    ;; (default nil)
-   dotspacemacs-enable-server t
+   dotspacemacs-enable-server nil
 
    ;; Set the emacs server socket location.
    ;; If nil, uses whatever the Emacs default is, otherwise a directory path
