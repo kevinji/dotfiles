@@ -53,6 +53,10 @@ if [[ -f "$HOME/.zprofile-local" ]]; then
 fi
 
 ## Custom programs
+if (( $+commands[gpg] )); then
+  export GPG_TTY="$(tty)"
+fi
+
 # fzf
 if [[ -d "/usr/local/opt/fzf" ]]; then
   path+=("/usr/local/opt/fzf/bin")
