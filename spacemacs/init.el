@@ -516,7 +516,7 @@ before packages are loaded."
    ivy-re-builders-alist '((swiper . ivy--regex-fuzzy)
                            (read-file-name-internal . ivy--regex-fuzzy)
                            (ivy-switch-buffer . ivy--regex-fuzzy)
-                           (t . ivy--regex-plus))
+                           (t . spacemacs/ivy--regex-plus))
 
    ;; Display both current and total matches in the Ivy buffer.
    ;; ivy-count-format "%d/%d "
