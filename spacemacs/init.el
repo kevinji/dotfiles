@@ -34,7 +34,9 @@ This function should only modify configuration layer settings."
    ;; List of configuration layers to load.
    dotspacemacs-configuration-layers
    '(
-     ivy
+     (ivy
+      :variables
+      ivy-enable-advanced-buffer-information t)
      (auto-completion
       :variables
       auto-completion-idle-delay 0.5)
@@ -532,6 +534,7 @@ before packages are loaded."
 
   ;; Disable double-`TAB'-tapping in minibuffer.
   (define-key ivy-minibuffer-map (kbd "TAB") 'ivy-alt-done)
+  (define-key ivy-minibuffer-map (kbd "RET") 'ivy-alt-done)
 
   ;; macOS `ls' does not support `--dired'.
   (when (eq system-type 'darwin)
