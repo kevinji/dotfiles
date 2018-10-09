@@ -35,5 +35,5 @@ reload_tmux() {
 }
 
 reload_antibody() {
-  antibody bundle < "$HOME/.zsh_plugins.txt" > "$HOME/.zsh_plugins.sh"
+  antibody bundle < "$HOME/.zsh-plugins.txt" > "$HOME/.zsh-plugins.sh"
 }
