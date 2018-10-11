@@ -575,6 +575,7 @@ before packages are loaded."
     :hook css-mode)
 
   (use-package js2-mode
+    :no-require t
     :custom
     (js2-strict-trailing-comma-warning nil))
 
