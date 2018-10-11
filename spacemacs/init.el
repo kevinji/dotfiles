@@ -46,9 +46,10 @@ This function should only modify configuration layer settings."
      markdown
      neotree
      ;; org
-     (shell :variables
-            shell-default-height 30
-            shell-default-position 'bottom)
+     (shell
+      :variables
+      shell-default-height 30
+      shell-default-position 'bottom)
      ;; spell-checking
      (syntax-checking
       :variables
@@ -59,8 +60,9 @@ This function should only modify configuration layer settings."
      ;; Useful
      colors
      osx
-     (evil-snipe :variables
-                 evil-snipe-enable-alternate-f-and-t-behaviors t)
+     (evil-snipe
+      :variables
+      evil-snipe-enable-alternate-f-and-t-behaviors t)
 
      ;; Languages
      html
@@ -497,84 +499,96 @@ This function is called at the very end of Spacemacs startup, after layer
 configuration.
 Put your configuration code here, except for variables that should be set
 before packages are loaded."
-  (setq-default
-   ;; Map `jk' to `ESC'.
-   evil-escape-key-sequence "jk"
-
-   ;; Make `olivetti' wider.
-   olivetti-body-width 100
-
-   ;; Disable trailing comma warnings for `js2-mode'.
-   js2-strict-trailing-comma-warning nil
-
-   ;; Disable Emacs lock files.
-   create-lockfiles nil
-
-   ;; Use `string' syntax for `re-builder'.
-   reb-re-syntax 'string
-
-   ;; Use Ivy's fuzzy matcher, and remove the initial `^'.
-   ivy-initial-inputs-alist nil
-   ivy-re-builders-alist '((swiper . ivy--regex-fuzzy)
-                           (read-file-name-internal . ivy--regex-fuzzy)
-                           (ivy-switch-buffer . ivy--regex-fuzzy)
-                           (t . spacemacs/ivy--regex-plus))
-
-   ;; Display both current and total matches in the Ivy buffer.
-   ;; ivy-count-format "%d/%d "
-
-   ;; Reset completion delay to default time.
-   company-idle-delay 0.5
-
-   ;; Set the inferior shell.
-   shell-file-name "/bin/sh")
-
-  ;; Map `RET' in normal mode to `save-buffer'.
-  (define-key evil-normal-state-map (kbd "RET") 'save-buffer)
-
-  ;; Disable double-`TAB'-tapping in minibuffer.
-  (define-key ivy-minibuffer-map (kbd "TAB") 'ivy-alt-done)
-  (define-key ivy-minibuffer-map (kbd "RET") 'ivy-alt-done)
-
-  ;; macOS `ls' does not support `--dired'.
-  (when (eq system-type 'darwin)
-    (setq-default dired-use-ls-dired nil))
-
-  ;; https://emacs.stackexchange.com/a/15054
-  (fset 'evil-visual-update-x-selection 'ignore)
-
-  ;; Enable flashing mode-line on errors.
-  (doom-themes-visual-bell-config)
-
-  ;; Enable custom neotree theme.
-  (doom-themes-neotree-config)
-
-  ;; Correct (and improve) org-mode's native fontification.
-  (doom-themes-org-config)
-
-  ;; Enable EditorConfig.
-  (editorconfig-mode 1)
-
-  ;; Enable `rainbow-mode' for CSS.
-  (add-hook 'css-mode-hook 'rainbow-mode)
-
-  ;; Replace `spacemacs-centered-buffer-mode' with `olivetti'.
-  (spacemacs/set-leader-keys "wc" 'olivetti-mode)
-
-  ;; Enable `winner-mode', which allows undoing and redoing of window
-  ;; configuration changes via `C-c left' and `C-c right'.
-  (winner-mode 1)
-
-  ;; Add `auto-fill-mode' to a few text modes.
-  (add-hook 'markdown-mode-hook 'auto-fill-mode)
-
   ;; Disable `C-h h' (`view-hello-file'), which crashes Spacemacs.
   (put 'view-hello-file 'disabled t)
 
   ;; Stop `ESC ESC ESC' (`keyboard-escape-quit') from closing all windows.
   (defadvice keyboard-escape-quit
-      (around keyboard-escape-quit-dont-close-windows activate)
+    (around keyboard-escape-quit-dont-close-windows activate)
     (let ((buffer-quit-function (lambda () ()))) ad-do-it))
+
+  ;; Disable Emacs lock files.
+  (setq-default create-lockfiles nil)
+
+  (use-package dired
+    :if (eq system-type 'darwin)
+    :custom
+    (dired-use-ls-dired nil "macOS `ls' does not support `--dired'."))
+
+  (use-package evil
+    :custom
+    (evil-escape-key-sequence "jk")
+
+    :config
+    ;; https://emacs.stackexchange.com/a/15054
+    (fset 'evil-visual-update-x-selection 'ignore)
+
+    :bind (:map evil-normal-state-map
+           ("RET" . save-buffer)))
+
+  (use-package doom-themes
+    :config
+    ;; Enable flashing mode-line on errors.
+    ;; (doom-themes-visual-bell-config)
+
+    ;; Enable custom neotree theme.
+    (doom-themes-neotree-config)
+
+    ;; Correct (and improve) org-mode's native fontification.
+    (doom-themes-org-config))
+
+  (use-package editorconfig
+    :config
+    (editorconfig-mode 1))
+
+  (use-package ivy
+    :after flx
+    :custom
+    ;; (ivy-count-format "%d/%d " "Display both current and total matches in the Ivy buffer.")
+    (ivy-initial-inputs-alist nil "Remove the initial `^' in searches.")
+    (ivy-re-builders-alist
+      '((swiper . ivy--regex-fuzzy)
+        (read-file-name-internal . ivy--regex-fuzzy)
+        (ivy-switch-buffer . ivy--regex-fuzzy)
+        (t . spacemacs/ivy--regex-plus)))
+
+    :bind (:map ivy-minibuffer-map
+           ;; Disable double-`TAB'-tapping in minibuffer.
+           ("TAB" . ivy-alt-done)
+           ("RET" . ivy-alt-done)))
+
+  (use-package company
+    :custom
+    (company-idle-delay 0.5 "Reset completion delay to default time."))
+
+  (use-package olivetti
+    :custom
+    (olivetti-body-width 100 "Make `olivetti' wider.")
+
+    :bind (:map spacemacs-default-map
+           ;; Replace `spacemacs-centered-buffer-mode' with `olivetti'.
+           ("wc" . olivetti-mode)))
+
+  (use-package rainbow-mode
+    :after css-mode
+    :hook css-mode)
+
+  (use-package js2-mode
+    :custom
+    (js2-strict-trailing-comma-warning nil))
+
+  (use-package re-builder
+    :custom
+    (reb-re-syntax 'string))
+
+  (use-package auto-fill-mode
+    :after markdown-mode
+    :hook markdown-mode)
+
+  (when (fboundp 'winner-mode)
+    ;; Enable `winner-mode', which allows undoing and redoing of window
+    ;; configuration changes via `C-c left' and `C-c right'.
+    (winner-mode 1))
 
   ;; Load `custom-file' if it exists.
   (when (file-exists-p custom-file)
