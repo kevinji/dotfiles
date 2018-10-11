@@ -559,6 +559,7 @@ before packages are loaded."
 
   (use-package company
     :custom
+    (company-dabbrev-downcase nil "https://emacs.stackexchange.com/a/10838")
     (company-idle-delay 0.5 "Reset completion delay to default time."))
 
   (use-package olivetti
