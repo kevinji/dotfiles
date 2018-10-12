@@ -1,4 +1,6 @@
 # Rename this file to gitconfig-local and fill in the fields.
+[core]
+	pager = $PAGER
 [user]
 	name = AUTHOR-NAME
 	email = AUTHOR-EMAIL
