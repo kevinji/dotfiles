@@ -33,7 +33,6 @@ brew "emacs-plus"
 brew "neovim"
 
 # Languages and package managers
-brew "python@2"
 brew "python"
 
 brew "node"
@@ -52,8 +51,6 @@ brew "exa"
 brew "fd"
 brew "fzf"
 brew "htop"
-brew "jq"
-brew "mosh"
 brew "rename"
 brew "ripgrep"
 brew "tldr"
@@ -66,7 +63,6 @@ brew "ffmpeg", args: [
     "with-libvpx", "with-opus", "with-sdl2", "with-x265"
 ]
 brew "gnupg"
-brew "openblas"
 brew "pandoc"
 brew "pngquant"
 
@@ -85,10 +81,8 @@ cask "font-source-code-pro"
 
 # Programming tools
 cask "iterm2"
-cask "vagrant"
 
 # Utilities
-cask "1password-cli"
 cask "alfred"
 cask "appcleaner"
 cask "bartender"
@@ -108,11 +102,9 @@ cask "texstudio"
 
 cask "adobe-creative-cloud"
 cask "dropbox"
-cask "evernote"
 cask "iina"
 cask "private-internet-access"
 cask "spotify"
-cask "steam"
 cask "transmission"
 
 ## macOS applications
@@ -125,6 +117,5 @@ mas "Evernote", id: 406056744
 mas "Fantastical 2", id: 975937182
 mas "Microsoft OneNote", id: 784801555
 mas "Spark", id: 1176895641
-mas "Stockfish", id: 801463932
 mas "The Unarchiver", id: 425424353
 mas "Things 3", id: 904280696
