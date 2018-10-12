@@ -13,3 +13,5 @@ if [[ -f "$HOME/.zprofile-local" ]]; then
 fi
 
 source "$DIR/external.zsh"
+
+unset DIR
