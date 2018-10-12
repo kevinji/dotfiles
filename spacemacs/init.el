@@ -544,7 +544,10 @@ before packages are loaded."
   (use-package ivy
     :after flx
     :custom
-    ;; (ivy-count-format "%d/%d " "Display both current and total matches in the Ivy buffer.")
+    ;; (ivy-count-format
+    ;;   "%d/%d "
+    ;;   "Display both current and total matches in the Ivy buffer.")
+    (ivy-extra-directories nil "Remove `.' and `..' from directory lists.")
     (ivy-initial-inputs-alist nil "Remove the initial `^' in searches.")
     (ivy-re-builders-alist
       '((swiper . ivy--regex-fuzzy)
