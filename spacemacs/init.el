@@ -511,11 +511,13 @@ before packages are loaded."
   (setq-default create-lockfiles nil)
 
   (use-package dired
+    :defer t
     :if (eq system-type 'darwin)
     :custom
     (dired-use-ls-dired nil "macOS `ls' does not support `--dired'."))
 
   (use-package evil
+    :defer t
     :custom
     (evil-escape-key-sequence "jk")
 
@@ -527,6 +529,7 @@ before packages are loaded."
            ("RET" . save-buffer)))
 
   (use-package doom-themes
+    :defer t
     :config
     ;; Enable flashing mode-line on errors.
     ;; (doom-themes-visual-bell-config)
@@ -538,10 +541,12 @@ before packages are loaded."
     (doom-themes-org-config))
 
   (use-package editorconfig
+    :defer t
     :config
     (editorconfig-mode 1))
 
   (use-package ivy
+    :defer t
     :after flx
     :custom
     ;; (ivy-count-format
@@ -561,11 +566,13 @@ before packages are loaded."
            ("RET" . ivy-alt-done)))
 
   (use-package company
+    :defer t
     :custom
     (company-dabbrev-downcase nil "https://emacs.stackexchange.com/a/10838")
     (company-idle-delay 0.5 "Reset completion delay to default time."))
 
   (use-package olivetti
+    :defer t
     :custom
     (olivetti-body-width 100 "Make `olivetti' wider.")
 
@@ -574,19 +581,23 @@ before packages are loaded."
            ("wc" . olivetti-mode)))
 
   (use-package rainbow-mode
+    :defer t
     :after css-mode
     :hook css-mode)
 
   (use-package js2-mode
+    :defer t
     :no-require t
     :custom
     (js2-strict-trailing-comma-warning nil))
 
   (use-package re-builder
+    :defer t
     :custom
     (reb-re-syntax 'string))
 
   (use-package auto-fill-mode
+    :defer t
     :after markdown-mode
     :hook markdown-mode)
 
