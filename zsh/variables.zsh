@@ -3,7 +3,19 @@ if [[ "$OSTYPE" == darwin* ]]; then
   export BROWSER="open"
 fi
 
-export EDITOR="vim"
+if (( $+commands[vimx] )); then
+  alias vi="vimx"
+  alias vim="vimx"
+  alias vimdiff="vimx -d"
+  export EDITOR="vimx"
+elif (( $+commands[nvim] )); then
+  alias vi="nvim"
+  alias vim="nvim"
+  alias vimdiff="nvim -d"
+  export EDITOR="nvim"
+else
+  export EDITOR="vim"
+fi
 
 export VISUAL="$EDITOR"
 export PAGER="less"
