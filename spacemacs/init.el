@@ -63,6 +63,7 @@ This function should only modify configuration layer settings."
      (evil-snipe
       :variables
       evil-snipe-enable-alternate-f-and-t-behaviors t)
+     ranger
 
      ;; Languages
      html
@@ -515,6 +516,14 @@ before packages are loaded."
     :if (eq system-type 'darwin)
     :custom
     (dired-use-ls-dired nil "macOS `ls' does not support `--dired'."))
+
+  (use-package ranger
+    :defer t
+    :after dired
+    :custom
+    (ranger-override-dired-mode t)
+    (ranger-show-hidden t)
+    (ranger-preview-file t))
 
   (use-package evil
     :defer t
