@@ -41,6 +41,21 @@ zstyle ":completion:*" matcher-list "m:{[:lower:][:upper:]}={[:upper:][:lower:]}
 # Cache completion
 zstyle ":completion::complete:*" use-cache on
 
+# ssh completion
+zstyle -a ":prezto:module:completion:*:hosts" etc-host-ignores "_etc_host_ignores"
+zstyle -e ":completion:*:hosts" hosts 'reply=(
+  ${=${=${=${${(f)"$(cat {/etc/ssh/ssh_,~/.ssh/}known_hosts(|2)(N) 2> /dev/null)"}%%[#| ]*}//\]:[0-9]*/ }//,/ }//\[/ }
+  ${=${(f)"$(cat /etc/hosts(|)(N) <<(ypcat hosts 2> /dev/null))"}%%(\#${_etc_host_ignores:+|${(j:|:)~_etc_host_ignores}})*}
+  ${=${${${${(@M)${(f)"$(cat ~/.ssh/config 2> /dev/null)"}:#Host *}#Host }:#*\**}:#*\?*}}
+)'
+
+zstyle ":completion:*:(ssh|scp|rsync):*" tag-order "hosts:-host:host hosts:-domain:domain hosts:-ipaddr:ip\ address *"
+zstyle ":completion:*:(scp|rsync):*" group-order users files all-files hosts-domain hosts-host hosts-ipaddr
+zstyle ":completion:*:ssh:*" group-order users hosts-domain hosts-host users hosts-ipaddr
+zstyle ":completion:*:(ssh|scp|rsync):*:hosts-host" ignored-patterns "*(.|:)*" loopback ip6-loopback localhost ip6-localhost broadcasthost
+zstyle ":completion:*:(ssh|scp|rsync):*:hosts-domain" ignored-patterns "<->.<->.<->.<->" "^[-[:alnum:]]##(.[-[:alnum:]]##)##" "*@*"
+zstyle ":completion:*:(ssh|scp|rsync):*:hosts-ipaddr" ignored-patterns "^(<->.<->.<->.<->|(|::)([[:xdigit:].]##:(#c,2))##(|%*))" "127.0.0.<->" "255.255.255.255" "::1" "fe80::*"
+
 # zsh functions
 autoload -Uz bracketed-paste-url-magic
 zle -N bracketed-paste bracketed-paste-url-magic
