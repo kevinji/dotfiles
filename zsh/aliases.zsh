@@ -1,3 +1,10 @@
+## General
+alias type="type -a"
+
+if (( $+commands[perl] )); then
+  alias psed="perl -p0e" # Shadows `psed` provided by perl.
+fi
+
 ## Directories
 alias l="ls -1A"   # Lists in one column, hidden files.
 alias ll="ls -lh"  # Lists human readable sizes.
@@ -11,8 +18,6 @@ if (( $+commands[exa] )); then
 fi
 
 alias mkdir="${aliases[mkdir]:-mkdir} -p" # Make intermediate directories.
-
-alias type="type -a"
 
 ## Git
 if (( $+commands[git] )); then
