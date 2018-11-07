@@ -67,6 +67,8 @@ zle -N bracketed-paste bracketed-paste-url-magic
 autoload -Uz compinit
 compinit
 
+autoload -Uz zmv
+
 # bash emulation
 autoload -Uz bashcompinit
 bashcompinit
