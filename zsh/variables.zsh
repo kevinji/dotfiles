@@ -1,6 +1,8 @@
 ## Basic variables
 if [[ "$OSTYPE" == darwin* ]]; then
   export BROWSER="open"
+elif (( $+commands[xdg-open] )); then
+  export BROWSER="xdg-open"
 fi
 
 if (( $+commands[vimx] )); then
