@@ -53,10 +53,11 @@ brew "tldr"
 brew "wget"
 
 # Rust-based shell tools
-brew "bat"
-brew "exa"
-brew "fd"
-brew "ripgrep"
+brew "bat"       # cat
+brew "exa"       # ls
+brew "hyperfine" # bench
+brew "fd"        # find
+brew "ripgrep"   # grep
 
 # Miscellaneous tools
 brew "editorconfig"
