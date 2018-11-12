@@ -45,7 +45,7 @@ This function should only modify configuration layer settings."
      git
      markdown
      multiple-cursors
-     neotree
+     ;; neotree
      ;; org
      (shell
       :variables
@@ -512,6 +512,10 @@ before packages are loaded."
   ;; Disable Emacs lock files.
   (setq-default create-lockfiles nil)
 
+  ;; Disable beeping.
+  (setq-default visible-bell nil)
+  (setq-default ring-bell-function 'ignore)
+
   (use-package dired
     :defer t
     :if (eq system-type 'darwin)
@@ -545,7 +549,7 @@ before packages are loaded."
     ;; (doom-themes-visual-bell-config)
 
     ;; Enable custom neotree theme.
-    (doom-themes-neotree-config)
+    ;; (doom-themes-neotree-config)
 
     ;; Correct (and improve) org-mode's native fontification.
     (doom-themes-org-config))
