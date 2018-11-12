@@ -539,8 +539,17 @@ before packages are loaded."
     ;; https://emacs.stackexchange.com/a/15054
     (fset 'evil-visual-update-x-selection 'ignore)
 
+    ;; Paste multiple times without overwriting clipboard.
+    (defun evil-paste-after-from-0 ()
+      (interactive)
+      (let ((evil-this-register ?0))
+        (call-interactively 'evil-paste-after)))
+
     :bind (:map evil-normal-state-map
-           ("RET" . save-buffer)))
+           ("RET" . save-buffer)
+
+           :map evil-visual-state-map
+           ("p" . evil-paste-after-from-0)))
 
   (use-package doom-themes
     :defer t

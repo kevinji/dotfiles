@@ -52,6 +52,9 @@ inoremap jk <Esc>
 " Enter to save
 nnoremap <CR> :w<CR>
 
+" Paste multiple times without overwriting clipboard
+xnoremap p pgvy
+
 " Keep the current visual block selection active after shifting
 vmap > >gv
 vmap < <gv
