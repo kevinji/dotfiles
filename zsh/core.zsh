@@ -68,6 +68,8 @@ autoload -Uz compinit
 compinit
 
 autoload -Uz zmv
+alias zcp="zmv -C"
+alias zln="zmv -L"
 
 # bash emulation
 autoload -Uz bashcompinit
