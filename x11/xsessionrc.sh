@@ -1,6 +1,8 @@
+#!/bin/bash
+
 # Caps -> Esc/Ctrl
 setxkbmap -option 'caps:ctrl_modifier'
-xcape -e 'Caps_Lock=Escape;Control_L=Escape;Control_R=Escape'
+xcape -e 'Caps_Lock=Escape'
 
-# Swap Alt/Win
-setxkbmap -option 'altwin:swap_alt_win'
+# Swap LAlt/LWin
+setxkbmap -option 'altwin:swap_lalt_lwin'
