@@ -537,22 +537,15 @@ before packages are loaded."
     :defer t
     :custom
     (evil-escape-key-sequence "jk")
+    (evil-kill-on-visual-paste nil
+      "Stop `evil-visual-paste' from adding the replaced text to the kill ring.")
 
     :config
     ;; https://emacs.stackexchange.com/a/15054
     (fset 'evil-visual-update-x-selection 'ignore)
 
-    ;; Paste multiple times without overwriting clipboard.
-    (defun evil-paste-after-from-0 ()
-      (interactive)
-      (let ((evil-this-register ?0))
-        (call-interactively 'evil-paste-after)))
-
     :bind (:map evil-normal-state-map
-           ("RET" . save-buffer)
-
-           :map evil-visual-state-map
-           ("p" . evil-paste-after-from-0)))
+           ("RET" . save-buffer)))
 
   (use-package doom-themes
     :defer t
