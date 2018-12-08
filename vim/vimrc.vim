@@ -32,7 +32,7 @@ syntax on
 set background=dark
 
 " Use the system clipboard, if possible
-set clipboard^=unnamedplus,unnamed
+set clipboard^=unnamed,unnamedplus
 
 " Make <Leader> more accessible
 let mapleader = " "
@@ -53,7 +53,7 @@ inoremap jk <Esc>
 nnoremap <CR> :w<CR>
 
 " Paste multiple times without overwriting clipboard
-xnoremap p pgvy
+xnoremap <silent> p p:let @+=@0<CR>:let @"=@0<CR>
 
 " Keep the current visual block selection active after shifting
 vmap > >gv
