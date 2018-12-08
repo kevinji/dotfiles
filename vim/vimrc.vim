@@ -53,7 +53,26 @@ inoremap jk <Esc>
 nnoremap <CR> :w<CR>
 
 " Paste multiple times without overwriting clipboard
-xnoremap <silent> p p:let @+=@0<CR>:let @"=@0<CR>
+function! RestoreRegister()
+  if &clipboard == 'unnamed,unnamedplus'
+    let @* = s:restore_reg
+    let @+ = s:restore_reg
+  elseif &clipboard == 'unnamed'
+    let @* = s:restore_reg
+  elseif &clipboard == 'unnamedplus'
+    let @+ = s:restore_reg
+  else
+    let @" = s:restore_reg
+  endif
+  return ''
+endfunction
+
+function! s:Repl()
+  let s:restore_reg = @"
+  return "p@=RestoreRegister()\<cr>"
+endfunction
+
+xnoremap <silent> <expr> p <sid>Repl()
 
 " Keep the current visual block selection active after shifting
 vmap > >gv
