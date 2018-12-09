@@ -26,7 +26,7 @@ update_vim() {
 
 update_ycm() {
   pushd "$HOME/.vim/plugged/youcompleteme"
-  ./install.py --clang-completer --js-completer --rust-completer --java-completer
+  python3 ./install.py --clang-completer --js-completer --rust-completer --java-completer
   popd
 }
 
