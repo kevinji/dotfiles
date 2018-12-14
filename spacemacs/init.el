@@ -559,6 +559,14 @@ before packages are loaded."
     ;; Correct (and improve) org-mode's native fontification.
     (doom-themes-org-config))
 
+  (use-package doom-modeline
+    :defer t
+    :custom
+    (doom-modeline-major-mode-icon nil "Hide the major mode icon.")
+    (doom-modeline-persp-name nil "Hide the perspective name.")
+    (doom-modeline-lsp nil "Hide the `lsp' state.")
+    (doom-modeline-github nil "Disable GitHub notifications."))
+
   (use-package editorconfig
     :defer t
     :diminish editorconfig-mode
