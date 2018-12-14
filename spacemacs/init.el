@@ -561,6 +561,7 @@ before packages are loaded."
 
   (use-package editorconfig
     :defer t
+    :diminish editorconfig-mode
     :config
     (editorconfig-mode 1))
 
@@ -585,6 +586,7 @@ before packages are loaded."
 
   (use-package company
     :defer t
+    :diminish company-mode
     :custom
     (company-dabbrev-downcase nil "https://emacs.stackexchange.com/a/10838")
     (company-idle-delay 0.5 "Reset completion delay to default time."))
