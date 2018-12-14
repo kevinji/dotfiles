@@ -583,7 +583,8 @@ before packages are loaded."
     (ivy-extra-directories nil "Remove `.' and `..' from directory lists.")
     (ivy-initial-inputs-alist nil "Remove the initial `^' in searches.")
     (ivy-re-builders-alist
-      '((read-file-name-internal . ivy--regex-fuzzy)
+      '((counsel-find-file . ivy--regex-fuzzy)
+        (read-file-name-internal . ivy--regex-fuzzy)
         (ivy-switch-buffer . ivy--regex-fuzzy)
         (t . spacemacs/ivy--regex-plus)))
 
