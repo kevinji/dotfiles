@@ -5,6 +5,10 @@ if (( $+commands[perl] )); then
   alias psed="perl -p0e" # Shadows `psed` provided by perl.
 fi
 
+if (( $+commands[ncdu] )); then
+  alias ncdu="ncdu --color dark" # Enable colors.
+fi
+
 ## Directories
 alias l="ls -1A"   # Lists in one column, hidden files.
 alias ll="ls -lh"  # Lists human readable sizes.
