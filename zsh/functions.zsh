@@ -1,3 +1,7 @@
+sum() {
+  awk '{ sum += $1 } END { print sum }'
+}
+
 update_python() {
   if (( $+commands[pip2] )); then
     pip2 install -q --upgrade pip
