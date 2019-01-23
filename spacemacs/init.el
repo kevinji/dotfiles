@@ -591,7 +591,11 @@ before packages are loaded."
     :bind (:map ivy-minibuffer-map
            ;; Disable double-`TAB'-tapping in minibuffer.
            ("TAB" . ivy-alt-done)
-           ("RET" . ivy-alt-done)))
+           ("RET" . ivy-alt-done))
+
+          (:map counsel-find-file-map
+           ("<left>" . counsel-up-directory)
+           ("<right>" . counsel-down-directory)))
 
   (use-package company
     :defer t
