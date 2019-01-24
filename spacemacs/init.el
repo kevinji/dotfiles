@@ -589,13 +589,11 @@ before packages are loaded."
         (t . spacemacs/ivy--regex-plus)))
 
     :bind (:map ivy-minibuffer-map
-           ;; Disable double-`TAB'-tapping in minibuffer.
-           ("TAB" . ivy-alt-done)
            ("RET" . ivy-alt-done))
 
           (:map counsel-find-file-map
-           ("<left>" . counsel-up-directory)
-           ("<right>" . counsel-down-directory)))
+           ;; Disable double-`TAB'-tapping in minibuffer.
+           ("TAB" . counsel-down-directory)))
 
   (use-package company
     :defer t
