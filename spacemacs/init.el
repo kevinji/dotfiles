@@ -45,7 +45,7 @@ This function should only modify configuration layer settings."
      git
      markdown
      multiple-cursors
-     ;; neotree
+     ;; treemacs
      ;; org
      (shell
       :variables
