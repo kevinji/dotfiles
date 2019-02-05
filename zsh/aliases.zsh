@@ -27,6 +27,9 @@ alias mkdir="${aliases[mkdir]:-mkdir} -p" # Make intermediate directories.
 if (( $+commands[git] )); then
   alias g="git"
 
+  alias ga="git add"
+  alias gA="git add --patch"
+
   alias gb="git branch"
   alias gba="git branch --all --verbose"
   alias gbd="git branch --delete"
@@ -46,9 +49,6 @@ if (( $+commands[git] )); then
   alias gfm="git pull"
   alias gfmu="git pull upstream master"
 
-  alias ga="git add"
-  alias gia="git add"
-  alias giA="git add --patch"
   alias gid="git diff --no-ext-diff --cached"
   alias giD="git diff --no-ext-diff --cached --word-diff"
   alias gir="git reset"
