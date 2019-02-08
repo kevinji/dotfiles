@@ -104,6 +104,7 @@ cask "google-chrome-beta"
 cask "mactex"
 cask "texstudio"
 
+cask "adobe-acrobat-reader"
 cask "adobe-creative-cloud"
 cask "dropbox"
 cask "iina"
