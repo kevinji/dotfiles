@@ -46,6 +46,7 @@ brew "rbenv"
 brew "rustup-init"
 
 # Shell niceties
+brew "bash"
 brew "coreutils"
 brew "fzf"
 brew "htop"
