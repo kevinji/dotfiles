@@ -87,7 +87,9 @@ This function should only modify configuration layer settings."
      all-the-icons
      doom-themes
      editorconfig
+     evil-vimish-fold
      olivetti
+     vimish-fold
      )
 
    ;; A list of packages that cannot be updated.
@@ -546,6 +548,12 @@ before packages are loaded."
 
     :bind (:map evil-normal-state-map
            ("RET" . save-buffer)))
+
+  (use-package evil-vimish-fold
+    :defer t
+    :after (evil vimish-fold)
+    :config
+    (evil-vimish-fold-mode 1))
 
   (use-package doom-themes
     :defer t
