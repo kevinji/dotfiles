@@ -640,6 +640,16 @@ before packages are loaded."
     :after markdown-mode
     :hook markdown-mode)
 
+  (use-package auto-fill-mode
+    :defer t
+    :after tuareg
+    :init
+    (defun auto-fill-comments ()
+      (setq-local comment-auto-fill-only-comments t)
+      (auto-fill-mode 1))
+
+    (add-hook 'tuareg-mode-hook 'auto-fill-comments))
+
   (when (fboundp 'winner-mode)
     ;; Enable `winner-mode', which allows undoing and redoing of window
     ;; configuration changes via `C-c left' and `C-c right'.
