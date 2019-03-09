@@ -11,5 +11,7 @@ git clone --recursive https://github.com/kevinji/dotfiles.git
 
 Then, run `./install`, followed by `./scripts/setup-mac.sh` if relevant.
 
+Under the hood, [Dotbot](https://github.com/anishathalye/dotbot) manages the dotfiles installation.
+
 ## License
 [MIT](LICENSE).
