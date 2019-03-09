@@ -16,8 +16,6 @@
 	enabled = true
 [diff]
 	indentHeuristic = true
-[submodule]
-	recurse = true
 [color]
 	ui = true
 [color "diff-highlight"]
