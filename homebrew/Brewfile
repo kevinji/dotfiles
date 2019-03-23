@@ -24,6 +24,8 @@ brew "tmux"
 
 # Replacements for system programs
 brew "bash"
+brew "coreutils"
+brew "grep"
 brew "vim"
 
 # Git and helpers
@@ -50,7 +52,6 @@ brew "rbenv"
 brew "rustup-init"
 
 # Shell niceties
-brew "coreutils"
 brew "fzf"
 brew "htop"
 brew "tldr"
