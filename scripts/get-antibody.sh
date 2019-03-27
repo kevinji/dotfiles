@@ -28,4 +28,4 @@ extract() {
 download
 extract || true
 mv -f "$TMPDIR"/antibody ~/bin/antibody
-which antibody
+type antibody
