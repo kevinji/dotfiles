@@ -1,3 +1,4 @@
+#!/usr/bin/env zsh
 ## General
 alias type="type -a"
 

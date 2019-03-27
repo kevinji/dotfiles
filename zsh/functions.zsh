@@ -1,3 +1,4 @@
+#!/usr/bin/env zsh
 sum() {
   awk '{ sum += $1 } END { print sum }'
 }

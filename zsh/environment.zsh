@@ -1,3 +1,4 @@
+#!/usr/bin/env zsh
 ## Interactive shell variables
 # Delay of zsh key sequences (like Esc), in 10 ms units
 KEYTIMEOUT=1

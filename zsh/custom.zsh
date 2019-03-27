@@ -1,3 +1,4 @@
+#!/usr/bin/env zsh
 ## Custom programs
 # PostgreSQL
 if (( $+commands[pg_ctl] )); then

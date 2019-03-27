@@ -1,3 +1,4 @@
+#!/usr/bin/env zsh
 # Profile loading time.
 # zmodload zsh/zprof
 

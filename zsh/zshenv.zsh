@@ -1,3 +1,4 @@
+#!/usr/bin/env zsh
 # Use macOS shortcuts everywhere
 if [[ "$OSTYPE" == darwin* ]]; then
   alias o="open"

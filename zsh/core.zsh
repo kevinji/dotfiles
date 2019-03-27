@@ -1,3 +1,4 @@
+#!/usr/bin/env zsh
 # zsh options
 setopt COMBINING_CHARS      # Display accented chars as one char.
 setopt INTERACTIVE_COMMENTS # Allow comments in shell.

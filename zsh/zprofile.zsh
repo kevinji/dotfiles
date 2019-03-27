@@ -1,3 +1,4 @@
+#!/usr/bin/env zsh
 # Follow symlinks to this script's directory.
 if (( $+commands[greadlink] )); then
   alias readlink="greadlink"
