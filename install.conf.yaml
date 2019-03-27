@@ -14,6 +14,12 @@
     ~/.pip: pip
     ~/.ptpython: ptpython
 
+    ~/.config/ocamlformat:
+      create: true
+      path: ocaml/ocamlformat
+    ~/.ocp/ocp-indent.conf:
+      create: true
+      path: ocaml/ocp-indent.conf
     ~/.utoprc: ocaml/utoprc
 
     ~/.spacemacs.d/init.el:
