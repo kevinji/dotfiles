@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 set -e
 DOWNLOAD_URL="https://github.com/getantibody/antibody/releases/download"
 test -z "$TMPDIR" && TMPDIR="$(mktemp -d)"
