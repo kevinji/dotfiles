@@ -117,6 +117,7 @@ cask "iina"
 cask "private-internet-access"
 cask "spotify"
 cask "transmission"
+cask "visual-studio-code"
 
 ## macOS applications
 mas "Xcode", id: 497799835

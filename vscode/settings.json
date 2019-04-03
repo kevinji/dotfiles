@@ -1,0 +1,34 @@
+{
+    "editor.cursorBlinking": "solid",
+    "editor.fontFamily": "'Source Code Pro'",
+    "editor.fontSize": 13,
+    "editor.formatOnPaste": true,
+    "editor.lineNumbers": "relative",
+    "editor.renderFinalNewline": false,
+    "editor.wordWrap": "on",
+    "files.insertFinalNewline": true,
+    "files.trimFinalNewlines": true,
+    "telemetry.enableTelemetry": false,
+    "vim.hlsearch": true,
+    "vim.insertModeKeyBindingsNonRecursive": [
+        {
+            "before": ["j", "k"],
+            "after": ["<esc>"]
+        }
+    ],
+    "vim.leader": " ",
+    "vim.normalModeKeyBindingsNonRecursive": [
+        {
+            "before": ["Y"],
+            "after": ["y", "$"]
+        },
+        {
+            "before": ["<enter>"],
+            "commands": ["workbench.action.files.save"]
+        }
+    ],
+    "vim.sneak": true,
+    "vim.useSystemClipboard": true,
+    "workbench.colorTheme": "Dracula",
+    "workbench.editor.highlightModifiedTabs": true
+}
