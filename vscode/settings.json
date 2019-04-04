@@ -5,9 +5,12 @@
     "editor.formatOnPaste": true,
     "editor.lineNumbers": "relative",
     "editor.renderFinalNewline": false,
+    "editor.renderIndentGuides": false,
     "editor.wordWrap": "on",
     "files.insertFinalNewline": true,
     "files.trimFinalNewlines": true,
+    "html.format.endWithNewline": true,
+    "search.smartCase": true,
     "telemetry.enableTelemetry": false,
     "vim.hlsearch": true,
     "vim.insertModeKeyBindingsNonRecursive": [
@@ -29,6 +32,8 @@
     ],
     "vim.sneak": true,
     "vim.useSystemClipboard": true,
+    "window.nativeTabs": true,
     "workbench.colorTheme": "Dracula",
-    "workbench.editor.highlightModifiedTabs": true
+    "workbench.editor.highlightModifiedTabs": true,
+    "workbench.statusBar.feedback.visible": false
 }
