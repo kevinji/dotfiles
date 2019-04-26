@@ -1,6 +1,6 @@
 #!/usr/bin/env zsh
 ## General
-alias type="type -a"
+alias type="type -a -f" # `type` == `whence -v`
 
 if (( $+commands[perl] )); then
   alias psed="perl -p0e" # Shadows `psed` provided by perl.
