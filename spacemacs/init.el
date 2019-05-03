@@ -57,7 +57,7 @@ This function should only modify configuration layer settings."
       :variables
       flycheck-check-syntax-automatically '(save idle-change mode-enabled)
       flycheck-idle-change-delay 2)
-     version-control
+     ;; version-control
 
      ;; Useful
      colors
