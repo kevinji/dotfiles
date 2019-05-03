@@ -45,7 +45,7 @@ This function should only modify configuration layer settings."
      git
      lsp
      markdown
-     multiple-cursors
+     ;; multiple-cursors
      ;; treemacs
      ;; org
      (shell
