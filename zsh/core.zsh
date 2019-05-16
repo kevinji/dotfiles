@@ -95,3 +95,6 @@ bindkey -M vicmd "j" history-substring-search-down
 # Search backwards and forwards
 bindkey -M vicmd "/" history-incremental-search-backward
 bindkey -M vicmd "?" history-incremental-search-forward
+
+# Replace suffixes with spaces before certain chars (`man zshparam`)
+ZLE_SPACE_SUFFIX_CHARS=$'&|'
