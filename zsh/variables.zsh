@@ -21,7 +21,12 @@ else
 fi
 
 export VISUAL="$EDITOR"
-export PAGER="less"
+
+if [[ "$TERM" == "dumb" ]]; then
+  export PAGER="cat"
+else
+  export PAGER="less"
+fi
 
 if [[ -z "$LANG" ]]; then
   export LANG="en_US.UTF-8"
