@@ -635,21 +635,6 @@ before packages are loaded."
            ;; Replace `spacemacs-centered-buffer-mode' with `olivetti'.
            ("wc" . olivetti-mode)))
 
-  (use-package merlin
-    :after tuareg)
-
-  (use-package ocp-indent
-    :after tuareg)
-
-  (use-package ocamlformat
-    :after tuareg
-    :init
-    (add-hook 'tuareg-mode-hook
-      (lambda () (add-hook 'before-save-hook #'ocamlformat-before-save))))
-
-  (use-package dune
-    :after tuareg)
-
   (use-package rainbow-mode
     :defer t
     :after css-mode
