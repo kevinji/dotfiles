@@ -118,6 +118,7 @@ cask "iina"
 cask "private-internet-access"
 cask "spotify"
 cask "transmission"
+cask "typora"
 cask "visual-studio-code"
 
 ## macOS applications
