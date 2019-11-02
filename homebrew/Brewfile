@@ -109,9 +109,6 @@ cask "firefox-beta"
 cask "google-chrome-beta"
 
 # Applications
-cask "mactex"
-cask "texstudio"
-
 cask "adobe-acrobat-reader"
 cask "dropbox"
 cask "iina"
