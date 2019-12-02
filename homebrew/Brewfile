@@ -102,7 +102,6 @@ cask "nightowl"
 cask "scroll-reverser"
 cask "spectacle"
 cask "steelseries-exactmouse-tool"
-cask "ubiquiti-unifi-controller"
 
 # Browsers
 cask "firefox-beta"
