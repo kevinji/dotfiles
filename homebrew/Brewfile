@@ -108,12 +108,12 @@ cask "google-chrome-beta"
 
 # Applications
 cask "adobe-acrobat-reader"
+cask "discord"
 cask "dropbox"
 cask "iina"
 cask "private-internet-access"
 cask "spotify"
 cask "transmission"
-cask "typora"
 cask "visual-studio-code"
 
 ## macOS applications
