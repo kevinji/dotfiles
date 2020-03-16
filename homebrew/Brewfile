@@ -44,12 +44,9 @@ brew "python"
 brew "node"
 brew "yarn"
 
-brew "ocaml"
-brew "opam"
-
-brew "rbenv"
-
-brew "rustup-init"
+brew "opam"        # Manages ocaml
+brew "rbenv"       # Manages ruby
+brew "rustup-init" # Manages rust
 
 # Shell niceties
 brew "fzf"
