@@ -93,9 +93,11 @@ cask "iterm2"
 # Utilities
 cask "alfred"
 cask "appcleaner"
+cask "audio-hijack"
 cask "bartender"
 cask "karabiner-elements"
 cask "loopback"
+cask "obs"
 cask "scroll-reverser"
 cask "spectacle"
 cask "steelseries-exactmouse-tool"
@@ -110,10 +112,15 @@ cask "discord"
 cask "dropbox"
 cask "iina"
 cask "mumble"
+cask "notion"
 cask "private-internet-access"
 cask "spotify"
 cask "transmission"
 cask "visual-studio-code"
+
+# Calls
+cask "webex-meetings"
+cask "zoomus"
 
 ## macOS applications
 mas "Xcode", id: 497799835
