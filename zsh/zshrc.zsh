@@ -15,7 +15,6 @@ source "$DIR/aliases.zsh"
 source "$DIR/functions.zsh"
 source "$DIR/custom.zsh"
 
-## Local changes
 if [[ -f "$HOME/.zshrc-local" ]]; then
   source "$HOME/.zshrc-local"
 fi

@@ -8,11 +8,11 @@ DIR="$(dirname "$(readlink -f "${(%):-%x}")")"
 
 source "$DIR/variables.zsh"
 
-## Local changes
 if [[ -f "$HOME/.zprofile-local" ]]; then
   source "$HOME/.zprofile-local"
 fi
 
+source "$DIR/variables-after-overrides.zsh"
 source "$DIR/external.zsh"
 
 unset DIR
