@@ -3,6 +3,8 @@
 	pager = diff-so-fancy | $PAGER
 [fetch]
 	prune = true
+[pull]
+	rebase = true
 [push]
 	default = simple
 [commit]
