@@ -108,6 +108,7 @@ cask "google-chrome-beta"
 
 # Applications
 cask "adobe-acrobat-reader"
+cask "anki"
 cask "discord"
 cask "dropbox"
 cask "iina"
