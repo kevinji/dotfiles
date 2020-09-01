@@ -534,6 +534,9 @@ before packages are loaded."
   (setq-default visible-bell nil)
   (setq-default ring-bell-function 'ignore)
 
+  ;; Improve performance for files with long lines.
+  (global-so-long-mode 1)
+
   (use-package dired
     :defer t
     :if (eq system-type 'darwin)
