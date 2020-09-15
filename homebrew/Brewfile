@@ -38,6 +38,7 @@ brew "emacs-plus"
 brew "neovim"
 
 # Languages and package managers
+brew "java"
 brew "python"
 
 brew "node"
@@ -75,7 +76,6 @@ brew "pngquant"
 
 ## Casks
 # Essentials
-cask "java"
 cask "xquartz"
 
 # Fonts
