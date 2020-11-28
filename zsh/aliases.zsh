@@ -11,6 +11,12 @@ if (( $+commands[ncdu] )); then
 fi
 
 ## Directories
+if [[ "$OSTYPE" != darwin* ]]; then
+  # GNU ls only enables colors when this flag is passed. This check is not
+  # robust, but currently only my macOS system uses BSD ls.
+  alias ls="ls --color=auto"
+fi
+
 alias l="ls -1A"   # Lists in one column, hidden files.
 alias ll="ls -lh"  # Lists human readable sizes.
 alias la="ls -Alh" # Lists human readable sizes, hidden files.
