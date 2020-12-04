@@ -91,6 +91,7 @@ This function should only modify configuration layer settings."
      editorconfig
      evil-vimish-fold
      olivetti
+     undo-tree
      vimish-fold
      )
 
@@ -551,12 +552,17 @@ before packages are loaded."
     (ranger-show-hidden t)
     (ranger-preview-file t))
 
+  (use-package undo-tree
+    :defer t)
+
   (use-package evil
     :defer t
+    :after undo-tree
     :custom
     (evil-escape-key-sequence "jk")
     (evil-kill-on-visual-paste nil
       "Stop `evil-visual-paste' from adding the replaced text to the kill ring.")
+    (evil-undo-system 'undo-tree)
 
     :config
     ;; https://emacs.stackexchange.com/a/15054
