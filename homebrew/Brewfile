@@ -121,7 +121,7 @@ cask "visual-studio-code"
 
 # Calls
 cask "webex-meetings"
-cask "zoomus"
+cask "zoom"
 
 ## macOS applications
 mas "Xcode", id: 497799835
