@@ -61,6 +61,7 @@ brew "exa"       # ls
 brew "hyperfine" # bench
 brew "fd"        # find
 brew "ripgrep"   # grep
+brew "xsv"
 
 # Miscellaneous tools
 brew "editorconfig"
