@@ -118,6 +118,7 @@ cask "notion"
 cask "private-internet-access"
 cask "spotify"
 cask "transmission"
+cask "twobird"
 cask "visual-studio-code"
 
 # Calls
