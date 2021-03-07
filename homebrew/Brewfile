@@ -119,7 +119,6 @@ cask "twobird"
 cask "visual-studio-code"
 
 # Calls
-cask "webex-meetings"
 cask "zoom"
 
 ## macOS applications
