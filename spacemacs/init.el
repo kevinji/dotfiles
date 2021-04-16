@@ -617,6 +617,7 @@ before packages are loaded."
         (read-file-name-internal . ivy--regex-fuzzy)
         (ivy-switch-buffer . ivy--regex-fuzzy)
         (t . spacemacs/ivy--regex-plus)))
+    (counsel-find-file-at-point nil "Stop finding the file at the cursor.")
 
     :bind (:map ivy-minibuffer-map
            ("RET" . ivy-alt-done))
