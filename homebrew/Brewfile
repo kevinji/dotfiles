@@ -74,6 +74,7 @@ brew "fswatch"
 brew "gnupg"
 brew "pandoc"
 brew "pngquant"
+brew "svn" # Needed for font-source-code-pro
 
 ## Casks
 # Essentials
