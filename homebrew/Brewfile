@@ -89,6 +89,7 @@ cask "font-open-sans"
 cask "font-source-code-pro"
 
 # Programming tools
+cask "docker"
 cask "iterm2"
 
 # Utilities
