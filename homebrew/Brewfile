@@ -39,10 +39,8 @@ brew "neovim"
 
 # Languages and package managers
 brew "java"
-brew "python"
-
 brew "node"
-brew "yarn"
+brew "python"
 
 brew "opam"        # Manages ocaml
 brew "rbenv"       # Manages ruby
@@ -89,7 +87,6 @@ cask "font-open-sans"
 cask "font-source-code-pro"
 
 # Programming tools
-cask "docker"
 cask "iterm2"
 
 # Utilities
@@ -110,10 +107,8 @@ cask "google-chrome-beta"
 # Applications
 cask "adobe-acrobat-reader"
 cask "anki"
-cask "discord"
 cask "dropbox"
 cask "iina"
-cask "messenger"
 cask "notion"
 cask "private-internet-access"
 cask "spotify"
@@ -121,7 +116,9 @@ cask "transmission"
 cask "twobird"
 cask "visual-studio-code"
 
-# Calls
+# Communication
+cask "discord"
+cask "messenger"
 cask "zoom"
 
 ## macOS applications
@@ -131,8 +128,6 @@ mas "1Password 7", id: 1333542190
 mas "Affinity Photo", id: 824183456
 mas "DaisyDisk", id: 411643860
 mas "Deliveries", id: 924726344
-mas "Evernote", id: 406056744
 mas "Fantastical 2", id: 975937182
-mas "Microsoft OneNote", id: 784801555
 mas "The Unarchiver", id: 425424353
 mas "Things 3", id: 904280696
