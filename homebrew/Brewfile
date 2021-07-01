@@ -51,6 +51,7 @@ brew "fzf"
 brew "htop"
 brew "shellcheck"
 brew "tldr"
+brew "tree"
 brew "wget"
 
 # Rust-based shell tools
