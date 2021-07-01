@@ -70,6 +70,7 @@ brew "ffmpeg", args: [
 brew "ffsend"
 brew "fswatch"
 brew "gnupg"
+brew "k3d"
 brew "pandoc"
 brew "pngquant"
 brew "svn" # Needed for font-source-code-pro
@@ -87,6 +88,7 @@ cask "font-open-sans"
 cask "font-source-code-pro"
 
 # Programming tools
+cask "docker"
 cask "iterm2"
 
 # Utilities
