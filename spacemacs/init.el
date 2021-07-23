@@ -42,7 +42,11 @@ This function should only modify configuration layer settings."
      better-defaults
      emacs-lisp
      git
-     lsp
+     (lsp
+      :variables
+      cargo-process-reload-on-modify t
+      lsp-rust-server 'rust-analyzer
+      lsp-ui-doc-enable nil)
      markdown
      ;; multiple-cursors
      ;; treemacs
@@ -72,7 +76,9 @@ This function should only modify configuration layer settings."
      javascript
      ocaml
      python
-     rust
+     (rust
+      :variables
+      rust-format-on-save t)
      yaml
      )
 
