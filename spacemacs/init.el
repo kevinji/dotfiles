@@ -79,6 +79,7 @@ This function should only modify configuration layer settings."
      (rust
       :variables
       rust-format-on-save t)
+     sql
      yaml
      )
 
