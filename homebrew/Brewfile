@@ -8,6 +8,7 @@ tap "homebrew/cask-versions"
 
 tap "beeftornado/rmtree"
 tap "d12frosted/emacs-plus"
+tap "ethereum/ethereum"
 tap "getantibody/tap"
 
 cask_args appdir: "/Applications"
@@ -41,6 +42,7 @@ brew "neovim"
 brew "java"
 brew "node"
 brew "python"
+brew "solidity"
 
 brew "opam"        # Manages ocaml
 brew "rbenv"       # Manages ruby
