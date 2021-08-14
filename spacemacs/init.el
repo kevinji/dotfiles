@@ -79,7 +79,9 @@ This function should only modify configuration layer settings."
      (rust
       :variables
       rust-format-on-save t)
-     solidity
+     (solidity
+      :variables
+      solidity-flycheck-solc-checker-active t)
      sql
      yaml
      )
@@ -95,10 +97,12 @@ This function should only modify configuration layer settings."
    dotspacemacs-additional-packages
    '(
      all-the-icons
+     company-solidity
      doom-themes
      editorconfig
      evil-vimish-fold
      olivetti
+     rainbow-mode
      undo-tree
      vimish-fold
      )
@@ -715,6 +719,10 @@ before packages are loaded."
     :custom
     (company-dabbrev-downcase nil "https://emacs.stackexchange.com/a/10838")
     (company-idle-delay 0.5 "Reset completion delay to default time."))
+
+  (use-package company-solidity
+    :defer t
+    :after company)
 
   (use-package olivetti
     :defer t
