@@ -51,6 +51,7 @@ brew "rustup-init" # Manages rust
 # Shell niceties
 brew "fzf"
 brew "htop"
+brew "jq"
 brew "shellcheck"
 brew "tldr"
 brew "tree"
