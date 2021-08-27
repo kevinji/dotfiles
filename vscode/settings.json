@@ -3,6 +3,7 @@
     "editor.fontFamily": "'Source Code Pro'",
     "editor.fontSize": 13,
     "editor.formatOnPaste": true,
+    "editor.inlineSuggest.enabled": true,
     "editor.lineNumbers": "relative",
     "editor.renderFinalNewline": false,
     "editor.renderIndentGuides": false,
