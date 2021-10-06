@@ -83,6 +83,9 @@ This function should only modify configuration layer settings."
       :variables
       solidity-flycheck-solc-checker-active t)
      sql
+     (typescript
+      :variables
+      typescript-linter 'eslint)
      yaml
      )
 
