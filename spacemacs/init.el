@@ -458,7 +458,10 @@ It should only modify the values of Spacemacs settings."
    ;; When used in a plist, `visual' takes precedence over `relative'.
    ;; (default nil)
    dotspacemacs-line-numbers '(:relative t
-                               :enabled-for-modes json-mode
+                               :enabled-for-modes ; TODO: Figure out typescript-
+                                                  ; tsx highlighting.
+                                                  fundamental-mode
+                                                  json-mode
                                                   prog-mode
                                                   text-mode
                                                   tuareg-mode)
