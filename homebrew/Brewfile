@@ -66,6 +66,7 @@ brew "ripgrep"   # grep
 brew "xsv"
 
 # Miscellaneous tools
+brew "dive"
 brew "editorconfig"
 brew "ffmpeg", args: [
     "with-fdk-aac", "with-freetype", "with-libass", "with-libvorbis",
