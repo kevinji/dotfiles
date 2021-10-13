@@ -1,6 +1,8 @@
 [core]
 	excludesFile = ~/.gitignore-global
 	pager = diff-so-fancy | $PAGER
+[init]
+	defaultBranch = main
 [fetch]
 	prune = true
 [pull]
