@@ -9,7 +9,6 @@ tap "homebrew/cask-versions"
 tap "beeftornado/rmtree"
 tap "d12frosted/emacs-plus"
 tap "ethereum/ethereum"
-tap "getantibody/tap"
 
 cask_args appdir: "/Applications"
 
