@@ -94,6 +94,7 @@ cask "font-source-code-pro"
 
 # Programming tools
 cask "docker"
+cask "google-cloud-sdk"
 cask "iterm2"
 
 # Utilities
