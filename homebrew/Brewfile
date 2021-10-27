@@ -115,7 +115,6 @@ cask "google-chrome-beta"
 
 # Applications
 cask "adobe-acrobat-reader"
-cask "anki"
 cask "dropbox"
 cask "iina"
 cask "notion"
@@ -136,7 +135,7 @@ mas "Xcode", id: 497799835
 mas "1Password 7", id: 1333542190
 mas "Affinity Photo", id: 824183456
 mas "DaisyDisk", id: 411643860
-mas "Deliveries", id: 924726344
-mas "Fantastical 2", id: 975937182
+mas "Deliveries", id: 290986013
+mas "Fantastical", id: 975937182
 mas "The Unarchiver", id: 425424353
 mas "Things 3", id: 904280696
