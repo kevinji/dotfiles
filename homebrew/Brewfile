@@ -32,6 +32,7 @@ brew "vim"
 brew "git"
 
 brew "diff-so-fancy"
+brew "git-filter-repo"
 brew "git-lfs"
 
 # Editors
