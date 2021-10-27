@@ -14,3 +14,8 @@ if [[ -d "/usr/local/opt/fzf" ]]; then
   # Key bindings
   source "/usr/local/opt/fzf/shell/key-bindings.zsh"
 fi
+
+# Google Cloud SDK
+if [[ -d "/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk" ]]; then
+  source "/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc"
+fi
