@@ -87,6 +87,9 @@ This function should only modify configuration layer settings."
       :variables
       typescript-linter 'eslint)
      yaml
+
+     ;; Tools
+     docker
      )
 
    ;; List of additional packages that will be installed without being wrapped
