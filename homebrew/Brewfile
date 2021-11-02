@@ -76,6 +76,7 @@ brew "ffsend"
 brew "fswatch"
 brew "gnupg"
 brew "k3d"
+brew "magic-wormhole"
 brew "pandoc"
 brew "pngquant"
 brew "svn" # Needed for font-source-code-pro
