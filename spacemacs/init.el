@@ -634,6 +634,15 @@ before packages are loaded."
   ;; Improve performance for files with long lines.
   (global-so-long-mode 1)
 
+  (defun switch-to-minibuffer-window ()
+    "Switch to the minibuffer window, if active."
+    (interactive)
+    (when (active-minibuffer-window)
+      (select-frame-set-input-focus (window-frame (active-minibuffer-window)))
+      (select-window (active-minibuffer-window))))
+
+  (global-set-key (kbd "C-c o") 'switch-to-minibuffer-window)
+
   (use-package dired
     :defer t
     :if (eq system-type 'darwin)
