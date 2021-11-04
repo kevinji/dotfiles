@@ -18,4 +18,8 @@ fi
 # Google Cloud SDK
 if [[ -d "/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk" ]]; then
   source "/usr/local/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/completion.zsh.inc"
+
+  gcurl() {
+    curl --header "Authorization: Bearer $(gcloud auth print-identity-token)" "$@"
+  }
 fi
