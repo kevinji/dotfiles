@@ -7,8 +7,8 @@ tap "homebrew/cask-fonts"
 tap "homebrew/cask-versions"
 
 tap "beeftornado/rmtree"
-tap "d12frosted/emacs-plus"
 tap "ethereum/ethereum"
+tap "railwaycat/emacsmacport"
 
 cask_args appdir: "/Applications"
 
@@ -35,7 +35,7 @@ brew "git-filter-repo"
 brew "git-lfs"
 
 # Editors
-brew "emacs-plus"
+brew "emacs-mac"
 brew "neovim"
 
 # Languages and package managers
