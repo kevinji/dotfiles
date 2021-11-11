@@ -26,9 +26,12 @@ brew "coreutils"
 brew "grep"
 brew "vim"
 
-# Git and helpers
+# Version control
 brew "git"
+brew "mercurial"
+brew "subversion" # Needed for font-source-code-pro
 
+# Git helpers
 brew "diff-so-fancy"
 brew "git-filter-repo"
 brew "git-lfs"
@@ -72,7 +75,6 @@ brew "k3d"
 brew "magic-wormhole"
 brew "pandoc"
 brew "pngquant"
-brew "svn" # Needed for font-source-code-pro
 
 ## Casks
 # Fonts
