@@ -7,7 +7,6 @@ tap "homebrew/cask-fonts"
 tap "homebrew/cask-versions"
 
 tap "beeftornado/rmtree"
-tap "ethereum/ethereum"
 tap "railwaycat/emacsmacport"
 
 cask_args appdir: "/Applications"
@@ -67,12 +66,7 @@ brew "xsv"
 
 # Miscellaneous tools
 brew "dive"
-brew "editorconfig"
-brew "ffmpeg", args: [
-    "with-fdk-aac", "with-freetype", "with-libass", "with-libvorbis",
-    "with-libvpx", "with-opus", "with-sdl2", "with-x265"
-]
-brew "ffsend"
+brew "ffmpeg"
 brew "fswatch"
 brew "gnupg"
 brew "k3d"
@@ -82,15 +76,9 @@ brew "pngquant"
 brew "svn" # Needed for font-source-code-pro
 
 ## Casks
-# Essentials
-cask "xquartz"
-
 # Fonts
+cask "font-dejavu"
 cask "font-fira-sans"
-cask "font-hack"
-cask "font-inconsolata"
-cask "font-montserrat"
-cask "font-open-sans"
 cask "font-source-code-pro"
 
 # Programming tools
@@ -137,5 +125,6 @@ mas "Affinity Photo", id: 824183456
 mas "DaisyDisk", id: 411643860
 mas "Deliveries", id: 290986013
 mas "Fantastical", id: 975937182
+mas "Slack for Desktop", id: 803453959
 mas "The Unarchiver", id: 425424353
 mas "Things 3", id: 904280696
