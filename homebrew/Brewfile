@@ -105,8 +105,8 @@ cask "audio-hijack"
 cask "bartender"
 cask "karabiner-elements"
 cask "loopback"
+cask "rectangle"
 cask "scroll-reverser"
-cask "spectacle"
 cask "steelseries-exactmouse-tool"
 
 # Browsers
