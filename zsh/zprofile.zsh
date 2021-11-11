@@ -1,4 +1,8 @@
 #!/usr/bin/env zsh
+if [[ -f /opt/homebrew/bin/brew ]]; then
+  eval "$(/opt/homebrew/bin/brew shellenv)"
+fi
+
 # Follow symlinks to this script's directory.
 if (( $+commands[greadlink] )); then
   alias readlink="greadlink"
