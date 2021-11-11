@@ -34,7 +34,6 @@ brew "git-filter-repo"
 brew "git-lfs"
 
 # Editors
-brew "emacs-mac"
 brew "neovim"
 
 # Languages and package managers
@@ -83,6 +82,7 @@ cask "font-source-code-pro"
 
 # Programming tools
 cask "docker"
+cask "emacs-mac"
 cask "google-cloud-sdk"
 cask "iterm2"
 
