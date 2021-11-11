@@ -2,6 +2,8 @@
 	excludesFile = ~/.gitignore-global
 [init]
 	defaultBranch = main
+[delta]
+	syntax-theme = Dracula
 [pager]
     diff = delta
     log = delta
