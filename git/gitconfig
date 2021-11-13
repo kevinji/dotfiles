@@ -4,13 +4,16 @@
 	defaultBranch = main
 [delta]
 	syntax-theme = Dracula
+	file-decoration-style = blue ul ol
+	hunk-header-style = raw
+	hunk-header-decoration-style = none
 [pager]
-    diff = delta
-    log = delta
-    reflog = delta
-    show = delta
+	diff = delta
+	log = delta
+	reflog = delta
+	show = delta
 [interactive]
-    diffFilter = delta --color-only
+	diffFilter = delta --color-only
 [fetch]
 	prune = true
 [pull]
