@@ -73,6 +73,7 @@ brew "gnupg"
 brew "k3d"
 brew "magic-wormhole"
 brew "pandoc"
+brew "pngcrush"
 brew "pngquant"
 
 ## Casks
