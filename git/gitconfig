@@ -31,6 +31,8 @@
 	enabled = true
 [diff]
 	indentHeuristic = true
+[help]
+	autoCorrect = prompt
 [color]
 	ui = true
 [color "diff-highlight"]
