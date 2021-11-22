@@ -54,7 +54,7 @@ if (( $+commands[git] )); then
   alias gfc="git clone"
   alias gfu="git fetch upstream"
   alias gfm="git pull"
-  alias gfmu="git pull upstream master"
+  alias gfmu="git pull upstream HEAD"
 
   alias gid="git diff --no-ext-diff --cached"
   alias giD="git diff --no-ext-diff --cached --word-diff"
