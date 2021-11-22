@@ -44,6 +44,7 @@ brew "node"
 brew "python"
 brew "solidity"
 
+brew "corepack"    # Manages node
 brew "opam"        # Manages ocaml
 brew "rbenv"       # Manages ruby
 brew "rustup-init" # Manages rust
