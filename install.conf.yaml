@@ -14,6 +14,9 @@
     ~/.pip: pip
     ~/.ptpython: ptpython
 
+    ~/.config/bat/config:
+      create: true
+      path: bat/bat.conf
     ~/.config/ocamlformat:
       create: true
       path: ocaml/ocamlformat
