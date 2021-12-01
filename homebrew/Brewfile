@@ -66,8 +66,11 @@ brew "fd"        # find
 brew "ripgrep"   # grep
 brew "xsv"
 
-# Miscellaneous tools
+# Docker
 brew "dive"
+brew "lazydocker"
+
+# Miscellaneous tools
 brew "ffmpeg"
 brew "fswatch"
 brew "gnupg"
