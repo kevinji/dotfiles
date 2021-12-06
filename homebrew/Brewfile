@@ -49,6 +49,9 @@ brew "opam"        # Manages ocaml
 brew "rbenv"       # Manages ruby
 brew "rustup-init" # Manages rust
 
+# Databases
+brew "mongosh"
+
 # Shell niceties
 brew "fzf"
 brew "htop"
