@@ -74,6 +74,7 @@ brew "dive"
 brew "lazydocker"
 
 # Miscellaneous tools
+brew "aria2"
 brew "ffmpeg"
 brew "fswatch"
 brew "gnupg"
