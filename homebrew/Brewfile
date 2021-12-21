@@ -73,13 +73,15 @@ brew "xsv"
 brew "dive"
 brew "lazydocker"
 
+# External services
+brew "magic-wormhole"
+
 # Miscellaneous tools
 brew "aria2"
 brew "ffmpeg"
 brew "fswatch"
 brew "gnupg"
 brew "k3d"
-brew "magic-wormhole"
 brew "pandoc"
 brew "pngcrush"
 brew "pngquant"
