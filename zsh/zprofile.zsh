@@ -17,6 +17,6 @@ if [[ -f "$HOME/.zprofile-local" ]]; then
 fi
 
 source "$DIR/variables-after-overrides.zsh"
-source "$DIR/external.zsh"
+source "$DIR/external-zprofile.zsh"
 
 unset DIR

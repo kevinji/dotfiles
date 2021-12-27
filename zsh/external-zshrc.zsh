@@ -1,5 +1,4 @@
 #!/usr/bin/env zsh
-## Custom programs
 # gpg
 if (( $+commands[gpg] )); then
   export GPG_TTY="$(tty)"

@@ -13,7 +13,7 @@ source "$DIR/core.zsh"
 source "$DIR/environment.zsh"
 source "$DIR/aliases.zsh"
 source "$DIR/functions.zsh"
-source "$DIR/custom.zsh"
+source "$DIR/external-zshrc.zsh"
 
 if [[ -f "$HOME/.zshrc-local" ]]; then
   source "$HOME/.zshrc-local"
