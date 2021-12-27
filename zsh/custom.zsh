@@ -1,5 +1,10 @@
 #!/usr/bin/env zsh
 ## Custom programs
+# gpg
+if (( $+commands[gpg] )); then
+  export GPG_TTY="$(tty)"
+fi
+
 # PostgreSQL
 if (( $+commands[pg_ctl] )); then
   alias pg_start="pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start"
@@ -7,12 +12,12 @@ if (( $+commands[pg_ctl] )); then
 fi
 
 # fzf
-if [[ -d "/usr/local/opt/fzf" ]]; then
+if [[ -d "$HOMEBREW_PREFIX/opt/fzf" ]]; then
   # Auto-completion
-  [[ $- == *i* ]] && source "/usr/local/opt/fzf/shell/completion.zsh" 2> /dev/null
+  [[ $- == *i* ]] && source "$HOMEBREW_PREFIX/opt/fzf/shell/completion.zsh" 2> /dev/null
 
   # Key bindings
-  source "/usr/local/opt/fzf/shell/key-bindings.zsh"
+  source "$HOMEBREW_PREFIX/opt/fzf/shell/key-bindings.zsh"
 fi
 
 # Google Cloud SDK

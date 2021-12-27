@@ -39,15 +39,11 @@ brew "git-lfs"
 brew "neovim"
 
 # Languages and package managers
-brew "java"
-brew "node"
 brew "python"
 brew "solidity"
 
-brew "corepack"    # Manages node
-brew "opam"        # Manages ocaml
-brew "rbenv"       # Manages ruby
-brew "rustup-init" # Manages rust
+brew "asdf" # Language-agnostic
+brew "opam" # Manages ocaml
 
 # Databases
 brew "mongosh"

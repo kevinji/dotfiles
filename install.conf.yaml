@@ -7,6 +7,8 @@
 - clean: ['~']
 
 - link:
+    ~/.tool-versions: asdf/tool-versions
+
     ~/.gitconfig: git/gitconfig
     ~/.gitconfig-local: git/gitconfig-local
     ~/.gitignore-global: git/gitignore-global
