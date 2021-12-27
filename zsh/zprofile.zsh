@@ -12,8 +12,8 @@ DIR="$(dirname "$(readlink -f "${(%):-%x}")")"
 
 source "$DIR/variables.zsh"
 
-if [[ -f "$HOME/.zprofile-local" ]]; then
-  source "$HOME/.zprofile-local"
+if [[ -f "$DIR/zprofile-local.zsh" ]]; then
+  source "$DIR/zprofile-local.zsh"
 fi
 
 source "$DIR/variables-after-overrides.zsh"

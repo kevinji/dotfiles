@@ -9,6 +9,10 @@
 - link:
     ~/.tool-versions: asdf/tool-versions
 
+    ~/.config/bat/config:
+      create: true
+      path: bat/bat.conf
+
     ~/.gitconfig: git/gitconfig
     ~/.gitconfig-local: git/gitconfig-local
     ~/.gitignore-global: git/gitignore-global
@@ -16,9 +20,6 @@
     ~/.pip: pip
     ~/.ptpython: ptpython
 
-    ~/.config/bat/config:
-      create: true
-      path: bat/bat.conf
     ~/.config/ocamlformat:
       create: true
       path: ocaml/ocamlformat
@@ -44,7 +45,6 @@
     ~/.hushlogin: zsh/hushlogin
     ~/.inputrc: zsh/inputrc
     ~/.zprofile: zsh/zprofile.zsh
-    ~/.zprofile-local: zsh/zprofile-local.zsh
     ~/.zsh-plugins.txt: zsh/zsh-plugins.txt
     ~/.zshenv: zsh/zshenv.zsh
     ~/.zshrc: zsh/zshrc.zsh

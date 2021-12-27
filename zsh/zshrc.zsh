@@ -15,8 +15,8 @@ source "$DIR/aliases.zsh"
 source "$DIR/functions.zsh"
 source "$DIR/external-zshrc.zsh"
 
-if [[ -f "$HOME/.zshrc-local" ]]; then
-  source "$HOME/.zshrc-local"
+if [[ -f "$DIR/zshrc-local.zsh" ]]; then
+  source "$DIR/zshrc-local.zsh"
 fi
 
 unset DIR
