@@ -72,6 +72,7 @@ This function should only modify configuration layer settings."
      ranger
 
      ;; Languages
+     csv
      html
      javascript
      ocaml
