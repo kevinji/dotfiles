@@ -13,12 +13,22 @@
       create: true
       path: bat/bat.conf
 
-    ~/.gitconfig: git/gitconfig
-    ~/.gitconfig-local: git/gitconfig-local
-    ~/.gitignore-global: git/gitignore-global
+    ~/.config/git/config:
+      create: true
+      path: git/gitconfig
+    ~/.config/git/config-local:
+      create: true
+      path: git/gitconfig-local
+    ~/.config/git/ignore:
+      create: true
+      path: git/gitignore-global
 
-    ~/.pip: pip
-    ~/.ptpython: ptpython
+    ~/.config/pip/pip.conf:
+      create: true
+      path: pip/pip.conf
+    ~/.ptpython/config.py:
+      create: true
+      path: ptpython/config.py
 
     ~/.config/ocamlformat:
       create: true
@@ -35,7 +45,9 @@
       create: true
       path: spacemacs/local-example.el
 
-    ~/.tmux.conf: tmux/tmux.conf
+    ~/.config/tmux/tmux.conf:
+      create: true
+      path: tmux/tmux.conf
 
     ~/.vimrc: vim/vimrc.vim
     ~/.config/nvim/init.vim:

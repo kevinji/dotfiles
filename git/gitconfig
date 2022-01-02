@@ -1,5 +1,5 @@
 [core]
-	excludesFile = ~/.gitignore-global
+	excludesFile = ~/.config/git/ignore
 [init]
 	defaultBranch = main
 [delta]
@@ -55,4 +55,4 @@
 	process = git-lfs filter-process
 	required = true
 [include]
-	path = ~/.gitconfig-local
+	path = ~/.config/git/config-local
