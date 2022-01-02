@@ -93,6 +93,7 @@ cask "docker"
 cask "emacs-mac"
 cask "google-cloud-sdk"
 cask "iterm2"
+cask "utm"
 
 # Utilities
 cask "alfred"
