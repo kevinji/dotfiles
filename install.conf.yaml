@@ -83,9 +83,9 @@
     - command: antibody bundle < ~/.config/zsh/zsh-plugins.txt > ~/.config/zsh/zsh-plugins.sh
       description: Static loading Antibody plugins
     - >-
-        echo "Set zsh as your login shell: chsh -s \"\$(which zsh)\""
+        echo 'Set zsh as your login shell: chsh -s "$(which zsh)"'
     - >-
-        echo "You may need to add zsh to /etc/shells."
+        echo 'You may need to add zsh to /etc/shells.'
 
 - brewfile:
     file: homebrew/Brewfile
