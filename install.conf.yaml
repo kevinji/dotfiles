@@ -7,11 +7,11 @@
 - clean: ['~']
 
 - link:
-    ~/.tool-versions: asdf/tool-versions
-
     ~/.config/alacritty/alacritty.yml:
       create: true
       path: alacritty/alacritty.yml
+
+    ~/.tool-versions: asdf/tool-versions
 
     ~/.config/bat/config:
       create: true
@@ -58,12 +58,20 @@
       create: true
       path: vim/vimrc.vim
 
+    ~/.yarnrc.yml: yarn/yarnrc.yml
+
     ~/.hushlogin: zsh/hushlogin
     ~/.inputrc: zsh/inputrc
-    ~/.zprofile: zsh/zprofile.zsh
-    ~/.zsh-plugins.txt: zsh/zsh-plugins.txt
     ~/.zshenv: zsh/zshenv.zsh
-    ~/.zshrc: zsh/zshrc.zsh
+    ~/.config/zsh/.zprofile:
+      create: true
+      path: zsh/zprofile.zsh
+    ~/.config/zsh/.zshrc:
+      create: true
+      path: zsh/zshrc.zsh
+    ~/.config/zsh/zsh-plugins.txt:
+      create: true
+      path: zsh/zsh-plugins.txt
 
 - shell:
     - command: git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm || true
@@ -72,7 +80,7 @@
         curl -fLo ~/.vim/autoload/plug.vim --create-dirs
         https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
       description: Cloning vim-plug
-    - command: antibody bundle < ~/.zsh-plugins.txt > ~/.zsh-plugins.sh
+    - command: antibody bundle < ~/.config/zsh/zsh-plugins.txt > ~/.config/zsh/zsh-plugins.sh
       description: Static loading Antibody plugins
     - >-
         echo "Set zsh as your login shell: chsh -s \"\$(which zsh)\""

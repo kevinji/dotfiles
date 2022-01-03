@@ -38,7 +38,3 @@ update_ycm() {
 reload_tmux() {
   tmux source-file "$HOME/.tmux.conf"
 }
-
-reload_antibody() {
-  antibody bundle < "$HOME/.zsh-plugins.txt" > "$HOME/.zsh-plugins.sh"
-}

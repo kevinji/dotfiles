@@ -24,7 +24,7 @@ setopt AUTO_PARAM_SLASH     # Add a slash automatically after a directory name.
 setopt NO_FLOW_CONTROL      # Disable start/stop characters.
 
 # zsh history
-HISTFILE="$HOME/.zsh_history"
+HISTFILE="$ZDOTDIR/.zsh_history"
 HISTSIZE=10000
 SAVEHIST=10000
 
@@ -62,7 +62,9 @@ autoload -Uz bracketed-paste-url-magic
 zle -N bracketed-paste bracketed-paste-url-magic
 
 # Source antibody plugins
-[[ -f "$HOME/.zsh-plugins.sh" ]] && source "$HOME/.zsh-plugins.sh"
+if [[ -f "$HOME/.config/zsh/zsh-plugins.sh" ]]; then
+  source "$HOME/.config/zsh/zsh-plugins.sh"
+fi
 
 # zsh features
 autoload -Uz compinit

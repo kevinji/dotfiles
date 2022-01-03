@@ -1,4 +1,7 @@
 #!/usr/bin/env zsh
+ZDOTDIR="$HOME/.config/zsh"
+
+# Aliases are here so they work in Vim
 # Use macOS shortcuts everywhere
 if [[ "$OSTYPE" == darwin* ]]; then
   alias o="open"
