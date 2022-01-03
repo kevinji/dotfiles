@@ -1,7 +1,5 @@
 tap "homebrew/cask"
 
-tap "homebrew/services"
-
 tap "homebrew/cask-drivers"
 tap "homebrew/cask-fonts"
 tap "homebrew/cask-versions"
@@ -93,15 +91,12 @@ cask "docker"
 cask "emacs-mac"
 cask "google-cloud-sdk"
 cask "iterm2"
-cask "utm"
 
 # Utilities
 cask "alfred"
 cask "appcleaner"
-cask "audio-hijack"
 cask "bartender"
 cask "karabiner-elements"
-cask "loopback"
 cask "rectangle"
 cask "scroll-reverser"
 cask "steelseries-exactmouse-tool"
@@ -120,7 +115,6 @@ cask "spotify"
 cask "steam"
 cask "transmission"
 cask "twobird"
-cask "visual-studio-code"
 
 # Communication
 cask "discord"
