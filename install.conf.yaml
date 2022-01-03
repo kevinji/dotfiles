@@ -87,6 +87,11 @@
     - >-
         echo "You may need to add zsh to /etc/shells."
 
+- brewfile:
+    file: homebrew/Brewfile
+    stdout: true
+    stderr: true
+
 - asdf:
     - plugin: java
       global: openjdk-17.0.1
