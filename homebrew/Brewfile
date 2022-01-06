@@ -103,7 +103,7 @@ cask "steelseries-exactmouse-tool"
 
 # Browsers
 cask "firefox-beta"
-cask "google-chrome-beta"
+cask "google-chrome"
 
 # Applications
 cask "adobe-acrobat-reader"
