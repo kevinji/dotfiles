@@ -40,7 +40,6 @@
     ~/.ocp/ocp-indent.conf:
       create: true
       path: ocaml/ocp-indent.conf
-    ~/.utoprc: ocaml/utoprc
 
     ~/.spacemacs.d/init.el:
       create: true
@@ -52,6 +51,11 @@
     ~/.config/tmux/tmux.conf:
       create: true
       path: tmux/tmux.conf
+
+    ~/.config/utop/init.ml:
+      create: true
+      path: utop/init.ml
+    ~/.utoprc: utop/utoprc
 
     ~/.vimrc: vim/vimrc.vim
     ~/.config/nvim/init.vim:
