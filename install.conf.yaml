@@ -102,14 +102,14 @@
       versions:
         - openjdk-17.0.1
     - plugin: nodejs
-      global: 17.3.0
+      global: 17.3.1
       versions:
-        - 17.3.0
+        - 17.3.1
     - plugin: ruby
       global: 3.1.0
       versions:
         - 3.1.0
     - plugin: rust
-      global: 1.57.0
+      global: 1.58.0
       versions:
-        - 1.57.0
+        - 1.58.0
