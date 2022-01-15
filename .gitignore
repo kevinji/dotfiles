@@ -1,4 +1,5 @@
 git/gitconfig-local
+homebrew/Brewfile.lock.json
 ptpython/history
 zsh/zprofile-local.zsh
 zsh/zshrc-local.zsh
