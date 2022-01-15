@@ -5,6 +5,7 @@ tap "homebrew/cask-fonts"
 tap "homebrew/cask-versions"
 
 tap "railwaycat/emacsmacport"
+tap "yt-dlp/taps"
 
 cask_args appdir: "/Applications"
 
@@ -70,9 +71,12 @@ brew "lazydocker"
 # External services
 brew "magic-wormhole"
 
+# Video
+brew "ffmpeg"
+brew "yt-dlp"
+
 # Miscellaneous tools
 brew "aria2"
-brew "ffmpeg"
 brew "fswatch"
 brew "gnupg"
 brew "k3d"
