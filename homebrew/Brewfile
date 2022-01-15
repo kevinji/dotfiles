@@ -107,7 +107,7 @@ cask "google-chrome"
 
 # Applications
 cask "adobe-acrobat-reader"
-cask "dropbox"
+cask "dropbox-beta"
 cask "iina"
 cask "notion"
 cask "private-internet-access"
@@ -117,7 +117,7 @@ cask "transmission"
 cask "twobird"
 
 # Communication
-cask "discord"
+cask "discord-ptb"
 cask "zoom"
 
 ## macOS applications
