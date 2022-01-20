@@ -5,6 +5,7 @@ tap "homebrew/cask-fonts"
 tap "homebrew/cask-versions"
 
 tap "railwaycat/emacsmacport"
+tap "rs/tap"
 tap "yt-dlp/taps"
 
 cask_args appdir: "/Applications"
@@ -48,6 +49,7 @@ brew "opam" # Manages ocaml
 brew "mongosh"
 
 # Shell niceties
+brew "curlie"
 brew "fzf"
 brew "htop"
 brew "jq"
