@@ -69,6 +69,7 @@ brew "xsv"
 # Docker
 brew "dive"
 brew "lazydocker"
+brew "skopeo"
 
 # External services
 brew "magic-wormhole"
