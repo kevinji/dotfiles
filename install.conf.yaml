@@ -98,13 +98,13 @@
 
 - asdf:
     - plugin: java
-      global: openjdk-17.0.1
+      global: openjdk-17.0.2
       versions:
-        - openjdk-17.0.1
+        - openjdk-17.0.2
     - plugin: nodejs
-      global: 17.3.1
+      global: 17.4.0
       versions:
-        - 17.3.1
+        - 17.4.0
     - plugin: ruby
       global: 3.1.0
       versions:
