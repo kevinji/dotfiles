@@ -105,6 +105,10 @@
       global: 17.4.0
       versions:
         - 17.4.0
+    - plugin: python
+      global: 3.10.2
+      versions:
+        - 3.10.2
     - plugin: ruby
       global: 3.1.0
       versions:
