@@ -104,6 +104,7 @@ This function should only modify configuration layer settings."
    dotspacemacs-additional-packages
    '(
      all-the-icons
+     bazel
      company-solidity
      doom-themes
      editorconfig
