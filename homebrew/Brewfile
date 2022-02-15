@@ -22,6 +22,7 @@ brew "tmux"
 # Replacements for system programs
 brew "bash"
 brew "coreutils"
+brew "gnu-sed"
 brew "grep"
 brew "vim"
 
