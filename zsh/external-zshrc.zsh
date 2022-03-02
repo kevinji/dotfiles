@@ -5,9 +5,8 @@ if (( $+commands[gpg] )); then
 fi
 
 # PostgreSQL
-if (( $+commands[pg_ctl] )); then
-  alias pg_start="pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start"
-  alias pg_stop="pg_ctl -D /usr/local/var/postgres stop -s -m fast"
+if [[ -f "$HOMEBREW_PREFIX/opt/postgresql/bin/postgres" ]]; then
+  alias pg="$HOMEBREW_PREFIX/opt/postgresql/bin/postgres -D $HOMEBREW_PREFIX/var/postgres"
 fi
 
 # fzf

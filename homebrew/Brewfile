@@ -49,6 +49,7 @@ brew "opam" # Manages ocaml
 
 # Databases
 brew "mongosh"
+brew "postgresql"
 
 # Shell niceties
 brew "curlie"
