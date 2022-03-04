@@ -117,7 +117,7 @@ cask "firefox-beta"
 cask "google-chrome"
 
 # Applications
-cask "dropbox-beta"
+cask "dropbox"
 cask "iina"
 cask "notion"
 cask "private-internet-access"
