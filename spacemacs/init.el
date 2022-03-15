@@ -600,7 +600,8 @@ If you are unsure, try setting them in `dotspacemacs/user-config' first."
   (setq-default
    ;; Dump generated custom settings elsewhere.
    ;; https://github.com/syl20bnr/spacemacs/issues/7891
-   custom-file (expand-file-name "custom.el" spacemacs-cache-directory)))
+   custom-file (expand-file-name "custom.el" spacemacs-cache-directory)
+   undo-tree-history-directory-alist (list (cons "." (expand-file-name "undo-tree-history" spacemacs-cache-directory)))))
 
 (defun dotspacemacs/user-load ()
   "Library to load while dumping.
