@@ -18,7 +18,7 @@ if (( $+commands[opam] )); then
   eval "$(opam env)"
 fi
 
-# Cargo
-if [[ -d "$HOME/.cargo/bin" ]]; then
-  path+=("$HOME/.cargo/bin")
+# Local ~/bin
+if [[ -d "$HOME/bin" ]]; then
+  path+=("$HOME/bin")
 fi
