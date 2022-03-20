@@ -127,7 +127,7 @@ cask "transmission"
 cask "twobird"
 
 # Communication
-cask "discord-ptb"
+cask "discord"
 cask "zoom"
 
 # Drivers
