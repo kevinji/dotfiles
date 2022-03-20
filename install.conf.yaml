@@ -102,14 +102,13 @@
       versions:
         - openjdk-17.0.2
     - plugin: nodejs
-      global: 17.6.0
+      global: 16.14.2
       versions:
-        - 16.14.0
-        - 17.6.0
+        - 16.14.2
     - plugin: python
-      global: 3.10.2
+      global: 3.10.3
       versions:
-        - 3.10.2
+        - 3.10.3
     - plugin: ruby
       global: 3.1.0
       versions:
