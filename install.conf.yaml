@@ -98,9 +98,9 @@
 
 - asdf:
     - plugin: java
-      global: openjdk-17.0.2
+      global: openjdk-18
       versions:
-        - openjdk-17.0.2
+        - openjdk-18
     - plugin: nodejs
       global: 16.14.2
       versions:
