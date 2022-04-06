@@ -116,18 +116,21 @@ cask "steelseries-exactmouse-tool"
 cask "firefox-beta"
 cask "google-chrome"
 
-# Applications
+# Storage
 cask "dropbox"
+cask "google-drive"
+
+# Applications
 cask "iina"
 cask "notion"
 cask "private-internet-access"
 cask "spotify"
 cask "steam"
 cask "transmission"
-cask "twobird"
 
 # Communication
 cask "discord"
+cask "twobird"
 cask "zoom"
 
 # Drivers
