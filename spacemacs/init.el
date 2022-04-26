@@ -86,7 +86,6 @@ This function should only modify configuration layer settings."
      sql
      (typescript
       :variables
-      typescript-indent-level 2
       typescript-linter 'eslint)
      yaml
 
