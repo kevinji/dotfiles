@@ -110,9 +110,9 @@
       versions:
         - 3.10.4
     - plugin: ruby
-      global: 3.1.0
+      global: 3.1.2
       versions:
-        - 3.1.0
+        - 3.1.2
     - plugin: rust
       global: 1.60.0
       versions:
