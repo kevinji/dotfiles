@@ -2,4 +2,4 @@ java openjdk-18.0.1
 nodejs 16.15.0
 python 3.10.4
 ruby 3.1.2
-rust 1.61.0
+rust 1.62.0
