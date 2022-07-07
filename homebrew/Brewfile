@@ -124,6 +124,7 @@ cask "google-drive"
 # Applications
 cask "1password"
 cask "adobe-creative-cloud"
+cask "audio-hijack"
 cask "figma"
 cask "iina"
 cask "notion"
