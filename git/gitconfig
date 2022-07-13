@@ -19,6 +19,7 @@
 [pull]
 	rebase = true
 [push]
+	autoSetupRemote = true
 	default = simple
 [commit]
 	verbose = true
