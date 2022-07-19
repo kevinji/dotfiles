@@ -114,6 +114,6 @@
       versions:
         - 3.1.2
     - plugin: rust
-      global: 1.62.0
+      global: 1.62.1
       versions:
-        - 1.62.0
+        - 1.62.1
