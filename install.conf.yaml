@@ -98,22 +98,22 @@
 
 - asdf:
     - plugin: java
-      global: openjdk-18.0.1.1
+      global: openjdk-18.0.2
       versions:
-        - openjdk-18.0.1.1
+        - openjdk-18.0.2
     - plugin: nodejs
       global: 16.16.0
       versions:
         - 16.16.0
     - plugin: python
-      global: 3.10.5
+      global: 3.10.6
       versions:
-        - 3.10.5
+        - 3.10.6
     - plugin: ruby
       global: 3.1.2
       versions:
         - 3.1.2
     - plugin: rust
-      global: 1.62.1
+      global: 1.63.0
       versions:
-        - 1.62.1
+        - 1.63.0
