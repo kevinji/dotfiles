@@ -98,22 +98,27 @@
 
 - asdf:
     - plugin: java
+      url: https://github.com/halcyon/asdf-java.git
       global: openjdk-18.0.2
       versions:
         - openjdk-18.0.2
     - plugin: nodejs
+      url: https://github.com/asdf-vm/asdf-nodejs.git
       global: 16.16.0
       versions:
         - 16.16.0
     - plugin: python
+      url: https://github.com/danhper/asdf-python.git
       global: 3.10.6
       versions:
         - 3.10.6
     - plugin: ruby
+      url: https://github.com/asdf-vm/asdf-ruby.git
       global: 3.1.2
       versions:
         - 3.1.2
     - plugin: rust
+      url: https://github.com/code-lever/asdf-rust.git
       global: 1.63.0
       versions:
         - 1.63.0
