@@ -22,3 +22,8 @@ fi
 if [[ -d "$HOME/bin" ]]; then
   path+=("$HOME/bin")
 fi
+
+# Cargo
+if [[ -f "$HOME/.cargo/env" ]]; then
+  source "$HOME/.cargo/env"
+fi
