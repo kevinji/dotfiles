@@ -27,3 +27,8 @@ fi
 if [[ -f "$HOME/.cargo/env" ]]; then
   source "$HOME/.cargo/env"
 fi
+
+# Doom Emacs
+if [[ -d "$HOME/.emacs.d/bin" ]]; then
+  path+=("$HOME/.emacs.d/bin")
+fi
