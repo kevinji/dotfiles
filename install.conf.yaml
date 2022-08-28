@@ -17,6 +17,16 @@
       create: true
       path: bat/bat.conf
 
+    ~/.config/doom/config.el:
+      create: true
+      path: doom/config.el
+    ~/.config/doom/init.el:
+      create: true
+      path: doom/init.el
+    ~/.config/doom/packages.el:
+      create: true
+      path: doom/packages.el
+
     ~/.config/git/config:
       create: true
       path: git/gitconfig
