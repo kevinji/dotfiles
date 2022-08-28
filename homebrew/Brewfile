@@ -49,7 +49,6 @@ brew "opam"        # Manages OCaml
 brew "rustup-init" # Manages Rust
 
 # Databases
-brew "mongosh"
 brew "postgresql@14"
 
 # Shell niceties
@@ -83,11 +82,8 @@ brew "ffmpeg"
 brew "yt-dlp"
 
 # Miscellaneous tools
-brew "aria2"
-brew "fswatch"
 brew "gnupg"
 brew "k3d"
-brew "lcdf-typetools"
 brew "pandoc"
 brew "pngcrush"
 brew "pngquant"
@@ -101,7 +97,6 @@ cask "font-source-code-pro"
 # Programming tools
 cask "docker"
 cask "emacs-mac"
-cask "google-cloud-sdk"
 cask "iterm2"
 
 # Utilities
@@ -120,13 +115,10 @@ cask "google-chrome"
 
 # Storage
 cask "dropbox"
-cask "google-drive"
 
 # Applications
 cask "1password"
-cask "adobe-creative-cloud"
 cask "audio-hijack"
-cask "figma"
 cask "iina"
 cask "notion"
 cask "private-internet-access"
