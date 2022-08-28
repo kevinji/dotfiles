@@ -50,7 +50,7 @@ brew "rustup-init" # Manages Rust
 
 # Databases
 brew "mongosh"
-brew "postgresql"
+brew "postgresql@14"
 
 # Shell niceties
 brew "curlie"
