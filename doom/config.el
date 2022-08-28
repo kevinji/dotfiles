@@ -6,7 +6,7 @@
 
 ;; Some functionality uses this to identify you, e.g. GPG configuration, email
 ;; clients, file templates and snippets. It is optional.
-(setq user-full-name "John Doe"
+(setq user-full-name "Kevin Ji"
       user-mail-address "john@doe.com")
 
 ;; Doom exposes five (optional) variables for controlling fonts in Doom:
@@ -74,3 +74,15 @@
 ;;
 ;; You can also try 'gd' (or 'C-c c d') to jump to their definition and see how
 ;; they are implemented.
+
+(setq display-line-numbers-type 'relative)
+(add-to-list 'initial-frame-alist '(fullscreen . maximized))
+
+(after! evil
+  ;; Stop `evil-visual-paste' from adding the replaced text to the kill ring.
+  (setq evil-kill-on-visual-paste nil)
+
+  ;; https://emacs.stackexchange.com/a/15054
+  ;;(fset 'evil-visual-update-x-selection 'ignore)
+
+  (map! :map evil-normal-state-map "RET" #'save-buffer))
