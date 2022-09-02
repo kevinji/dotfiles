@@ -129,7 +129,6 @@ cask "steam"
 cask "transmission"
 
 # Communication
-cask "beeper"
 cask "discord"
 cask "twobird"
 cask "zoom"
