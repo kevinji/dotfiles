@@ -118,7 +118,7 @@
       versions:
         - 16.17.0
     - plugin: python
-      url: https://github.com/danhper/asdf-python.git
+      url: https://github.com/asdf-community/asdf-python.git
       global: 3.10.6
       versions:
         - 3.10.6
