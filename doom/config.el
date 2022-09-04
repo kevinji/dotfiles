@@ -90,6 +90,9 @@
 
   (map! :map evil-normal-state-map "RET" #'save-buffer))
 
+(after! rustic
+  (setq rustic-format-trigger 'on-save))
+
 (let ((local-file (expand-file-name "~/.config/doom/local.el")))
   (when (file-exists-p local-file)
     (load-file local-file)))
