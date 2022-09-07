@@ -119,9 +119,9 @@
         - 16.17.0
     - plugin: python
       url: https://github.com/asdf-community/asdf-python.git
-      global: 3.10.6
+      global: 3.10.7
       versions:
-        - 3.10.6
+        - 3.10.7
     - plugin: ruby
       url: https://github.com/asdf-vm/asdf-ruby.git
       global: 3.1.2
