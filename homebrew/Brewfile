@@ -65,6 +65,7 @@ brew "wget"
 
 # Rust-based shell tools
 brew "bat"       # cat
+brew "difftastic"
 brew "exa"       # ls
 brew "hyperfine" # bench
 brew "fd"        # find
