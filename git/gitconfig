@@ -1,5 +1,6 @@
 [core]
 	excludesFile = ~/.config/git/ignore
+	pager = delta
 [init]
 	defaultBranch = main
 [delta]
@@ -7,11 +8,6 @@
 	file-decoration-style = blue ul ol
 	hunk-header-style = raw
 	hunk-header-decoration-style = none
-[pager]
-	diff = delta
-	log = delta
-	reflog = delta
-	show = delta
 [interactive]
 	diffFilter = delta --color-only
 [fetch]
