@@ -1,6 +1,9 @@
 [core]
 	excludesFile = ~/.config/git/ignore
 	pager = delta
+[user]
+	name = Kevin Ji
+	email = 1146876+kevinji@users.noreply.github.com
 [init]
 	defaultBranch = main
 [delta]
