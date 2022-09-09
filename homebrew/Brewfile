@@ -101,6 +101,7 @@ cask "font-source-code-pro"
 cask "docker"
 cask "emacs-mac"
 cask "iterm2"
+cask "utm"
 
 # Utilities
 cask "alfred"
