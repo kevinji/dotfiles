@@ -32,3 +32,8 @@ fi
 if [[ -d "$HOME/.emacs.d/bin" ]]; then
   path+=("$HOME/.emacs.d/bin")
 fi
+
+# Google Cloud
+if [[ -d "/opt/homebrew/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/bin" ]]; then
+  path+=("/opt/homebrew/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/bin")
+fi
