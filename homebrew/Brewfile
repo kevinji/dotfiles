@@ -79,6 +79,7 @@ brew "skopeo"
 
 # External services
 brew "magic-wormhole"
+brew "mitmproxy"
 
 # Video
 brew "ffmpeg"
