@@ -11,8 +11,6 @@
       create: true
       path: alacritty/alacritty.yml
 
-    ~/.tool-versions: asdf/tool-versions
-
     ~/.config/bat/config:
       create: true
       path: bat/bat.conf
