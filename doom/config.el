@@ -90,6 +90,18 @@
 
   (map! :map evil-normal-state-map "RET" #'save-buffer))
 
+(after! vertico
+  (vertico-multiform-mode)
+
+  (defun sort-directories-first (files)
+    (setq files (vertico-sort-alpha files))
+    (nconc
+      (seq-filter (lambda (x) (string-suffix-p "/" x)) files)
+      (seq-remove (lambda (x) (string-suffix-p "/" x)) files)))
+
+  (setq vertico-multiform-categories
+    '((file (vertico-sort-function . sort-directories-first)))))
+
 (after! rustic
   (setq rustic-format-trigger 'on-save))
 
