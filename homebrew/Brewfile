@@ -4,6 +4,7 @@ tap "homebrew/cask-drivers"
 tap "homebrew/cask-fonts"
 tap "homebrew/cask-versions"
 
+tap "hashicorp/tap"
 tap "railwaycat/emacsmacport"
 tap "rs/tap"
 tap "yt-dlp/taps"
@@ -42,6 +43,7 @@ brew "neovim"
 
 # Languages and package managers
 brew "python"
+brew "hashicorp/tap/terraform"
 
 brew "asdf"        # Language-agnostic
 brew "opam"        # Manages OCaml
