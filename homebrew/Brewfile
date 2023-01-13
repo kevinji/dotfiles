@@ -74,10 +74,13 @@ brew "fd"        # find
 brew "ripgrep"   # grep
 brew "xsv"
 
-# Docker
+# Containers
+brew "colima"
 brew "dive"
-brew "lazydocker"
-brew "skopeo"
+brew "docker"
+brew "docker-compose"
+brew "docker-credential-helper"
+brew "k3d"
 
 # External services
 brew "magic-wormhole"
@@ -89,7 +92,6 @@ brew "yt-dlp"
 
 # Miscellaneous tools
 brew "gnupg"
-brew "k3d"
 brew "pandoc"
 brew "pngcrush"
 brew "pngquant"
@@ -101,7 +103,6 @@ cask "font-fira-sans"
 cask "font-source-code-pro"
 
 # Programming tools
-cask "docker"
 cask "emacs-mac"
 cask "iterm2"
 cask "utm"

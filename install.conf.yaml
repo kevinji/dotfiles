@@ -15,6 +15,11 @@
       create: true
       path: bat/bat.conf
 
+    ~/.docker/cli-plugins/docker-compose:
+      if: '[ $(uname) = Darwin ]'
+      create: true
+      path: /opt/homebrew/opt/docker-compose/bin/docker-compose
+
     ~/.config/doom/config.el:
       create: true
       path: doom/config.el
