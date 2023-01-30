@@ -85,6 +85,7 @@ brew "docker-credential-helper"
 brew "k3d"
 
 # External services
+brew "google-cloud-sdk"
 brew "magic-wormhole"
 brew "mitmproxy"
 
@@ -94,6 +95,7 @@ brew "yt-dlp"
 
 # Miscellaneous tools
 brew "gnupg"
+brew "graphviz"
 brew "pandoc"
 brew "pngcrush"
 brew "pngquant"
