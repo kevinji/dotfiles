@@ -83,6 +83,7 @@ brew "docker"
 brew "docker-compose"
 brew "docker-credential-helper"
 brew "k3d"
+brew "skopeo"
 
 # External services
 brew "google-cloud-sdk"
