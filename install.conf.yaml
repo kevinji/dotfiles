@@ -15,6 +15,10 @@
       create: true
       path: bat/bat.conf
 
+    ~/.docker/cli-plugins/docker-buildx:
+      if: '[ $(uname) = Darwin ]'
+      create: true
+      path: /opt/homebrew/opt/docker-buildx/bin/docker-buildx
     ~/.docker/cli-plugins/docker-compose:
       if: '[ $(uname) = Darwin ]'
       create: true
