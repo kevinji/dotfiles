@@ -87,7 +87,6 @@ brew "k3d"
 brew "skopeo"
 
 # External services
-brew "google-cloud-sdk"
 brew "magic-wormhole"
 brew "mitmproxy"
 
@@ -146,6 +145,9 @@ cask "zoom"
 
 # Drivers
 cask "focusrite-control"
+
+# External services
+cask "google-cloud-sdk"
 
 ## macOS applications
 mas "Xcode", id: 497799835
