@@ -132,6 +132,6 @@
         - 3.11.2
     - plugin: ruby
       url: https://github.com/asdf-vm/asdf-ruby.git
-      global: 3.2.0
+      global: 3.2.1
       versions:
-        - 3.2.0
+        - 3.2.1
