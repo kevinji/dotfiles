@@ -1,6 +1,0 @@
-sudo: false
-language: shell
-script:
-  - ./install || true
-notifications:
-  email: false

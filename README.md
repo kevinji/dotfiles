@@ -1,6 +1,4 @@
 # dotfiles
-[![Build Status](https://travis-ci.org/kevinji/dotfiles.svg?branch=master)](https://travis-ci.org/kevinji/dotfiles)
-
 dotfiles by [@kevinji](https://github.com/kevinji).
 
 ## Installation
