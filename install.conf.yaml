@@ -90,19 +90,24 @@
     ~/.config/zsh/.zshrc:
       create: true
       path: zsh/zshrc.zsh
-    ~/.config/zsh/zsh-plugins.txt:
+    ~/.config/zsh/.zsh_plugins.txt:
       create: true
       path: zsh/zsh-plugins.txt
 
 - shell:
-    - command: git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm || true
+    - command: >-
+        [ $(uname) = Darwin ] || git clone --depth=1 https://github.com/mattmc3/antidote.git ~/.config/zsh/.antidote
+      description: Installing Antidote
+    - command: >-
+        ./scripts/run-antidote-bundle.sh
+      description: Static loading Antidote plugins
+    - command: >-
+        git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm || true
       description: Cloning Tmux Plugin Manager
     - command: >-
         curl -fLo ~/.vim/autoload/plug.vim --create-dirs
         https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
       description: Cloning vim-plug
-    - command: antibody bundle < ~/.config/zsh/zsh-plugins.txt > ~/.config/zsh/zsh-plugins.sh
-      description: Static loading Antibody plugins
     - >-
         echo 'Set zsh as your login shell: chsh -s "$(which zsh)"'
     - >-

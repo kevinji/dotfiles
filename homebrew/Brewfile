@@ -18,7 +18,7 @@ brew "mas"
 
 # Shell essentials
 brew "zsh"
-brew "antibody"
+brew "antidote"
 brew "tmux"
 
 # Replacements for system programs

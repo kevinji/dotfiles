@@ -61,10 +61,14 @@ zstyle ":completion:*:(ssh|scp|rsync):*:hosts-ipaddr" ignored-patterns "^(<->.<-
 autoload -Uz bracketed-paste-url-magic
 zle -N bracketed-paste bracketed-paste-url-magic
 
-# Source antibody plugins
-if [[ -f "$HOME/.config/zsh/zsh-plugins.sh" ]]; then
-  source "$HOME/.config/zsh/zsh-plugins.sh"
+# Antidote
+if [[ -f "$(brew --prefix)/opt/antidote/share/antidote/antidote.zsh" ]]; then
+  source "$(brew --prefix)/opt/antidote/share/antidote/antidote.zsh"
+elif [[ -f "$ZDOTDIR/.antidote/antidote.zsh" ]]; then
+  source "$ZDOTDIR/.antidote/antidote.zsh"
 fi
+
+source "$ZDOTDIR/.zsh_plugins.zsh"
 
 # zsh features
 autoload -Uz compinit

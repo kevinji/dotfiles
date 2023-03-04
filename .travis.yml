@@ -1,7 +1,6 @@
 sudo: false
 language: shell
 script:
-  - ./scripts/get-antibody.sh || true
   - ./install || true
 notifications:
   email: false
