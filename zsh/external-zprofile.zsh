@@ -8,7 +8,7 @@ fi
 
 # asdf
 if (( $+commands[asdf] && $+commands[brew] )); then
-  source "$(brew --prefix asdf)/libexec/asdf.sh"
+  source "$HOMEBREW_PREFIX/opt/asdf/libexec/asdf.sh"
 elif [[ -f "$HOME/.asdf/asdf.sh" ]]; then
   source "$HOME/.asdf/asdf.sh"
   fpath+=("$ASDF_DIR/completions")
