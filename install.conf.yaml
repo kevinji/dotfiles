@@ -96,13 +96,13 @@
 
 - shell:
     - command: >-
-        [ $(uname) = Darwin ] || git clone --depth=1 https://github.com/mattmc3/antidote.git ~/.config/zsh/.antidote
+        [ $(uname) = Darwin ] || [[ -d ~/.config/zsh/.antidote ]] || git clone --depth=1 https://github.com/mattmc3/antidote.git ~/.config/zsh/.antidote
       description: Installing Antidote
     - command: >-
         ./scripts/run-antidote-bundle.sh
       description: Static loading Antidote plugins
     - command: >-
-        git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm || true
+        [[ -d ~/.tmux/plugins/tpm ]] || git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
       description: Cloning Tmux Plugin Manager
     - command: >-
         curl -fLo ~/.vim/autoload/plug.vim --create-dirs
