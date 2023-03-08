@@ -56,7 +56,7 @@ brew "rustup-init"      # Manages Rust
 brew "rust-analyzer"
 
 # Databases
-brew "postgresql@14"
+brew "postgresql@15"
 
 # Shell niceties
 brew "curlie"
