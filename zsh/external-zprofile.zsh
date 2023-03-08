@@ -43,3 +43,8 @@ fi
 if [[ -d "$HOME/.local/share/solana/install/active_release/bin" ]]; then
   path+=("$HOME/.local/share/solana/install/active_release/bin")
 fi
+
+# Foundry
+if [[ -d "$HOME/.foundry/bin" ]]; then
+  path+=("$HOME/.foundry/bin")
+fi
