@@ -121,9 +121,9 @@
 - asdf:
     - plugin: java
       url: https://github.com/halcyon/asdf-java.git
-      global: openjdk-19.0.2
+      global: openjdk-20
       versions:
-        - openjdk-19.0.2
+        - openjdk-20
     - plugin: nodejs
       url: https://github.com/asdf-vm/asdf-nodejs.git
       global: 18.14.1
