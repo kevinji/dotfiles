@@ -30,8 +30,8 @@ if [[ -f "$HOME/.cargo/env" ]]; then
 fi
 
 # Doom Emacs
-if [[ -d "$HOME/.emacs.d/bin" ]]; then
-  path+=("$HOME/.emacs.d/bin")
+if [[ -d "$HOME/.config/emacs/bin" ]]; then
+  path+=("$HOME/.config/emacs/bin")
 fi
 
 # Google Cloud
