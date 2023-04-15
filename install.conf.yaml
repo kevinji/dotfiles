@@ -7,10 +7,6 @@
 - clean: ['~']
 
 - link:
-    ~/.config/alacritty/alacritty.yml:
-      create: true
-      path: alacritty/alacritty.yml
-
     ~/.config/bat/config:
       create: true
       path: bat/bat.conf
