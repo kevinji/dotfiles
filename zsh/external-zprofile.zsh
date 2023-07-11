@@ -48,3 +48,8 @@ fi
 if [[ -d "$HOME/.foundry/bin" ]]; then
   path+=("$HOME/.foundry/bin")
 fi
+
+# OrbStack
+if [[ -d "$HOME/.orbstack/bin" ]]; then
+  path+=("$HOME/.orbstack/bin")
+fi

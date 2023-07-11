@@ -76,7 +76,6 @@ brew "ripgrep"   # grep
 brew "xsv"
 
 # Containers
-brew "colima"
 brew "dive"
 brew "docker"
 brew "docker-buildx"
@@ -109,6 +108,7 @@ cask "font-source-code-pro"
 # Programming tools
 cask "emacs-mac"
 cask "iterm2"
+cask "orbstack"
 cask "utm"
 
 # Utilities
