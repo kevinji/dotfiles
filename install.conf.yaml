@@ -122,14 +122,14 @@
         - openjdk-20.0.1
     - plugin: nodejs
       url: https://github.com/asdf-vm/asdf-nodejs.git
-      global: 18.16.0
+      global: 18.16.1
       versions:
-        - 18.16.0
+        - 18.16.1
     - plugin: python
       url: https://github.com/asdf-community/asdf-python.git
-      global: 3.11.3
+      global: 3.11.4
       versions:
-        - 3.11.3
+        - 3.11.4
     - plugin: ruby
       url: https://github.com/asdf-vm/asdf-ruby.git
       global: 3.2.2
