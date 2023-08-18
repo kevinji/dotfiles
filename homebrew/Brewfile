@@ -4,7 +4,7 @@ tap "homebrew/cask-versions"
 
 tap "bufbuild/buf"
 tap "hashicorp/tap"
-tap "kevinji/emacsmacport" # Emacs 28 needed for Doom Emacs
+tap "railwaycat/emacsmacport"
 tap "rs/tap"
 tap "yt-dlp/taps"
 
