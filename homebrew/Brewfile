@@ -1,4 +1,3 @@
-tap "homebrew/cask-drivers"
 tap "homebrew/cask-fonts"
 tap "homebrew/cask-versions"
 
@@ -128,13 +127,16 @@ cask "google-chrome"
 # Storage
 cask "dropbox"
 
+# Audio
+cask "audio-hijack"
+cask "focusrite-control"
+cask "spotify"
+
 # Applications
 cask "1password"
-cask "audio-hijack"
 cask "iina"
 cask "notion"
 cask "private-internet-access"
-cask "spotify"
 cask "steam"
 cask "transmission"
 
@@ -142,9 +144,6 @@ cask "transmission"
 cask "discord"
 cask "twobird"
 cask "zoom"
-
-# Drivers
-cask "focusrite-control"
 
 # External services
 cask "google-cloud-sdk"
