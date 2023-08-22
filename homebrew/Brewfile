@@ -1,7 +1,6 @@
 tap "homebrew/cask-fonts"
 tap "homebrew/cask-versions"
 
-tap "bufbuild/buf"
 tap "hashicorp/tap"
 tap "railwaycat/emacsmacport"
 tap "rs/tap"
@@ -43,11 +42,9 @@ brew "neovim"
 brew "python"
 brew "hashicorp/tap/terraform"
 
-brew "asdf"             # Language-agnostic
-brew "bazelisk"         # Manages Bazel
-brew "bufbuild/buf/buf" # Builds Protobuf
-brew "opam"             # Manages OCaml
-brew "rustup-init"      # Manages Rust
+brew "asdf"        # Language-agnostic
+brew "opam"        # Manages OCaml
+brew "rustup-init" # Manages Rust
 
 # Rust
 brew "rust-analyzer"
