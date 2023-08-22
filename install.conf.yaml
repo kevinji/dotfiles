@@ -54,13 +54,6 @@
       create: true
       path: ocaml/ocp-indent.conf
 
-    ~/.spacemacs.d/init.el:
-      create: true
-      path: spacemacs/init.el
-    ~/.spacemacs.d/local-example.el:
-      create: true
-      path: spacemacs/local-example.el
-
     ~/.config/tmux/tmux.conf:
       create: true
       path: tmux/tmux.conf
