@@ -31,6 +31,7 @@ brew "mercurial"
 brew "subversion" # Needed for font-source-code-pro
 
 # Git helpers
+brew "gh"
 brew "git-delta"
 brew "git-filter-repo"
 brew "git-lfs"
