@@ -31,6 +31,7 @@ SAVEHIST=10000
 setopt EXTENDED_HISTORY     # Use the ":start:elapsed;command" format for history entries.
 setopt INC_APPEND_HISTORY   # Append to history file during shell session.
 setopt SHARE_HISTORY        # Share history between sessions.
+setopt HIST_IGNORE_SPACE    # Avoid saving history entries that start with spaces.
 setopt HIST_IGNORE_ALL_DUPS # Delete older duplicated events from history.
 setopt HIST_FIND_NO_DUPS    # Avoid displaying duplicate history entries.
 setopt HIST_SAVE_NO_DUPS    # Avoid saving duplicate history entries.
