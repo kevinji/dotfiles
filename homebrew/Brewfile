@@ -133,6 +133,7 @@ cask "spotify"
 # Applications
 cask "1password"
 cask "iina"
+cask "moonlight"
 cask "notion"
 cask "private-internet-access"
 cask "steam"
