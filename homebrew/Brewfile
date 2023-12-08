@@ -90,6 +90,17 @@ brew "mitmproxy"
 brew "ffmpeg"
 brew "yt-dlp"
 
+# Dependencies for npm `canvas`:
+# https://www.npmjs.com/package/canvas
+brew "pkg-config"
+brew "cairo"
+brew "pango"
+brew "libpng"
+brew "jpeg"
+brew "giflib"
+brew "librsvg"
+brew "pixman"
+
 # Miscellaneous tools
 brew "gnupg"
 brew "graphviz"
