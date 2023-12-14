@@ -35,8 +35,8 @@ if [[ -d "$HOME/.config/emacs/bin" ]]; then
 fi
 
 # Google Cloud
-if [[ -d "/opt/homebrew/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/bin" ]]; then
-  path+=("/opt/homebrew/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/bin")
+if [[ -d "$HOMEBREW_PREFIX/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/bin" ]]; then
+  path+=("$HOMEBREW_PREFIX/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/bin")
 fi
 
 # Solana
