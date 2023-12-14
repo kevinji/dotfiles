@@ -37,10 +37,12 @@ fi
 typeset -gU cdpath fpath mailpath path
 
 # Set the list of directories that Zsh searches for programs.
-path=(
-  /usr/local/{bin,sbin}
-  $path
-)
+if [[ "$OSTYPE" != darwin* ]]; then
+  path=(
+    /usr/local/{bin,sbin}
+    $path
+  )
+fi
 
 ## Less
 # Set the default Less options.

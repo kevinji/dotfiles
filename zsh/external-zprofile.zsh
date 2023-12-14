@@ -7,7 +7,7 @@ if (( $+commands[fd] )); then
 fi
 
 # asdf
-if (( $+commands[asdf] && $+commands[brew] )); then
+if (( $+commands[asdf] && $+commands[brew] )) && [[ -f "$HOMEBREW_PREFIX/opt/asdf/libexec/asdf.sh" ]]; then
   source "$HOMEBREW_PREFIX/opt/asdf/libexec/asdf.sh"
 elif [[ -f "$HOME/.asdf/asdf.sh" ]]; then
   source "$HOME/.asdf/asdf.sh"
