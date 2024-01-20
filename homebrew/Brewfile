@@ -119,6 +119,7 @@ cask "emacs-mac"
 cask "iterm2"
 cask "orbstack"
 cask "utm"
+cask "visual-studio-code"
 
 # Utilities
 cask "alfred"
