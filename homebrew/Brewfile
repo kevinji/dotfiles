@@ -58,7 +58,6 @@ brew "curlie"
 brew "fzf"
 brew "htop"
 brew "jq"
-brew "llm"
 brew "ncdu"
 brew "shellcheck"
 brew "tree"
@@ -81,6 +80,10 @@ brew "docker-compose"
 brew "docker-credential-helper"
 brew "k3d"
 brew "skopeo"
+
+# AI
+brew "llm"
+brew "ollama"
 
 # External services
 brew "magic-wormhole"
