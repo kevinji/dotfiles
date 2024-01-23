@@ -83,7 +83,6 @@ brew "skopeo"
 
 # AI
 brew "llm"
-brew "ollama"
 
 # External services
 brew "magic-wormhole"
@@ -132,6 +131,9 @@ cask "karabiner-elements"
 cask "linearmouse"
 cask "monitorcontrol"
 cask "rectangle"
+
+# AI
+cask "ollama"
 
 # Browsers
 cask "firefox-beta"
