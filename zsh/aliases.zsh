@@ -21,11 +21,11 @@ alias l="ls -1A"   # Lists in one column, hidden files.
 alias ll="ls -lh"  # Lists human readable sizes.
 alias la="ls -Alh" # Lists human readable sizes, hidden files.
 
-if (( $+commands[exa] )); then
-  alias xs="exa"
-  alias x="exa -1a"   # Lists in one column, hidden files.
-  alias xl="exa -lh"  # Lists human readable sizes.
-  alias xa="exa -alh" # Lists human readable sizes, hidden files.
+if (( $+commands[eza] )); then
+  alias xs="eza"
+  alias x="eza -1a"   # Lists in one column, hidden files.
+  alias xl="eza -lh"  # Lists human readable sizes.
+  alias xa="eza -alh" # Lists human readable sizes, hidden files.
 fi
 
 alias mkdir="${aliases[mkdir]:-mkdir} -p" # Make intermediate directories.
