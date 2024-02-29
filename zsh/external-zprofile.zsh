@@ -14,8 +14,19 @@ elif [[ -f "$HOME/.asdf/asdf.sh" ]]; then
   fpath+=("$ASDF_DIR/completions")
 fi
 
-if [[ -f "$HOME/.asdf/plugins/golang/set-env.zsh" ]]; then
-  source "$HOME/.asdf/plugins/golang/set-env.zsh"
+if (( $+commands[asdf] )); then
+  ASDF_JAVA_BIN="$(asdf which java 2> /dev/null || echo "")"
+  if [[ -f "$ASDF_JAVA_BIN" ]]; then
+    export JAVA_HOME="$(dirname $(dirname "$ASDF_JAVA_BIN"))"
+    export JDK_HOME="$JAVA_HOME"
+  fi
+  unset ASDF_JAVA_BIN
+
+  ASDF_GO_BIN="$(asdf which go 2> /dev/null || echo "")"
+  if [[ -f "$ASDF_GO_BIN" ]]; then
+    export GOROOT="$(dirname $(dirname "$ASDF_GO_BIN"))"
+  fi
+  unset ASDF_GO_BIN
 fi
 
 # Opam
