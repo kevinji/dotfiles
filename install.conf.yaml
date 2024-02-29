@@ -108,6 +108,11 @@
     stderr: true
 
 - asdf:
+    - plugin: golang
+      url: https://github.com/asdf-community/asdf-golang.git
+      global: 1.22.0
+      versions:
+        - 1.22.0
     - plugin: java
       url: https://github.com/halcyon/asdf-java.git
       global: openjdk-21.0.1
