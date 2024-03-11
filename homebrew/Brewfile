@@ -4,7 +4,6 @@ tap "homebrew/cask-versions"
 tap "hashicorp/tap"
 tap "railwaycat/emacsmacport"
 tap "rs/tap"
-tap "yt-dlp/taps"
 
 cask_args appdir: "/Applications"
 
