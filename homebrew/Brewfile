@@ -80,9 +80,6 @@ brew "docker-credential-helper"
 brew "k3d"
 brew "skopeo"
 
-# AI
-brew "llm"
-
 # External services
 brew "magic-wormhole"
 
