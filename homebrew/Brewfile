@@ -85,7 +85,6 @@ brew "llm"
 
 # External services
 brew "magic-wormhole"
-brew "mitmproxy"
 
 # Video
 brew "ffmpeg"
@@ -128,6 +127,7 @@ cask "appcleaner"
 cask "bartender"
 cask "karabiner-elements"
 cask "linearmouse"
+cask "mitmproxy"
 cask "monitorcontrol"
 cask "rectangle"
 
