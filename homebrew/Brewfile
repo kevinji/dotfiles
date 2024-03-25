@@ -88,9 +88,14 @@ brew "magic-wormhole"
 brew "ffmpeg"
 brew "yt-dlp"
 
+# Build tools/dependencies
+brew "cmake"
+brew "libuv"
+brew "ninja"
+brew "pkg-config"
+
 # Dependencies for npm `canvas`:
 # https://www.npmjs.com/package/canvas
-brew "pkg-config"
 brew "cairo"
 brew "pango"
 brew "libpng"
