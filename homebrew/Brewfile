@@ -109,6 +109,9 @@ brew "pandoc"
 brew "pngcrush"
 brew "pngquant"
 
+# Cloud CLIs
+brew "awscli"
+
 ## Casks
 # Fonts
 cask "font-dejavu"
@@ -161,7 +164,7 @@ cask "discord"
 cask "twobird"
 cask "zoom"
 
-# External services
+# Cloud CLIs
 cask "google-cloud-sdk"
 
 ## macOS applications
