@@ -89,6 +89,7 @@ brew "ffmpeg"
 brew "yt-dlp"
 
 # Build tools/dependencies
+brew "ccache"
 brew "cmake"
 brew "libuv"
 brew "ninja"
