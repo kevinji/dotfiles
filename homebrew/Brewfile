@@ -26,7 +26,6 @@ brew "vim"
 # Version control
 brew "git"
 brew "mercurial"
-brew "subversion" # Needed for font-source-code-pro
 
 # Git helpers
 brew "gh"
@@ -59,7 +58,6 @@ brew "htop"
 brew "jq"
 brew "ncdu"
 brew "shellcheck"
-brew "tree"
 brew "wget"
 
 # Rust-based shell tools
