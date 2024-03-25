@@ -26,16 +26,3 @@ if [[ -d "$HOMEBREW_PREFIX/Caskroom/google-cloud-sdk/latest/google-cloud-sdk" ]]
     curl --header "Authorization: Bearer $(gcloud auth print-identity-token)" "$@"
   }
 fi
-
-# Objective-See apps
-if [[ -d "/Applications/DNSMonitor.app" ]]; then
-  alias dnsmonitor="sudo /Applications/DNSMonitor.app/Contents/MacOS/DNSMonitor"
-fi
-
-if [[ -d "/Applications/FileMonitor.app" ]]; then
-  alias filemonitor="sudo /Applications/FileMonitor.app/Contents/MacOS/FileMonitor"
-fi
-
-if [[ -d "/Applications/ProcessMonitor.app" ]]; then
-  alias processmonitor="sudo /Applications/ProcessMonitor.app/Contents/MacOS/ProcessMonitor"
-fi

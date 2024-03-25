@@ -150,6 +150,11 @@ cask "audio-hijack"
 cask "focusrite-control"
 cask "spotify"
 
+# Objective-See utilities
+cask "dnsmonitor"
+cask "filemonitor"
+cask "processmonitor"
+
 # Applications
 cask "1password"
 cask "iina"
