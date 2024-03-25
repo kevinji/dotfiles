@@ -6,27 +6,9 @@ if (( $+commands[fd] )); then
   export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 fi
 
-# asdf
-if (( $+commands[asdf] && $+commands[brew] )) && [[ -f "$HOMEBREW_PREFIX/opt/asdf/libexec/asdf.sh" ]]; then
-  source "$HOMEBREW_PREFIX/opt/asdf/libexec/asdf.sh"
-elif [[ -f "$HOME/.asdf/asdf.sh" ]]; then
-  source "$HOME/.asdf/asdf.sh"
-  fpath+=("$ASDF_DIR/completions")
-fi
-
-if (( $+commands[asdf] )); then
-  ASDF_JAVA_BIN="$(asdf which java 2> /dev/null || echo "")"
-  if [[ -f "$ASDF_JAVA_BIN" ]]; then
-    export JAVA_HOME="$(dirname $(dirname "$ASDF_JAVA_BIN"))"
-    export JDK_HOME="$JAVA_HOME"
-  fi
-  unset ASDF_JAVA_BIN
-
-  ASDF_GO_BIN="$(asdf which go 2> /dev/null || echo "")"
-  if [[ -f "$ASDF_GO_BIN" ]]; then
-    export GOROOT="$(dirname $(dirname "$ASDF_GO_BIN"))"
-  fi
-  unset ASDF_GO_BIN
+# mise
+if (( $+commands[mise] )); then
+  path=("$HOME/.local/share/mise/shims" $path)
 fi
 
 # Opam

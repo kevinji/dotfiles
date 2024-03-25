@@ -40,12 +40,9 @@
       create: true
       path: git/gitignore-global
 
-    ~/.config/pip/pip.conf:
+    ~/.config/mise/config.toml:
       create: true
-      path: pip/pip.conf
-    ~/.ptpython/config.py:
-      create: true
-      path: ptpython/config.py
+      path: mise/config.toml
 
     ~/.config/ocamlformat:
       create: true
@@ -53,6 +50,13 @@
     ~/.ocp/ocp-indent.conf:
       create: true
       path: ocaml/ocp-indent.conf
+
+    ~/.config/pip/pip.conf:
+      create: true
+      path: pip/pip.conf
+    ~/.ptpython/config.py:
+      create: true
+      path: ptpython/config.py
 
     ~/.config/tmux/tmux.conf:
       create: true
@@ -106,30 +110,3 @@
     file: homebrew/Brewfile
     stdout: true
     stderr: true
-
-- asdf:
-    - plugin: golang
-      url: https://github.com/asdf-community/asdf-golang.git
-      global: 1.22.0
-      versions:
-        - 1.22.0
-    - plugin: java
-      url: https://github.com/halcyon/asdf-java.git
-      global: openjdk-21.0.2
-      versions:
-        - openjdk-21.0.2
-    - plugin: nodejs
-      url: https://github.com/asdf-vm/asdf-nodejs.git
-      global: 20.10.0
-      versions:
-        - 20.10.0
-    - plugin: python
-      url: https://github.com/asdf-community/asdf-python.git
-      global: 3.11.6
-      versions:
-        - 3.11.6
-    - plugin: ruby
-      url: https://github.com/asdf-vm/asdf-ruby.git
-      global: 3.2.2
-      versions:
-        - 3.2.2
