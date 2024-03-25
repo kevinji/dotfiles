@@ -9,6 +9,7 @@ fi
 # mise
 if (( $+commands[mise] )); then
   path=("$HOME/.local/share/mise/shims" $path)
+  export MISE_NODE_COREPACK=true
 fi
 
 # Opam
