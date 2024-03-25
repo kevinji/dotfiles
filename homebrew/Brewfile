@@ -3,7 +3,6 @@ tap "homebrew/cask-versions"
 
 tap "hashicorp/tap"
 tap "railwaycat/emacsmacport"
-tap "rs/tap"
 
 cask_args appdir: "/Applications"
 
