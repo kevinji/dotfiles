@@ -45,8 +45,8 @@ brew "opam"        # Manages OCaml
 brew "rustup-init" # Manages Rust
 brew "uv"          # Manages Python
 
-# Rust
 brew "rust-analyzer"
+brew "tflint"
 
 # Databases
 brew "postgresql@16"
