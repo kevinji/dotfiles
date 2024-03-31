@@ -1,6 +1,7 @@
 tap "homebrew/cask-fonts"
 tap "homebrew/cask-versions"
 
+tap "derailed/k9s"
 tap "hashicorp/tap"
 tap "railwaycat/emacsmacport"
 
@@ -75,9 +76,12 @@ brew "docker"
 brew "docker-buildx"
 brew "docker-compose"
 brew "docker-credential-helper"
+brew "skopeo"
+
+# Kubernetes
 brew "helm"
 brew "k3d"
-brew "skopeo"
+brew "derailed/k9s/k9s"
 
 # External services
 brew "magic-wormhole"
