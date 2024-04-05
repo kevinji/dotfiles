@@ -46,7 +46,6 @@ brew "opam"        # Manages OCaml
 brew "rustup-init" # Manages Rust
 brew "uv"          # Manages Python
 
-brew "hatch"         # Python project manager
 brew "ruff"          # Python linter/formatter
 brew "rust-analyzer" # Rust LSP
 brew "tflint"        # Terraform linter
