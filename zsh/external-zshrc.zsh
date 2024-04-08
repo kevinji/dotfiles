@@ -26,3 +26,8 @@ if [[ -d "$HOMEBREW_PREFIX/Caskroom/google-cloud-sdk/latest/google-cloud-sdk" ]]
     curl --header "Authorization: Bearer $(gcloud auth print-identity-token)" "$@"
   }
 fi
+
+# Tailscale
+if [[ -f "/Applications/Tailscale.app/Contents/MacOS/Tailscale" ]]; then
+  alias tailscale="/Applications/Tailscale.app/Contents/MacOS/Tailscale"
+fi
