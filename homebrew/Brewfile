@@ -114,6 +114,7 @@ brew "graphviz"
 brew "pandoc"
 brew "pngcrush"
 brew "pngquant"
+brew "protobuf"
 
 # Cloud CLIs
 brew "awscli"
