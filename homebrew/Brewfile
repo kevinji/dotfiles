@@ -91,12 +91,16 @@ brew "magic-wormhole"
 brew "ffmpeg"
 brew "yt-dlp"
 
+# AI
+brew "huggingface-cli"
+
 # Build tools/dependencies
 brew "ccache"
 brew "cmake"
 brew "libuv"
 brew "ninja"
 brew "pkg-config"
+brew "sccache"
 
 # Dependencies for npm `canvas`:
 # https://www.npmjs.com/package/canvas
@@ -111,7 +115,6 @@ brew "pixman"
 # Miscellaneous tools
 brew "gnupg"
 brew "graphviz"
-brew "huggingface-cli"
 brew "pandoc"
 brew "pngcrush"
 brew "pngquant"
