@@ -38,6 +38,7 @@ brew "git-lfs"
 brew "neovim"
 
 # Languages and package managers
+brew "protobuf"
 brew "python"
 brew "hashicorp/tap/terraform"
 
@@ -56,6 +57,7 @@ brew "postgresql@16"
 # Shell niceties
 brew "curlie"
 brew "fzf"
+brew "gnupg"
 brew "htop"
 brew "jq"
 brew "ncdu"
@@ -112,13 +114,13 @@ brew "giflib"
 brew "librsvg"
 brew "pixman"
 
-# Miscellaneous tools
-brew "gnupg"
-brew "graphviz"
-brew "pandoc"
+# Image manipulation
 brew "pngcrush"
 brew "pngquant"
-brew "protobuf"
+
+# Documentation
+brew "graphviz"
+brew "pandoc"
 
 # Cloud CLIs
 brew "awscli"
