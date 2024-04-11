@@ -106,6 +106,14 @@ brew "ninja"
 brew "pkg-config"
 brew "sccache"
 
+# Dependencies for python-build:
+# https://github.com/pyenv/pyenv/wiki#suggested-build-environment
+brew "openssl"
+brew "readline"
+brew "sqlite3"
+brew "xz"
+brew "zlib"
+
 # Dependencies for npm `canvas`:
 # https://www.npmjs.com/package/canvas
 brew "cairo"
