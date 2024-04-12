@@ -2,5 +2,5 @@
 go = "1.22"
 java = "21"
 node = "20"
-python = "3.11.8"
+python = "3.11"
 ruby = "3"
