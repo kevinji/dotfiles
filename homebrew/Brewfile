@@ -26,7 +26,6 @@ brew "vim"
 
 # Version control
 brew "git"
-brew "mercurial"
 
 # Git helpers
 brew "gh"
@@ -51,10 +50,12 @@ brew "protobuf"
 
 brew "ruff"          # Python linter/formatter
 brew "rust-analyzer" # Rust LSP
+brew "shellcheck"    # Bash static analysis
 brew "tflint"        # Terraform linter
 
 # Databases
 brew "postgresql@16"
+brew "sqlite"
 
 # Shell niceties
 brew "curlie"
@@ -63,7 +64,6 @@ brew "gnupg"
 brew "htop"
 brew "jq"
 brew "ncdu"
-brew "shellcheck"
 brew "wget"
 
 # Rust-based shell tools
@@ -95,35 +95,6 @@ brew "magic-wormhole"
 brew "ffmpeg"
 brew "yt-dlp"
 
-# AI
-brew "huggingface-cli"
-
-# Build tools/dependencies
-brew "ccache"
-brew "cmake"
-brew "libuv"
-brew "ninja"
-brew "pkg-config"
-brew "sccache"
-
-# Dependencies for python-build:
-# https://github.com/pyenv/pyenv/wiki#suggested-build-environment
-brew "openssl"
-brew "readline"
-brew "sqlite3"
-brew "xz"
-brew "zlib"
-
-# Dependencies for npm `canvas`:
-# https://www.npmjs.com/package/canvas
-brew "cairo"
-brew "pango"
-brew "libpng"
-brew "jpeg"
-brew "giflib"
-brew "librsvg"
-brew "pixman"
-
 # Image manipulation
 brew "pngcrush"
 brew "pngquant"
@@ -153,7 +124,6 @@ cask "alfred"
 cask "appcleaner"
 cask "bartender"
 cask "karabiner-elements"
-cask "mitmproxy"
 cask "monitorcontrol"
 cask "rectangle"
 
@@ -181,7 +151,6 @@ cask "processmonitor"
 cask "1password"
 cask "iina"
 cask "notion"
-cask "nvidia-geforce-now"
 cask "private-internet-access"
 cask "steam"
 cask "transmission"
