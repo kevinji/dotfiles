@@ -1,5 +1,4 @@
 tap "homebrew/cask-fonts"
-tap "homebrew/cask-versions"
 
 tap "derailed/k9s"
 tap "hashicorp/tap"
@@ -131,7 +130,7 @@ cask "rectangle"
 cask "ollama"
 
 # Browsers
-cask "firefox-beta"
+cask "firefox"
 cask "google-chrome"
 
 # Storage
