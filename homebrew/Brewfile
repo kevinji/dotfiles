@@ -157,7 +157,6 @@ cask "transmission"
 # Communication
 cask "discord"
 cask "signal"
-cask "twobird"
 cask "zoom"
 
 # Cloud CLIs
