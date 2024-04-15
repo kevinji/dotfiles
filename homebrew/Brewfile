@@ -130,6 +130,7 @@ cask "rectangle"
 cask "ollama"
 
 # Browsers
+cask "arc"
 cask "firefox"
 cask "google-chrome"
 
