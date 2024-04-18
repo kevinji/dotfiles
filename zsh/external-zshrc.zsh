@@ -5,8 +5,9 @@ if (( $+commands[gpg] )); then
 fi
 
 # PostgreSQL
-if [[ -f "$HOMEBREW_PREFIX/opt/postgresql/bin/postgres" ]]; then
-  alias pg="$HOMEBREW_PREFIX/opt/postgresql/bin/postgres -D $HOMEBREW_PREFIX/var/postgres"
+if [[ -f "$HOMEBREW_PREFIX/opt/postgresql@16/bin/postgres" ]]; then
+  path+=("$HOMEBREW_PREFIX/opt/postgresql@16/bin")
+  alias pg="$HOMEBREW_PREFIX/opt/postgresql@16/bin/postgres -D $HOMEBREW_PREFIX/var/postgres"
 fi
 
 # fzf
