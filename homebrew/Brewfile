@@ -1,5 +1,6 @@
 tap "homebrew/cask-fonts"
 
+tap "bufbuild/buf"
 tap "derailed/k9s"
 tap "hashicorp/tap"
 tap "railwaycat/emacsmacport"
@@ -47,10 +48,11 @@ brew "uv"          # Manages Python
 brew "pkl"
 brew "protobuf"
 
-brew "ruff"          # Python linter/formatter
-brew "rust-analyzer" # Rust LSP
-brew "shellcheck"    # Bash static analysis
-brew "tflint"        # Terraform linter
+brew "bufbuild/buf/buf" # Protobuf project manager
+brew "ruff"             # Python linter/formatter
+brew "rust-analyzer"    # Rust LSP
+brew "shellcheck"       # Bash static analysis
+brew "tflint"           # Terraform linter
 
 # Databases
 brew "postgresql@16"
