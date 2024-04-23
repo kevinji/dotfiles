@@ -48,6 +48,7 @@ brew "uv"          # Manages Python
 brew "pkl"
 brew "protobuf"
 
+brew "bazelisk"         # Bazel version manager
 brew "bufbuild/buf/buf" # Protobuf project manager
 brew "ruff"             # Python linter/formatter
 brew "rust-analyzer"    # Rust LSP
