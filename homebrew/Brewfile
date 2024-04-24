@@ -50,6 +50,7 @@ brew "protobuf"
 
 brew "bazelisk"         # Bazel version manager
 brew "bufbuild/buf/buf" # Protobuf project manager
+brew "golangci-lint"    # Golang linter
 brew "ruff"             # Python linter/formatter
 brew "rust-analyzer"    # Rust LSP
 brew "shellcheck"       # Bash static analysis
