@@ -1,6 +1,7 @@
 tap "homebrew/cask-fonts"
 
 tap "bufbuild/buf"
+tap "cargo-lambda/cargo-lambda"
 tap "derailed/k9s"
 tap "hashicorp/tap"
 tap "railwaycat/emacsmacport"
@@ -50,6 +51,7 @@ brew "protobuf"
 
 brew "bazelisk"         # Bazel version manager
 brew "bufbuild/buf/buf" # Protobuf project manager
+brew "cargo-lambda"     # AWS Lambda functions in Rust
 brew "golangci-lint"    # Golang linter
 brew "ruff"             # Python linter/formatter
 brew "rust-analyzer"    # Rust LSP
