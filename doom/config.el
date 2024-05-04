@@ -113,6 +113,9 @@
 (after! rustic
   (setq rustic-format-trigger 'on-save))
 
+(after! markdown-mode
+  (add-to-list 'auto-mode-alist '("\\.svx\\'" . markdown-mode)))
+
 (defun file-notify-rm-all-watches ()
   "Remove all existing file notification watches from Emacs."
   (interactive)
