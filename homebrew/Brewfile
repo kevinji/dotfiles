@@ -1,5 +1,3 @@
-tap "homebrew/cask-fonts"
-
 tap "bufbuild/buf"
 tap "cargo-lambda/cargo-lambda"
 tap "derailed/k9s"
