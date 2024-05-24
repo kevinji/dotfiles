@@ -110,9 +110,6 @@
               ("C-TAB" . 'copilot-accept-completion-by-word)
               ("C-<tab>" . 'copilot-accept-completion-by-word)))
 
-(after! rustic
-  (setq rustic-format-trigger 'on-save))
-
 (after! markdown-mode
   (add-to-list 'auto-mode-alist '("\\.svx\\'" . markdown-mode)))
 
