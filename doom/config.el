@@ -116,6 +116,13 @@
 (after! markdown-mode
   (add-to-list 'auto-mode-alist '("\\.svx\\'" . markdown-mode)))
 
+(setq +format-on-save-disabled-modes
+  '(emacs-lisp-mode     ; elisp's mechanisms are good enough
+    sql-mode            ; sqlformat is currently broken
+    tex-mode            ; latexindent is broken
+    latex-mode
+    org-msg-edit-mode)) ; doesn't need a formatter
+
 (defun file-notify-rm-all-watches ()
   "Remove all existing file notification watches from Emacs."
   (interactive)
