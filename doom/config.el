@@ -96,11 +96,11 @@
   (defun sort-directories-first (files)
     (setq files (vertico-sort-alpha files))
     (nconc
-      (seq-filter (lambda (x) (string-suffix-p "/" x)) files)
-      (seq-remove (lambda (x) (string-suffix-p "/" x)) files)))
+     (seq-filter (lambda (x) (string-suffix-p "/" x)) files)
+     (seq-remove (lambda (x) (string-suffix-p "/" x)) files)))
 
   (setq vertico-multiform-categories
-    '((file (vertico-sort-function . sort-directories-first)))))
+        '((file (vertico-sort-function . sort-directories-first)))))
 
 (use-package! copilot
   :hook (prog-mode . copilot-mode)
@@ -114,11 +114,11 @@
   (add-to-list 'auto-mode-alist '("\\.svx\\'" . markdown-mode)))
 
 (setq +format-on-save-disabled-modes
-  '(emacs-lisp-mode     ; elisp's mechanisms are good enough
-    sql-mode            ; sqlformat is currently broken
-    tex-mode            ; latexindent is broken
-    latex-mode
-    org-msg-edit-mode)) ; doesn't need a formatter
+      '(emacs-lisp-mode     ; elisp's mechanisms are good enough
+        sql-mode            ; sqlformat is currently broken
+        tex-mode            ; latexindent is broken
+        latex-mode
+        org-msg-edit-mode)) ; doesn't need a formatter
 
 (defun file-notify-rm-all-watches ()
   "Remove all existing file notification watches from Emacs."
