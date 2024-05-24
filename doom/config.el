@@ -113,6 +113,9 @@
 (after! markdown-mode
   (add-to-list 'auto-mode-alist '("\\.svx\\'" . markdown-mode)))
 
+(after! web-mode
+  (setq web-mode-enable-current-element-highlight t))
+
 (setq +format-on-save-disabled-modes
       '(emacs-lisp-mode     ; elisp's mechanisms are good enough
         sql-mode            ; sqlformat is currently broken
