@@ -116,6 +116,11 @@
 (after! web-mode
   (setq web-mode-enable-current-element-highlight t))
 
+(use-package! lsp-tailwindcss
+  :after lsp-mode
+  :init
+  (setq lsp-tailwindcss-add-on-mode t))
+
 ;; elisp's mechanisms are good enough
 (add-to-list '+format-on-save-disabled-modes 'emacs-lisp-mode)
 
