@@ -116,12 +116,8 @@
 (after! web-mode
   (setq web-mode-enable-current-element-highlight t))
 
-(setq +format-on-save-disabled-modes
-      '(emacs-lisp-mode     ; elisp's mechanisms are good enough
-        sql-mode            ; sqlformat is currently broken
-        tex-mode            ; latexindent is broken
-        latex-mode
-        org-msg-edit-mode)) ; doesn't need a formatter
+;; elisp's mechanisms are good enough
+(add-to-list '+format-on-save-disabled-modes 'emacs-lisp-mode)
 
 (defun file-notify-rm-all-watches ()
   "Remove all existing file notification watches from Emacs."
