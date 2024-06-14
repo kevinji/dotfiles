@@ -10,6 +10,11 @@ fi
 DIR="$(dirname "$(readlink -f "${(%):-%x}")")"
 
 source "$DIR/core.zsh"
+
+if [[ -f "$DIR/zshrc-early-local.zsh" ]]; then
+  source "$DIR/zshrc-early-local.zsh"
+fi
+
 source "$DIR/environment.zsh"
 source "$DIR/aliases.zsh"
 source "$DIR/functions.zsh"
