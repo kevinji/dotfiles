@@ -52,6 +52,7 @@ brew "rye"  # Python package manager
 brew "bazelisk"         # Bazel version manager
 brew "bufbuild/buf/buf" # Protobuf project manager
 brew "cargo-lambda"     # AWS Lambda functions in Rust
+brew "dnscontrol"       # DNS configuration as code
 brew "golangci-lint"    # Golang linter
 brew "rust-analyzer"    # Rust LSP
 brew "shellcheck"       # Bash static analysis
