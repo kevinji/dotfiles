@@ -11,6 +11,10 @@
       create: true
       path: bat/bat.conf
 
+    ~/.config/conda/condarc:
+      create: true
+      path: conda/condarc.yaml
+
     ~/.docker/cli-plugins/docker-buildx:
       if: '[ $(uname) = Darwin ]'
       create: true
