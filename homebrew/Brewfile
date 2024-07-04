@@ -111,12 +111,10 @@ brew "pandoc"
 # Cloud CLIs
 brew "awscli"
 
-## Casks
 # Fonts
-cask "font-dejavu"
-cask "font-fira-sans"
-cask "font-source-code-pro"
+brew "fontforge"
 
+## Casks
 # Programming tools
 cask "emacs-mac"
 cask "iterm2"
