@@ -81,6 +81,9 @@
     ~/.hushlogin: zsh/hushlogin
     ~/.inputrc: zsh/inputrc
     ~/.zshenv: zsh/zshenv.zsh
+    ~/.config/zsh/.p10k.zsh:
+      create: true
+      path: zsh/p10k.zsh
     ~/.config/zsh/.zprofile:
       create: true
       path: zsh/zprofile.zsh
