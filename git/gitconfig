@@ -24,6 +24,7 @@
 	verbose = true
 [rebase]
 	autoStash = true
+	updateRefs = true
 [merge]
 	conflictStyle = diff3
 [rerere]
