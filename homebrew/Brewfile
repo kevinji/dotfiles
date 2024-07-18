@@ -155,7 +155,6 @@ cask "processmonitor"
 cask "1password"
 cask "iina"
 cask "notion"
-cask "private-internet-access"
 cask "steam"
 cask "transmission"
 
