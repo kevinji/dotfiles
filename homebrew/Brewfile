@@ -41,9 +41,9 @@ brew "protobuf"
 brew "python"
 brew "hashicorp/tap/terraform"
 
-brew "mise"        # Language-agnostic
-brew "opam"        # Manages OCaml
-brew "rustup-init" # Manages Rust
+brew "mise"   # Language-agnostic
+brew "opam"   # Manages OCaml
+brew "rustup" # Manages Rust
 
 brew "uv"   # Python package installer
 brew "ruff" # Python linter/formatter
