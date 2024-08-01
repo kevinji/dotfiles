@@ -27,6 +27,11 @@ if [[ -f "$HOME/.cargo/env" ]]; then
   source "$HOME/.cargo/env"
 fi
 
+# Go
+if [[ -d "$HOME/go/bin" ]]; then
+  path+=("$HOME/go/bin")
+fi
+
 # Doom Emacs
 if [[ -d "$HOME/.config/emacs/bin" ]]; then
   path+=("$HOME/.config/emacs/bin")
