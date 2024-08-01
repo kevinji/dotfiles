@@ -53,6 +53,6 @@ if [[ -d "$HOME/.foundry/bin" ]]; then
 fi
 
 # OrbStack
-if [[ -d "$HOME/.orbstack/bin" ]]; then
-  path+=("$HOME/.orbstack/bin")
+if [[ -f "$HOME/.orbstack/shell/init.zsh" ]]; then
+  source "$HOME/.orbstack/shell/init.zsh"
 fi
