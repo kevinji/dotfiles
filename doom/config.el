@@ -103,6 +103,12 @@
   (setq vertico-multiform-categories
         '((file (vertico-sort-function . sort-directories-first)))))
 
+(after! apheleia
+  (setf (alist-get 'python-mode apheleia-mode-alist)
+    '(ruff-isort ruff))
+  (setf (alist-get 'python-ts-mode apheleia-mode-alist)
+    '(ruff-isort ruff)))
+
 (use-package! copilot
   :hook (prog-mode . copilot-mode)
   :bind (:map copilot-completion-map
