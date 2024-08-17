@@ -1,8 +1,8 @@
 [tools]
-go = "1.22"
+go = "1.23"
 java = "22"
 node = "20"
-python = "3.11"
+python = "3.12"
 ruby = "3"
 
 [settings]
