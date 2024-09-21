@@ -174,7 +174,6 @@ mas "DaVinci Resolve", id: 571213070
 mas "Fantastical", id: 975937182
 mas "Flighty", id: 1358823008
 mas "Messenger", id: 1480068668
-mas "Microsoft Remote Desktop", id: 1295203466
 mas "Parcel", id: 639968404
 mas "PDF Expert", id: 1055273043
 mas "Pixelmator Pro", id: 1289583905
@@ -183,4 +182,5 @@ mas "Tailscale", id: 1475387142
 mas "Telegram Lite", id: 946399090
 mas "The Unarchiver", id: 425424353
 mas "Things 3", id: 904280696
+mas "Windows App", id: 1295203466
 mas "Wipr", id: 1320666476
