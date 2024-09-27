@@ -1,6 +1,5 @@
 tap "bufbuild/buf"
 tap "cargo-lambda/cargo-lambda"
-tap "derailed/k9s"
 tap "hashicorp/tap"
 tap "railwaycat/emacsmacport"
 
@@ -90,7 +89,6 @@ brew "skopeo"
 # Kubernetes
 brew "helm"
 brew "k3d"
-brew "derailed/k9s/k9s"
 
 # External services
 brew "magic-wormhole"
