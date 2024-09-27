@@ -47,7 +47,6 @@ brew "rustup" # Manages Rust
 
 brew "uv"   # Python package installer
 brew "ruff" # Python linter/formatter
-brew "rye"  # Python package manager
 
 brew "bazelisk"         # Bazel version manager
 brew "bufbuild/buf/buf" # Protobuf project manager
