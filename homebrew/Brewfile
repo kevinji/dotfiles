@@ -156,6 +156,7 @@ cask "transmission"
 
 # Communication
 cask "discord"
+cask "obs"
 cask "signal"
 cask "zoom"
 
