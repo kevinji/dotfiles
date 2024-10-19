@@ -1,6 +1,6 @@
 [tools]
 go = "1.23"
-java = "22"
+java = "23"
 node = "20"
 python = "3.12"
 ruby = "3"
