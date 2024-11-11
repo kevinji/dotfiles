@@ -57,7 +57,7 @@ brew "shellcheck"       # Bash static analysis
 brew "tflint"           # Terraform linter
 
 # Databases
-brew "postgresql@16"
+brew "postgresql@17"
 brew "sqlite"
 
 # Shell niceties
