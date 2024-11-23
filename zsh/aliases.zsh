@@ -67,7 +67,7 @@ if (( $+commands[git] )); then
   alias gl="git log --topo-order --pretty=format:'${_git_log_medium_format}'"
   alias gls="git log --topo-order --stat --pretty=format:'${_git_log_medium_format}'"
   alias glo="git log --topo-order --pretty=format:'${_git_log_oneline_format}'"
-  alias glg="git log --topo-order --all --graph --pretty=format:'${_git_log_oneline_format}'"
+  alias glg="git log --topo-order --graph --pretty=format:'${_git_log_oneline_format}'"
   alias glb="git log --topo-order --pretty=format:'${_git_log_brief_format}'"
 
   alias gm="git merge"
