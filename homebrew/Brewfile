@@ -158,9 +158,6 @@ cask "zoom"
 # Cloud CLIs
 cask "google-cloud-sdk"
 
-# Games
-cask "nvidia-geforce-now"
-
 ## macOS applications
 mas "Xcode", id: 497799835
 
