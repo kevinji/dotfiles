@@ -34,6 +34,10 @@
       create: true
       path: doom/packages.el
 
+    ~/.config/ghostty/config:
+      create: true
+      path: ghostty/config
+
     ~/.config/git/config:
       create: true
       path: git/gitconfig

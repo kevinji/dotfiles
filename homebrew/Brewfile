@@ -114,6 +114,7 @@ brew "fontforge"
 ## Casks
 # Programming tools
 cask "emacs-mac"
+cask "ghostty"
 cask "iterm2"
 cask "orbstack"
 cask "utm"

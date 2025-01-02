@@ -1,0 +1,12 @@
+font-family = ""
+font-family = "BerkeleyMono Nerd Font"
+font-family = "Berkeley Mono"
+font-size = 14
+adjust-cell-width = -1
+adjust-cell-height = 2
+theme = "Snazzy Soft"
+unfocused-split-opacity = 1
+cursor-style = block
+cursor-style-blink = false
+fullscreen = true
+shell-integration-features = no-cursor
