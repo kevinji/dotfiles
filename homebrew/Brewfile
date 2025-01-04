@@ -1,7 +1,6 @@
 tap "bufbuild/buf"
 tap "cargo-lambda/cargo-lambda"
 tap "hashicorp/tap"
-tap "railwaycat/emacsmacport"
 
 cask_args appdir: "/Applications"
 
@@ -113,7 +112,7 @@ brew "fontforge"
 
 ## Casks
 # Programming tools
-cask "emacs-mac"
+cask "emacs"
 cask "ghostty"
 cask "iterm2"
 cask "orbstack"
