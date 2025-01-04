@@ -2,12 +2,13 @@
   description = "Example nix-darwin system flake";
 
   inputs = {
+    determinate.url = "https://flakehub.com/f/DeterminateSystems/determinate/0.1";
     nixpkgs.url = "github:NixOS/nixpkgs/nixpkgs-unstable";
     nix-darwin.url = "github:LnL7/nix-darwin";
     nix-darwin.inputs.nixpkgs.follows = "nixpkgs";
   };
 
-  outputs = inputs@{ self, nix-darwin, nixpkgs }:
+  outputs = inputs@{ self, determinate, nix-darwin, nixpkgs }:
   let
     configuration = { pkgs, ... }: {
       # List packages installed in system profile. To search by name, run:
@@ -31,13 +32,20 @@
 
       # The platform the configuration will be used on.
       nixpkgs.hostPlatform = "aarch64-darwin";
+
+      nix.extraOptions = ''
+        experimental-features = nix-command flakes
+      '';
     };
   in
   {
     # Build darwin flake using:
-    # $ darwin-rebuild build --flake .#simple
+    # $ darwin-rebuild build --flake .
     darwinConfigurations."Io" = nix-darwin.lib.darwinSystem {
-      modules = [ configuration ];
+      modules =
+        [ configuration
+          determinate.darwinModules.default
+        ];
     };
   };
 }
