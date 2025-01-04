@@ -116,8 +116,3 @@
         echo 'Set zsh as your login shell: chsh -s "$(which zsh)"'
     - >-
         echo 'You may need to add zsh to /etc/shells.'
-
-- brewfile:
-    file: homebrew/Brewfile
-    stdout: true
-    stderr: true
