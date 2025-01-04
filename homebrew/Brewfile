@@ -1,4 +1,3 @@
-tap "bufbuild/buf"
 tap "cargo-lambda/cargo-lambda"
 tap "hashicorp/tap"
 
@@ -34,7 +33,6 @@ brew "git-lfs"
 brew "neovim"
 
 # Languages and package managers
-brew "pkl"
 brew "protobuf"
 brew "python"
 brew "hashicorp/tap/terraform"
@@ -46,14 +44,13 @@ brew "rustup" # Manages Rust
 brew "uv"   # Python package installer
 brew "ruff" # Python linter/formatter
 
-brew "bazelisk"         # Bazel version manager
-brew "bufbuild/buf/buf" # Protobuf project manager
-brew "cargo-lambda"     # AWS Lambda functions in Rust
-brew "dnscontrol"       # DNS configuration as code
-brew "golangci-lint"    # Golang linter
-brew "rust-analyzer"    # Rust LSP
-brew "shellcheck"       # Bash static analysis
-brew "tflint"           # Terraform linter
+brew "bazelisk"      # Bazel version manager
+brew "cargo-lambda"  # AWS Lambda functions in Rust
+brew "dnscontrol"    # DNS configuration as code
+brew "golangci-lint" # Golang linter
+brew "rust-analyzer" # Rust LSP
+brew "shellcheck"    # Bash static analysis
+brew "tflint"        # Terraform linter
 
 # Databases
 brew "postgresql@17"
