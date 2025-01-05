@@ -209,10 +209,17 @@
             "Wipr" = 1320666476;
           };
 
+          # Set up zsh shell support.
+          programs.zsh.enable = true;
+          programs.zsh.promptInit = "";
+          programs.zsh.enableGlobalCompInit = false;
+
           # Enable alternative shell support in nix-darwin.
           programs.bash.enable = false;
           programs.fish.enable = false;
-          programs.zsh.enable = false;
+
+          # Enable sudo authentication with Touch ID.
+          security.pam.enableSudoTouchIdAuth = true;
 
           # Set Git commit hash for darwin-version.
           system.configurationRevision = self.rev or self.dirtyRev or null;
