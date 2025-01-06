@@ -21,7 +21,31 @@
         {
           # List packages installed in system profile. To search by name, run:
           # $ nix-env -qaP | grep wget
-          environment.systemPackages = [ ];
+          environment.systemPackages = [
+            # Shell essentials
+            pkgs.zsh
+            pkgs.tmux
+
+            # Replacements for system programs
+            pkgs.bashInteractive
+            pkgs.coreutils-prefixed
+            pkgs.gawkInteractive
+            pkgs.gnugrep
+            pkgs.gnused
+            pkgs.vim
+
+            # Version control
+            pkgs.git
+
+            # Git helpers
+            pkgs.delta
+            pkgs.gh
+            pkgs.git-filter-repo
+            pkgs.git-lfs
+
+            # Editors
+            pkgs.neovim
+          ];
 
           # Necessary for using flakes on this system.
           nix.settings.experimental-features = "nix-command flakes";
@@ -41,27 +65,6 @@
             # Shell essentials
             "zsh"
             "antidote"
-            "tmux"
-
-            # Replacements for system programs
-            "bash"
-            "coreutils"
-            "gawk"
-            "gnu-sed"
-            "grep"
-            "vim"
-
-            # Version control
-            "git"
-
-            # Git helpers
-            "gh"
-            "git-delta"
-            "git-filter-repo"
-            "git-lfs"
-
-            # Editors
-            "neovim"
 
             # Languages and package managers
             "protobuf"
