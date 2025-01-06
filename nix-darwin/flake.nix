@@ -19,6 +19,12 @@
       configuration =
         { pkgs, ... }:
         {
+          nixpkgs.config.allowUnfreePredicate =
+            pkg:
+            builtins.elem (pkgs.lib.getName pkg) [
+              "terraform"
+            ];
+
           # List packages installed in system profile. To search by name, run:
           # $ nix-env -qaP | grep wget
           environment.systemPackages = [
@@ -45,6 +51,79 @@
 
             # Editors
             pkgs.neovim
+
+            # Languages and package managers
+            pkgs.protobuf
+            pkgs.terraform
+
+            pkgs.mise # Language-agnostic
+            pkgs.opam # Manages OCaml
+            pkgs.rustup # Manages Rust
+            pkgs.uv # Python package installer
+
+            pkgs.dnscontrol # DNS configuration as code
+            pkgs.golangci-lint # Golang linter
+            pkgs.ruff # Python linter/formatter
+            pkgs.rust-analyzer # Rust LSP
+            pkgs.shellcheck # Bash static analysis
+            pkgs.tflint # Terraform linter
+
+            # Databases
+            pkgs.postgresql_17_jit
+            pkgs.sqlite
+
+            # Shell niceties
+            pkgs.curlie
+            pkgs.fzf
+            pkgs.gnupg
+            pkgs.htop
+            pkgs.jq
+            pkgs.ncdu
+            pkgs.wget
+            pkgs.zstd
+
+            # Rust-based shell tools
+            pkgs.bat # cat
+            pkgs.difftastic
+            pkgs.eza # ls
+            pkgs.hyperfine # bench
+            pkgs.fd # find
+            pkgs.ripgrep # grep
+            pkgs.xsv
+
+            # Containers
+            pkgs.dive
+            pkgs.docker
+            pkgs.docker-buildx
+            pkgs.docker-compose
+            pkgs.docker-credential-helpers
+            pkgs.skopeo
+
+            # Kubernetes
+            pkgs.k3d
+            pkgs.kubernetes-helm
+
+            # External services
+            pkgs.magic-wormhole
+
+            # Video
+            pkgs.ffmpeg-full
+            pkgs.yt-dlp
+
+            # Image manipulation
+            pkgs.pngcrush
+            pkgs.pngquant
+
+            # Documentation
+            pkgs.graphviz
+            pkgs.pandoc
+
+            # Fonts
+            pkgs.fontforge
+
+            # Cloud CLIs
+            pkgs.awscli
+            pkgs.google-cloud-sdk
           ];
 
           # Necessary for using flakes on this system.
@@ -54,7 +133,6 @@
           homebrew.enable = true;
 
           homebrew.taps = [
-            "cargo-lambda/cargo-lambda"
             "hashicorp/tap"
           ];
 
@@ -65,81 +143,6 @@
             # Shell essentials
             "zsh"
             "antidote"
-
-            # Languages and package managers
-            "protobuf"
-            "python"
-            "hashicorp/tap/terraform"
-
-            "mise" # Language-agnostic
-            "opam" # Manages OCaml
-            "rustup" # Manages Rust
-
-            "uv" # Python package installer
-            "ruff" # Python linter/formatter
-
-            "bazelisk" # Bazel version manager
-            "cargo-lambda" # AWS Lambda functions in Rust
-            "dnscontrol" # DNS configuration as code
-            "golangci-lint" # Golang linter
-            "rust-analyzer" # Rust LSP
-            "shellcheck" # Bash static analysis
-            "tflint" # Terraform linter
-
-            # Databases
-            "postgresql@17"
-            "sqlite"
-
-            # Shell niceties
-            "curlie"
-            "fzf"
-            "gnupg"
-            "htop"
-            "jq"
-            "ncdu"
-            "wget"
-
-            # Rust-based shell tools
-            "bat" # cat
-            "difftastic"
-            "eza" # ls
-            "hyperfine" # bench
-            "fd" # find
-            "ripgrep" # grep
-            "xsv"
-
-            # Containers
-            "dive"
-            "docker"
-            "docker-buildx"
-            "docker-compose"
-            "docker-credential-helper"
-            "skopeo"
-
-            # Kubernetes
-            "helm"
-            "k3d"
-
-            # External services
-            "magic-wormhole"
-
-            # Video
-            "ffmpeg"
-            "yt-dlp"
-
-            # Image manipulation
-            "pngcrush"
-            "pngquant"
-
-            # Documentation
-            "graphviz"
-            "pandoc"
-
-            # Cloud CLIs
-            "awscli"
-
-            # Fonts
-            "fontforge"
           ];
 
           homebrew.casks = [
@@ -186,9 +189,6 @@
             "obs"
             "signal"
             "zoom"
-
-            # Cloud CLIs
-            "google-cloud-sdk"
           ];
 
           homebrew.masApps = {

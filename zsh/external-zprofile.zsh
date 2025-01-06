@@ -37,16 +37,6 @@ if [[ -d "$HOME/.config/emacs/bin" ]]; then
   path+=("$HOME/.config/emacs/bin")
 fi
 
-# Google Cloud
-if [[ -d "$HOMEBREW_PREFIX/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/bin" ]]; then
-  path+=("$HOMEBREW_PREFIX/Caskroom/google-cloud-sdk/latest/google-cloud-sdk/bin")
-fi
-
-# Solana
-if [[ -d "$HOME/.local/share/solana/install/active_release/bin" ]]; then
-  path+=("$HOME/.local/share/solana/install/active_release/bin")
-fi
-
 # Foundry
 if [[ -d "$HOME/.foundry/bin" ]]; then
   path+=("$HOME/.foundry/bin")
