@@ -69,7 +69,7 @@
             pkgs.tflint # Terraform linter
 
             # Databases
-            pkgs.postgresql_17_jit
+            pkgs.postgresql_17
             pkgs.sqlite
 
             # Shell niceties
