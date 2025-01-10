@@ -2,6 +2,10 @@
 ## General
 alias type="type -a -f" # `type` == `whence -v`
 
+if (( $+commands[kubectl] )); then
+  alias k="kubectl"
+fi
+
 if (( $+commands[perl] )); then
   alias psed="perl -p0e" # Shadows `psed` provided by perl.
 fi
