@@ -86,6 +86,9 @@ bashcompinit
 # zsh-syntax-highlighting
 ZSH_HIGHLIGHT_HIGHLIGHTERS=(main brackets)
 
+# Enable vi mode
+bindkey -v
+
 # Enable proper backspacing in vi mode
 bindkey "^?" backward-delete-char
 bindkey "^W" backward-kill-word
