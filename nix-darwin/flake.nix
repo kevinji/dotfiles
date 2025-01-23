@@ -217,6 +217,22 @@
           # Enable sudo authentication with Touch ID.
           security.pam.enableSudoTouchIdAuth = true;
 
+          # Set default macOS settings.
+          system.defaults.NSGlobalDomain.AppleEnableMouseSwipeNavigateWithScrolls = false;
+          system.defaults.NSGlobalDomain.AppleEnableSwipeNavigateWithScrolls = false;
+          system.defaults.NSGlobalDomain.AppleICUForce24HourTime = true;
+          system.defaults.NSGlobalDomain.AppleInterfaceStyleSwitchesAutomatically = true;
+          system.defaults.NSGlobalDomain.NSAutomaticCapitalizationEnabled = false;
+          system.defaults.NSGlobalDomain.NSAutomaticPeriodSubstitutionEnabled = false;
+          system.defaults.NSGlobalDomain.NSAutomaticSpellingCorrectionEnabled = false;
+          system.defaults.NSGlobalDomain."com.apple.swipescrolldirection" = true;
+
+          system.defaults.CustomUserPreferences = {
+            NSGlobalDomain = {
+              "com.apple.mouse.linear" = true;
+            };
+          };
+
           # Set Git commit hash for darwin-version.
           system.configurationRevision = self.rev or self.dirtyRev or null;
 
