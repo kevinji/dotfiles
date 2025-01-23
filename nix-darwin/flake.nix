@@ -137,7 +137,6 @@
             # Programming tools
             "emacs"
             "ghostty"
-            "iterm2"
             "orbstack"
             "utm"
 
