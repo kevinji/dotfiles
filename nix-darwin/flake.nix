@@ -196,6 +196,7 @@
             "PDF Expert" = 1055273043;
             "Pixelmator Pro" = 1289583905;
             "Slack for Desktop" = 803453959;
+            "Soulver 3" = 1508732804;
             "Tailscale" = 1475387142;
             "Telegram Lite" = 946399090;
             "The Unarchiver" = 425424353;
