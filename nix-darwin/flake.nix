@@ -197,7 +197,7 @@
             "The Unarchiver" = 425424353;
             "Things 3" = 904280696;
             "Windows App" = 1295203466;
-            "Wipr" = 1320666476;
+            "Wipr 2" = 1662217862;
           };
 
           # Set up zsh shell support.
