@@ -133,10 +133,6 @@
           # Enable Homebrew support.
           homebrew.enable = true;
 
-          homebrew.brews = [
-            "mas"
-          ];
-
           homebrew.casks = [
             # Programming tools
             "emacs"
