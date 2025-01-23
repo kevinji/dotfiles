@@ -208,6 +208,8 @@
             source "${pkgs.antidote}/share/antidote/antidote.zsh"
           '';
 
+          environment.shells = [ pkgs.zsh ];
+
           # Enable alternative shell support in nix-darwin.
           programs.bash.enable = false;
           programs.fish.enable = false;
