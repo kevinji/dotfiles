@@ -30,6 +30,7 @@
           environment.systemPackages = [
             # Shell essentials
             pkgs.zsh
+            pkgs.antidote
             pkgs.tmux
 
             # Replacements for system programs
@@ -132,17 +133,8 @@
           # Enable Homebrew support.
           homebrew.enable = true;
 
-          homebrew.taps = [
-            "hashicorp/tap"
-          ];
-
           homebrew.brews = [
-            # macOS App Store
             "mas"
-
-            # Shell essentials
-            "zsh"
-            "antidote"
           ];
 
           homebrew.casks = [
@@ -216,6 +208,9 @@
           programs.zsh.enable = true;
           programs.zsh.promptInit = "";
           programs.zsh.enableGlobalCompInit = false;
+          programs.zsh.interactiveShellInit = ''
+            source "${pkgs.antidote}/share/antidote/antidote.zsh"
+          '';
 
           # Enable alternative shell support in nix-darwin.
           programs.bash.enable = false;
