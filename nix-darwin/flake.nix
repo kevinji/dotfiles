@@ -38,6 +38,7 @@
             pkgs.coreutils-prefixed
             pkgs.gawkInteractive
             pkgs.gnugrep
+            pkgs.gnupatch
             pkgs.gnused
             pkgs.vim
 
