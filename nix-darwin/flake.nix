@@ -91,7 +91,7 @@
             pkgs.hyperfine # bench
             pkgs.fd # find
             pkgs.ripgrep # grep
-            pkgs.xsv
+            pkgs.xan
 
             # Containers
             pkgs.dive
