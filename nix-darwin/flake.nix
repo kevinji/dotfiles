@@ -19,6 +19,10 @@
       configuration =
         { pkgs, ... }:
         {
+          # Disable nix-darwin's Nix installation management, as it is handled by
+          # Determinate Nix.
+          nix.enable = false;
+
           nixpkgs.config.allowUnfreePredicate =
             pkg:
             builtins.elem (pkgs.lib.getName pkg) [
@@ -251,7 +255,6 @@
       darwinConfigurations."Io" = nix-darwin.lib.darwinSystem {
         modules = [
           configuration
-          determinate.darwinModules.default
         ];
       };
 
