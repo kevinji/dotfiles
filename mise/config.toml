@@ -2,7 +2,7 @@
 go = "1.23"
 java = "23"
 node = "20"
-python = "3.12"
+python = "3.13"
 ruby = "3"
 
 [settings]
