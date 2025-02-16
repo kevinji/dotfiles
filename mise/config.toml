@@ -1,6 +1,5 @@
 [tools]
 node = "22"
-python = "3.13"
 
 [settings]
 disable_hints = ["python_multi"]
