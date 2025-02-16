@@ -14,6 +14,14 @@ if (( $+commands[ncdu] )); then
   alias ncdu="ncdu --color dark" # Enable colors.
 fi
 
+if (( $+commands[nix] )); then
+  alias nix="noglob nix"
+fi
+
+if (( $+commands[pytest] )); then
+  alias pytest="noglob pytest"
+fi
+
 ## Directories
 if [[ "$OSTYPE" != darwin* ]]; then
   # GNU ls only enables colors when this flag is passed. This check is not
