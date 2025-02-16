@@ -1,9 +1,6 @@
 [tools]
-go = "1.23"
-java = "23"
 node = "22"
 python = "3.13"
-ruby = "3"
 
 [settings]
 disable_hints = ["python_multi"]
