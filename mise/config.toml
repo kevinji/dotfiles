@@ -1,7 +1,0 @@
-[tools]
-node = "22"
-
-[settings]
-disable_hints = ["python_multi"]
-not_found_auto_install = false
-plugin_autoupdate_last_check_duration = "0"

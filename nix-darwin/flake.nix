@@ -59,10 +59,11 @@
             pkgs.neovim
 
             # Languages and package managers
+            pkgs.corepack_22
+            pkgs.nodejs_22
             pkgs.protobuf
             pkgs.terraform
 
-            pkgs.mise # Language-agnostic
             pkgs.opam # Manages OCaml
             pkgs.rustup # Manages Rust
             pkgs.uv # Python package installer

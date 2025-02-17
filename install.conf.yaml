@@ -48,10 +48,6 @@
       create: true
       path: git/gitignore-global
 
-    ~/.config/mise/config.toml:
-      create: true
-      path: mise/config.toml
-
     ~/.config/ocamlformat:
       create: true
       path: ocaml/ocamlformat

@@ -6,12 +6,6 @@ if (( $+commands[fd] )); then
   export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 fi
 
-# mise
-if (( $+commands[mise] )); then
-  path=("$HOME/.local/share/mise/shims" $path)
-  export MISE_NODE_COREPACK=true
-fi
-
 # Opam
 if (( $+commands[opam] )); then
   eval "$(opam env)"
