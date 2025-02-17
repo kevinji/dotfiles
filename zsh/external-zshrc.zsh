@@ -1,4 +1,9 @@
 #!/usr/bin/env zsh
+# direnv
+if (( $+commands[direnv])); then
+  eval "$(direnv hook zsh)"
+fi
+
 # gpg
 if (( $+commands[gpg] )); then
   export GPG_TTY="$(tty)"

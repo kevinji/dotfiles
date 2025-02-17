@@ -80,6 +80,7 @@
 
             # Shell niceties
             pkgs.curlie
+            pkgs.direnv
             pkgs.fzf
             pkgs.gnupg
             pkgs.htop
