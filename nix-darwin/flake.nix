@@ -59,7 +59,6 @@
             pkgs.neovim
 
             # Languages and package managers
-            pkgs.corepack_22
             pkgs.nodejs_22
             pkgs.protobuf
             pkgs.terraform
