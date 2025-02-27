@@ -221,7 +221,7 @@
           programs.fish.enable = false;
 
           # Enable sudo authentication with Touch ID.
-          security.pam.enableSudoTouchIdAuth = true;
+          security.pam.services.sudo_local.touchIdAuth = true;
 
           # Set default macOS settings.
           system.defaults.NSGlobalDomain.AppleEnableMouseSwipeNavigateWithScrolls = false;
