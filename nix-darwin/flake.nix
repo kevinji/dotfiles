@@ -154,9 +154,6 @@
             "monitorcontrol"
             "rectangle"
 
-            # AI
-            "ollama"
-
             # Browsers
             "arc"
             "firefox"
