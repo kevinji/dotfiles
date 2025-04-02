@@ -16,6 +16,13 @@ if [[ -d "$HOME/.local/bin" ]]; then
   path+=("$HOME/.local/bin")
 fi
 
+# Rustup
+if (( $+commands[rustup] )); then
+  # Auto-installation by rustup can cause corruption of toolchains or components:
+  # https://github.com/rust-lang/rustup/issues/988
+  export RUSTUP_AUTO_INSTALL=0
+fi
+
 # Cargo
 if [[ -f "$HOME/.cargo/env" ]]; then
   source "$HOME/.cargo/env"
