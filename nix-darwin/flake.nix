@@ -44,6 +44,7 @@
             pkgs.gnugrep
             pkgs.gnupatch
             pkgs.gnused
+            pkgs.rsync
             pkgs.vim
 
             # Version control
