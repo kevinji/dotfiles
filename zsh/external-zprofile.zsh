@@ -28,6 +28,10 @@ if [[ -f "$HOME/.cargo/env" ]]; then
   source "$HOME/.cargo/env"
 fi
 
+if [[ -d "$HOME/.cargo/bin" ]]; then
+  path+=("$HOME/.cargo/bin")
+fi
+
 # Go
 if [[ -d "$HOME/go/bin" ]]; then
   path+=("$HOME/go/bin")
