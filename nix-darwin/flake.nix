@@ -137,6 +137,9 @@
           # Necessary for using flakes on this system.
           nix.settings.experimental-features = "nix-command flakes";
 
+          # Set primary user for user-specific settings.
+          system.primaryUser = "kevinji";
+
           # Enable Homebrew support.
           homebrew.enable = true;
 
