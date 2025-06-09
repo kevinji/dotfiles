@@ -26,6 +26,7 @@
           nixpkgs.config.allowUnfreePredicate =
             pkg:
             builtins.elem (pkgs.lib.getName pkg) [
+              "claude-code"
               "terraform"
             ];
 
@@ -112,6 +113,7 @@
             pkgs.kubernetes-helm
 
             # External services
+            pkgs.claude-code
             pkgs.magic-wormhole
 
             # Video
