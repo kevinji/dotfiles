@@ -9,3 +9,4 @@ cursor-style-blink = false
 fullscreen = true
 shell-integration-features = no-cursor
 window-inherit-working-directory = false
+keybind = shift+enter=text:\n
