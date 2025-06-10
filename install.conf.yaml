@@ -15,15 +15,6 @@
       create: true
       path: conda/condarc.yaml
 
-    ~/.docker/cli-plugins/docker-buildx:
-      if: '[ $(uname) = Darwin ]'
-      create: true
-      path: /opt/homebrew/opt/docker-buildx/bin/docker-buildx
-    ~/.docker/cli-plugins/docker-compose:
-      if: '[ $(uname) = Darwin ]'
-      create: true
-      path: /opt/homebrew/opt/docker-compose/bin/docker-compose
-
     ~/.config/doom/config.el:
       create: true
       path: doom/config.el
