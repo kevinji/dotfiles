@@ -89,5 +89,8 @@ flycheck_*.el
 # Local History for Visual Studio Code
 .history/
 
+## Claude Code ##
+**/.claude/settings.local.json
+
 ## Custom ##
 .direnv/
