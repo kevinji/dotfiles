@@ -161,7 +161,6 @@
             "rectangle"
 
             # Browsers
-            "arc"
             "firefox"
             "google-chrome"
 
