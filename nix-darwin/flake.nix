@@ -81,6 +81,7 @@
             pkgs.sqlite
 
             # Shell niceties
+            pkgs.comma
             pkgs.curlie
             pkgs.direnv
             pkgs.fzf
