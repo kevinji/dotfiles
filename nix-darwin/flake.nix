@@ -147,7 +147,7 @@
 
           homebrew.casks = [
             # Programming tools
-            "emacs"
+            "emacs-app"
             "ghostty"
             "orbstack"
             "utm"
