@@ -194,7 +194,6 @@
             "DaVinci Resolve" = 571213070;
             "Fantastical" = 975937182;
             "Flighty" = 1358823008;
-            "Messenger" = 1480068668;
             "Parcel" = 639968404;
             "PDF Expert" = 1055273043;
             "Pixelmator Pro" = 1289583905;
