@@ -27,7 +27,6 @@
             pkg:
             builtins.elem (pkgs.lib.getName pkg) [
               "claude-code"
-              "terraform"
             ];
 
           # List packages installed in system profile. To search by name, run:
@@ -61,21 +60,12 @@
             pkgs.neovim
 
             # Languages and package managers
-            pkgs.nodejs_22
-            pkgs.protobuf
-            pkgs.terraform
-
             pkgs.opam # Manages OCaml
             pkgs.rustup # Manages Rust
-            pkgs.uv # Python package installer
 
             pkgs.devenv # Nix development envs
-            pkgs.dnscontrol # DNS configuration as code
-            pkgs.golangci-lint # Golang linter
-            pkgs.ruff # Python linter/formatter
             pkgs.rust-analyzer # Rust LSP
             pkgs.shellcheck # Bash static analysis
-            pkgs.tflint # Terraform linter
 
             # Databases
             pkgs.postgresql_17
