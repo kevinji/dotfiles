@@ -69,6 +69,7 @@
             pkgs.rustup # Manages Rust
             pkgs.uv # Python package installer
 
+            pkgs.devenv # Nix development envs
             pkgs.dnscontrol # DNS configuration as code
             pkgs.golangci-lint # Golang linter
             pkgs.ruff # Python linter/formatter
