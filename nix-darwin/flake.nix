@@ -147,6 +147,7 @@
             "karabiner-elements"
             "monitorcontrol"
             "rectangle"
+            "scroll-reverser"
 
             # Browsers
             "firefox"
