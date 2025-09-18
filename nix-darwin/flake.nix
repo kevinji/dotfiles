@@ -143,7 +143,7 @@
             # Utilities
             "alfred"
             "appcleaner"
-            "bartender"
+            "jordanbaird-ice"
             "karabiner-elements"
             "monitorcontrol"
             "rectangle"
