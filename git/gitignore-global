@@ -91,6 +91,7 @@ flycheck_*.el
 
 ## Claude Code ##
 **/.claude/settings.local.json
+**/.claude/checkpoints
 
 ## Custom ##
 .direnv/
