@@ -183,7 +183,7 @@
             "DaVinci Resolve" = 571213070;
             "Fantastical" = 975937182;
             "Flighty" = 1358823008;
-            "Parcel" = 639968404;
+            "Parcel" = 375589283;
             "PDF Expert" = 1055273043;
             "Pixelmator Pro" = 1289583905;
             "Slack for Desktop" = 803453959;
