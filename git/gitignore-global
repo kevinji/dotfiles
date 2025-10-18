@@ -2,11 +2,10 @@
 ## macOS ##
 # General
 .DS_Store
+__MACOSX/
 .AppleDouble
 .LSOverride
-
-# Icon must end with two \r
-Icon
+Icon[]
 
 # Thumbnails
 ._*
@@ -77,6 +76,9 @@ flycheck_*.el
 # network security
 /network-security.data
 
+# undo-tree
+*.~undo-tree~
+
 
 ## VSCode ##
 .vscode/*
@@ -84,10 +86,11 @@ flycheck_*.el
 !.vscode/tasks.json
 !.vscode/launch.json
 !.vscode/extensions.json
-*.code-workspace
+!.vscode/*.code-snippets
+!*.code-workspace
 
-# Local History for Visual Studio Code
-.history/
+# Built Visual Studio Code Extensions
+*.vsix
 
 ## Claude Code ##
 **/.claude/settings.local.json
