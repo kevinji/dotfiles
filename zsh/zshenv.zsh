@@ -3,9 +3,9 @@ ZDOTDIR="$HOME/.config/zsh"
 
 # Aliases are here so they work in Vim
 # Use macOS shortcuts everywhere
-if [[ "$OSTYPE" == darwin* ]]; then
+if [[ "${OSTYPE-}" == darwin* ]]; then
   alias o="open"
-elif [[ "$OSTYPE" == cygwin* ]]; then
+elif [[ "${OSTYPE-}" == cygwin* ]]; then
   alias o="cygstart"
   alias pbcopy="tee > /dev/clipboard"
   alias pbpaste="cat /dev/clipboard"

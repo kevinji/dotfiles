@@ -1,6 +1,6 @@
 #!/usr/bin/env zsh
 ## Basic variables
-if [[ "$OSTYPE" == darwin* ]]; then
+if [[ "${OSTYPE-}" == darwin* ]]; then
   export BROWSER="open"
 elif (( $+commands[xdg-open] )); then
   export BROWSER="xdg-open"
@@ -22,13 +22,13 @@ fi
 
 export VISUAL="$EDITOR"
 
-if [[ "$TERM" == "dumb" ]]; then
+if [[ "${TERM-}" == "dumb" ]]; then
   export PAGER="cat"
 else
   export PAGER="less"
 fi
 
-if [[ -z "$LANG" ]]; then
+if [[ -z "${LANG-}" ]]; then
   export LANG="en_US.UTF-8"
 fi
 
@@ -37,7 +37,7 @@ fi
 typeset -gU cdpath fpath mailpath path
 
 # Set the list of directories that Zsh searches for programs.
-if [[ "$OSTYPE" != darwin* ]]; then
+if [[ "${OSTYPE-}" != darwin* ]]; then
   path=(
     /usr/local/{bin,sbin}
     $path

@@ -1,5 +1,5 @@
 #!/usr/bin/env zsh
-if [[ "$OSTYPE" == darwin* ]]; then
+if [[ "${OSTYPE-}" == darwin* ]]; then
   if [[ $(arch) == "arm64" && -f /opt/homebrew/bin/brew ]]; then
     eval "$(/opt/homebrew/bin/brew shellenv)"
   elif [[ $(arch) == "i386" && -f /usr/local/bin/brew ]]; then
