@@ -91,6 +91,9 @@
 
   (map! :map evil-normal-state-map "RET" #'save-buffer))
 
+;; Preserve the remote user's PATH value
+(add-to-list 'tramp-remote-path 'tramp-own-remote-path)
+
 (after! vertico
   (vertico-multiform-mode)
 
