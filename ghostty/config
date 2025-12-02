@@ -7,6 +7,6 @@ unfocused-split-opacity = 1
 cursor-style = block
 cursor-style-blink = false
 fullscreen = true
-shell-integration-features = no-cursor
+shell-integration-features = no-cursor,ssh-terminfo,ssh-env
 window-inherit-working-directory = false
 keybind = shift+enter=text:\n
