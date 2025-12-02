@@ -90,8 +90,8 @@
         ./scripts/run-antidote-bundle.sh
       description: Static loading Antidote plugins
     - command: >-
-        [[ -d ~/.config/emacs ]] || git clone --depth 1 https://github.com/doomemacs/doomemacs ~/.config/emacs && ~/.config/emacs/bin/doom install
-      description: Cloning and installing Doom Emacs
+        [[ -d ~/.config/emacs ]] || git clone --depth 1 https://github.com/doomemacs/doomemacs ~/.config/emacs
+      description: Cloning Doom Emacs
     - command: >-
         [[ -d ~/.tmux/plugins/tpm ]] || git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
       description: Cloning Tmux Plugin Manager
@@ -107,3 +107,5 @@
         echo 'Set zsh as your login shell: chsh -s "$(which zsh)"'
     - >-
         echo 'You may need to add zsh to /etc/shells.'
+    - >-
+        echo 'Install Doom Emacs: ~/.config/emacs/bin/doom install'
