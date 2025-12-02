@@ -93,7 +93,15 @@
 
 (after! tramp
   ;; Preserve the remote user's PATH value
-  (add-to-list 'tramp-remote-path 'tramp-own-remote-path))
+  (add-to-list 'tramp-remote-path 'tramp-own-remote-path)
+
+  ;; Only log errors and warnings
+  (setq tramp-verbose 2))
+
+(after! (:and vc tramp)
+  ;; Disable TRAMP version control
+  (setq vc-ignore-dir-regexp
+        (format "\\(?:%s\\|%s\\)" vc-ignore-dir-regexp tramp-file-name-regexp)))
 
 (after! vertico
   (vertico-multiform-mode)
