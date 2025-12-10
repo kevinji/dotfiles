@@ -60,6 +60,7 @@
             pkgs.neovim
 
             # Languages and package managers
+            pkgs.nodejs-slim_24 # Used for Emacs LSP servers
             pkgs.opam # Manages OCaml
             pkgs.rustup # Manages Rust
 
