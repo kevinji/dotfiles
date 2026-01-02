@@ -1,7 +1,6 @@
-font-family = "BerkeleyMono Nerd Font"
+font-family = "Berkeley Mono Variable"
 font-size = 14
-adjust-cell-width = -1
-adjust-cell-height = 1
+font-style = SemiCondensed
 theme = "Snazzy Soft"
 unfocused-split-opacity = 1
 cursor-style = block
