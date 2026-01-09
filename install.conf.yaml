@@ -1,8 +1,6 @@
 - defaults:
     link:
       relink: true
-    shell:
-      stdout: true
 
 - clean: ['~']
 
@@ -107,7 +105,9 @@
       description: Static loading Antidote plugins
 
 - shell:
-    - >-
-        echo $'Set zsh as your login shell: chsh -s "$(which zsh)"\nYou may need to add zsh to /etc/shells.'
-    - >-
-        echo 'Install Doom Emacs: ~/.config/emacs/bin/doom install'
+    - command: >-
+        echo $'Set zsh as your login shell: chsh -s "$(which zsh)"\nYou may need to add zsh to /etc/shells.' >&2
+      stderr: true
+    - command: >-
+        echo 'Install Doom Emacs: ~/.config/emacs/bin/doom install' >&2
+      stderr: true
