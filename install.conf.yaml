@@ -89,6 +89,8 @@
     - command: >-
         ./scripts/run-antidote-bundle.sh
       description: Static loading Antidote plugins
+      stdout: true
+      stderr: true
     - command: >-
         [[ -d ~/.config/emacs ]] || git clone --depth 1 https://github.com/doomemacs/doomemacs ~/.config/emacs
       description: Cloning Doom Emacs
