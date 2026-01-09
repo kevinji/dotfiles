@@ -1,5 +1,5 @@
 #!/bin/bash
-set -e
+set -euo pipefail
 
 mkdir -p "$HOME"/.npm-global
 npm config set prefix "\${HOME}/.npm-global"

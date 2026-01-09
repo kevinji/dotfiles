@@ -1,4 +1,5 @@
 #!/usr/bin/env zsh
+set -euo pipefail
 
 alias tailscale="/Applications/Tailscale.app/Contents/MacOS/Tailscale"
 

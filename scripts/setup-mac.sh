@@ -1,5 +1,5 @@
 #!/usr/bin/env zsh
-set -e
+set -euo pipefail
 
 # Xcode CLT
 xcode-select --install || true
