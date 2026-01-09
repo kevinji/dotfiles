@@ -12,4 +12,4 @@ elif (( ! $+commands[antidote] )); then
   exit 1
 fi
 
-antidote bundle < ~/.config/zsh/.zsh_plugins.txt > ~/.config/zsh/.zsh_plugins.zsh
+antidote bundle < ~/.config/zsh/.zsh_plugins.txt >| ~/.config/zsh/.zsh_plugins.zsh
