@@ -83,7 +83,11 @@ source "${ZDOTDIR:-$HOME/.config/zsh}/.zsh_plugins.zsh"
 
 # zsh features
 autoload -Uz compinit
-compinit
+if [[ -e "${ZDOTDIR:-$HOME/.config/zsh}/.zcompdump" && -z "${ZDOTDIR:-$HOME/.config/zsh}"/.zcompdump(#qN.mh+24) ]]; then
+  compinit -C
+else
+  compinit
+fi
 
 autoload -Uz zmv
 alias zcp="zmv -C"
