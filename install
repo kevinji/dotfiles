@@ -1,5 +1,4 @@
-#!/usr/bin/env bash
-
+#!/usr/bin/env zsh
 set -euo pipefail
 
 CONFIG="install.conf.yaml"
