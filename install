@@ -5,7 +5,7 @@ CONFIG="install.conf.yaml"
 DOTBOT_DIR="dotbot"
 
 DOTBOT_BIN="bin/dotbot"
-BASEDIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+BASEDIR="${0:A:h}"
 
 "${BASEDIR}/${DOTBOT_DIR}/${DOTBOT_BIN}" \
   -d "${BASEDIR}" \
