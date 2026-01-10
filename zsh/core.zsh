@@ -67,10 +67,16 @@ autoload -Uz bracketed-paste-url-magic
 zle -N bracketed-paste bracketed-paste-url-magic
 
 # Antidote
-if [[ -v HOMEBREW_PREFIX && -f "$HOMEBREW_PREFIX/opt/antidote/share/antidote/antidote.zsh" ]]; then
-  source "$HOMEBREW_PREFIX/opt/antidote/share/antidote/antidote.zsh"
-elif [[ -f "${ZDOTDIR:-$HOME/.config/zsh}/.antidote/antidote.zsh" ]]; then
-  source "${ZDOTDIR:-$HOME/.config/zsh}/.antidote/antidote.zsh"
+if [[ -v HOMEBREW_PREFIX && -d "$HOMEBREW_PREFIX/opt/antidote/share/antidote" ]]; then
+  antidote_dir="$HOMEBREW_PREFIX/opt/antidote/share/antidote"
+elif [[ -d "${ZDOTDIR:-$HOME/.config/zsh}/.antidote" ]]; then
+  antidote_dir="${ZDOTDIR:-$HOME/.config/zsh}/.antidote"
+fi
+
+if [[ -v antidote_dir ]]; then
+  fpath=($antidote_dir/functions $fpath) 
+  autoload -Uz antidote
+  unset antidote_dir
 fi
 
 source "${ZDOTDIR:-$HOME/.config/zsh}/.zsh_plugins.zsh"
