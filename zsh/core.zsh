@@ -87,6 +87,7 @@ if [[ -e "${ZDOTDIR:-$HOME/.config/zsh}/.zcompdump" && -z "${ZDOTDIR:-$HOME/.con
   compinit -C
 else
   compinit
+  touch "${ZDOTDIR:-$HOME/.config/zsh}/.zcompdump" # Update the modified timestamp
 fi
 
 autoload -Uz zmv
