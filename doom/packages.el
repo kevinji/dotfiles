@@ -53,3 +53,6 @@
   :recipe (:host github :repo "copilot-emacs/copilot.el" :files ("*.el")))
 (package! lsp-tailwindcss :recipe (:host github :repo "merrickluo/lsp-tailwindcss"))
 (package! protobuf-mode)
+(package! lsp-mode
+  :recipe (:host github :repo "kevinji/lsp-mode" :branch "fix-slow")
+  :pin "fc5a710119e325b8320e014745bc687df991e2f1")
