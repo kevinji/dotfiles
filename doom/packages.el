@@ -55,4 +55,4 @@
 (package! protobuf-mode)
 (package! lsp-mode
   :recipe (:host github :repo "kevinji/lsp-mode" :branch "fix-slow")
-  :pin "fc5a710119e325b8320e014745bc687df991e2f1")
+  :pin "25ad0ead168fbdc3544fce2bfaa6a45d1df570de")
