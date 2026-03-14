@@ -8,4 +8,6 @@ cursor-style-blink = false
 fullscreen = true
 shell-integration-features = no-cursor,ssh-terminfo,ssh-env
 window-inherit-working-directory = false
+tab-inherit-working-directory = false
+split-inherit-working-directory = true
 keybind = shift+enter=text:\n
