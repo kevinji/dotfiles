@@ -54,5 +54,5 @@
 (package! lsp-tailwindcss :recipe (:host github :repo "merrickluo/lsp-tailwindcss"))
 (package! protobuf-mode)
 (package! lsp-mode
-  :recipe (:host github :repo "kevinji/lsp-mode" :branch "fix-slow")
-  :pin "25ad0ead168fbdc3544fce2bfaa6a45d1df570de")
+  :recipe (:host github :repo "emacs-lsp/lsp-mode")
+  :pin "197f56bf7a38b564cc5dec26d66b5f494da39783")
