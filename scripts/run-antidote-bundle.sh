@@ -1,5 +1,6 @@
 #!/usr/bin/env zsh
-set -euo pipefail
+# No -u: antidote v2+ references unset vars like $BASH_VERSION
+set -eo pipefail
 
 if [[ -v HOMEBREW_PREFIX && -d "$HOMEBREW_PREFIX/opt/antidote/share/antidote" ]]; then
   antidote_dir="$HOMEBREW_PREFIX/opt/antidote/share/antidote"
