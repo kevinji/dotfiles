@@ -189,7 +189,6 @@
             "Pixelmator Pro" = 1289583905;
             "Soulver 3" = 1508732804;
             "Tailscale" = 1475387142;
-            "Telegram Lite" = 946399090;
             "The Unarchiver" = 425424353;
             "Things 3" = 904280696;
             "Windows App" = 1295203466;
