@@ -159,7 +159,6 @@
 
             # Audio
             "audio-hijack"
-            "focusrite-control"
             "spotify"
 
             # Applications
