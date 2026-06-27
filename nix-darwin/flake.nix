@@ -127,7 +127,7 @@
             pkgs.magic-wormhole
 
             # Video
-            pkgs.ffmpeg-full
+            (pkgs.ffmpeg-full.override { withLcevcdec = false; })
             pkgs.yt-dlp
 
             # Image manipulation
