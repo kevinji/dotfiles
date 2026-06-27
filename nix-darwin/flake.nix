@@ -23,24 +23,6 @@
           # Determinate Nix.
           nix.enable = false;
 
-          nixpkgs.overlays = [
-            (final: prev: {
-              # Disable chromaprint and kvazaar tests due to failures
-              chromaprint = prev.chromaprint.overrideAttrs (
-                _old:
-                final.lib.optionalAttrs final.stdenv.hostPlatform.isDarwin {
-                  doCheck = false;
-                }
-              );
-              kvazaar = prev.kvazaar.overrideAttrs (
-                _old:
-                final.lib.optionalAttrs final.stdenv.hostPlatform.isDarwin {
-                  doCheck = false;
-                }
-              );
-            })
-          ];
-
           nixpkgs.config.allowUnfreePredicate =
             pkg:
             builtins.elem (pkgs.lib.getName pkg) [
@@ -127,7 +109,7 @@
             pkgs.magic-wormhole
 
             # Video
-            (pkgs.ffmpeg-full.override { withLcevcdec = false; })
+            pkgs.ffmpeg
             pkgs.yt-dlp
 
             # Image manipulation
