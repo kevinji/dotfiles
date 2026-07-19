@@ -190,6 +190,7 @@
             "Tailscale" = 1475387142;
             "The Unarchiver" = 425424353;
             "Things 3" = 904280696;
+            "WhatsApp Messenger" = 310633997;
             "Windows App" = 1295203466;
             "Wipr 2" = 1662217862;
           };
