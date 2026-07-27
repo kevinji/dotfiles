@@ -144,7 +144,6 @@
             # Utilities
             "alfred"
             "appcleaner"
-            "jordanbaird-ice"
             "karabiner-elements"
             "monitorcontrol"
             "rectangle"
