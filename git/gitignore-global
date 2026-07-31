@@ -93,8 +93,10 @@ flycheck_*.el
 *.vsix
 
 ## Claude Code ##
+**/.claude/.cc-writes/
 **/.claude/settings.local.json
 **/.claude/checkpoints
 
 ## Custom ##
 .direnv/
+
