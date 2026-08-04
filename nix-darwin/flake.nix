@@ -163,6 +163,7 @@
             # Applications
             "1password"
             "iina"
+            "league-of-legends"
             "notion"
             "steam"
             "transmission"
