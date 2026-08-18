@@ -1,5 +1,6 @@
 git/gitconfig-local
 ptpython/history
 zsh/zprofile-local.zsh
+zsh/zshenv-local.zsh
 zsh/zshrc-early-local.zsh
 zsh/zshrc-local.zsh

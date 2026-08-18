@@ -22,3 +22,13 @@ fi
 
 alias pbc="pbcopy"
 alias pbp="pbpaste"
+
+# Use :A instead of readlink because zshenv runs before zprofile, which adds
+# Homebrew's greadlink to PATH.
+DIR="${${(%):-%x}:A:h}"
+
+if [[ -f "$DIR/zshenv-local.zsh" ]]; then
+  source "$DIR/zshenv-local.zsh"
+fi
+
+unset DIR
