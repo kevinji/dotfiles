@@ -23,6 +23,29 @@
           # Determinate Nix.
           nix.enable = false;
 
+          # Fix curl-cffi (pulled in by yt-dlp) failing to load on macOS due to
+          # a missing LC_RPATH. Fixed upstream in curl-cffi 0.16.0; remove this
+          # overlay once nixpkgs-unstable includes it.
+          # https://github.com/NixOS/nixpkgs/commit/6b7d409df9
+          nixpkgs.overlays = [
+            (final: prev: {
+              pythonPackagesExtensions = prev.pythonPackagesExtensions ++ [
+                (pyfinal: pyprev: {
+                  curl-cffi =
+                    if pyprev.curl-cffi.version == "0.15.0" then
+                      pyprev.curl-cffi.overridePythonAttrs (old: {
+                        postFixup = (old.postFixup or "") + ''
+                          install_name_tool -add_rpath "${final.curl-impersonate}/lib" \
+                            "$out/${pyfinal.python.sitePackages}/curl_cffi/_wrapper.abi3.so"
+                        '';
+                      })
+                    else
+                      pyprev.curl-cffi;
+                })
+              ];
+            })
+          ];
+
           nixpkgs.config.allowUnfreePredicate =
             pkg:
             builtins.elem (pkgs.lib.getName pkg) [
