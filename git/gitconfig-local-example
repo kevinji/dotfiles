@@ -1,5 +1,9 @@
 # Rename this file to gitconfig-local and fill in the fields.
 [core]
 	pager = $PAGER
-[credential]
-	helper = CREDENTIAL-HELPER
+[credential "https://github.com"]
+	helper =
+	helper = !gh auth git-credential
+[credential "https://gist.github.com"]
+	helper =
+	helper = !gh auth git-credential
