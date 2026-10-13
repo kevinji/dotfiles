@@ -130,6 +130,7 @@
             # External services
             pkgs.claude-code
             pkgs.magic-wormhole
+            pkgs.rclone
 
             # Video
             pkgs.ffmpeg
