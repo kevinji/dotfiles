@@ -69,7 +69,7 @@
             pkgs.shellcheck # Bash static analysis
 
             # Databases
-            pkgs.postgresql_17
+            pkgs.postgresql_18
             pkgs.sqlite
 
             # Shell niceties
