@@ -148,7 +148,7 @@
             pkgs.fontforge
 
             # Cloud CLIs
-            pkgs.awscli
+            pkgs.awscli2
             pkgs.google-cloud-sdk
           ];
 
