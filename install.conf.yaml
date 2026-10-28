@@ -85,7 +85,7 @@
         [ $(uname) = Darwin ] || [[ -d ~/.config/zsh/.antidote ]] || git clone --depth=1 https://github.com/mattmc3/antidote.git ~/.config/zsh/.antidote
       description: Installing Antidote
     - command: >-
-        [[ -d ~/.config/emacs ]] || git clone --depth 1 https://github.com/doomemacs/doomemacs ~/.config/emacs
+        [[ -d ~/.config/emacs ]] || git clone --depth 1 https://github.com/doomemacs/core ~/.config/emacs
       description: Cloning Doom Emacs
     - command: >-
         [[ -d ~/.tmux/plugins/tpm ]] || git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
