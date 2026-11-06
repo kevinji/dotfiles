@@ -55,7 +55,9 @@
     ~/.config/utop/init.ml:
       create: true
       path: utop/init.ml
-    ~/.utoprc: utop/utoprc
+    ~/.config/utop/utoprc:
+      create: true
+      path: utop/utoprc
 
     ~/.vimrc: vim/vimrc.vim
     ~/.config/nvim/init.vim:
