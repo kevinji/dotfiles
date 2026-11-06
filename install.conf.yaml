@@ -40,7 +40,7 @@
     ~/.config/ocamlformat:
       create: true
       path: ocaml/ocamlformat
-    ~/.ocp/ocp-indent.conf:
+    ~/.config/ocp/ocp-indent.conf:
       create: true
       path: ocaml/ocp-indent.conf
 
