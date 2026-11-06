@@ -44,7 +44,7 @@
       create: true
       path: ocaml/ocp-indent.conf
 
-    ~/.ptpython/config.py:
+    ~/.config/ptpython/config.py:
       create: true
       path: ptpython/config.py
 

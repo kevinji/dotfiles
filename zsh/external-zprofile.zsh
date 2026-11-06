@@ -51,3 +51,8 @@ fi
 if [[ -f "$HOME/.orbstack/shell/init.zsh" ]]; then
   source "$HOME/.orbstack/shell/init.zsh"
 fi
+
+# ptpython
+if (( $+commands[ptpython] )); then
+  export PTPYTHON_CONFIG_HOME="${XDG_CONFIG_HOME:-$HOME/.config}/ptpython"
+fi
