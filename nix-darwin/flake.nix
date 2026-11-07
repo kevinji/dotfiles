@@ -173,7 +173,6 @@
             "discord"
             "obs"
             "signal"
-            "zoom"
           ];
 
           homebrew.masApps = {
