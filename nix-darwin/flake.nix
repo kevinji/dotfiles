@@ -29,6 +29,18 @@
               "claude-code"
             ];
 
+          nixpkgs.overlays = [
+            # xan 0.61.0 depends on zstd-sys with its pkg-config feature, but
+            # the nixpkgs derivation doesn't provide pkg-config or zstd.
+            # TODO: Remove once fixed upstream in nixpkgs.
+            (final: prev: {
+              xan = prev.xan.overrideAttrs (old: {
+                nativeBuildInputs = (old.nativeBuildInputs or [ ]) ++ [ final.pkg-config ];
+                buildInputs = (old.buildInputs or [ ]) ++ [ final.zstd ];
+              });
+            })
+          ];
+
           # List packages installed in system profile. To search by name, run:
           # $ nix-env -qaP | grep wget
           environment.systemPackages = [
