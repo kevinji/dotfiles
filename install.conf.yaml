@@ -4,6 +4,10 @@
 
 - clean: ['~']
 
+- shell:
+    - command: touch git/gitconfig-local
+      description: Creating git/gitconfig-local
+
 - link:
     ~/.config/bat/config:
       create: true
